@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curtis Moody's Portfolio</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style>
+    body { 
+         background-color: #7D939C;
+         font-family: Varela Round;
+         font-size: 16px;
+    }
+
+    #headshot {
+         border-radius: 50%;
+         border-width: 3px;
+         border-color: #22425A;
+         border-style: solid;
+    }
+
+    .jumbotron {
+         background-color: #cfd7e5;
+    }
+
+    .jumbotron .name {
+         margin-bottom: 5px;
+         font-size: 40px;
+         color: #22425A;
+    }
+
+    .jumbotron .title {
+         margin-top: 0px;
+         font-size: 25px;
+         color: #22425A;    
+    }
+
+    .profile {
+         margin-bottom: 0px;
+    }
+
+    .main-wrapper {
+         padding-top: 30px;
+    }
+
+    .social-list {
+         color: #22425A;
+    }
+
+    .info-block {
+        background-color: #cfd7e5;
+        padding: 30px;
+        margin-bottom: 15px;
+        color: #22425A;
+    }
+
+    .opac-hover {
+        display: inline-block;
+
+    }
+    .opac-hover img:hover {
+        opacity: .5;
+    }
+
+    .project-flush {
+         margin-top: 0px;
+    }
+
+    #nav-bar {
+         background-color: #8da8b5;
+    }
+    #nav-bar ul li a {
+         color: #22425A;
+    }
+    #nav-bar {
+         margin-bottom: 0px;
+    }
+
+    .info-block .title {
+         margin-top: 0px;
+         font-weight: 800;
+    }
+
+    .project-name {
+         font-weight: 800;
+    }
+
+    .project {
+         margin-bottom: 10px;
+    }
+
+    .skill-name {
+         margin-bottom: 0px;
+         font-weight: 800;
+    }
+
+    .school-name {
+         font-weight: 800;
+         font-size: 20px;
+    }
+
+    .social-list a {
+         color: #22425A;
+    }
+</style>
+<nav id="nav-bar" class="navbar navbar-default navbar-static-top">
+     <div class="container-fluid">
+          <ul class="nav navbar-nav navbar-right">
+               <li><a href="#about">About</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#education">Education</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#contact">Contact</a></li> 
+          </ul>
+     </div>
+</nav>
+<div class="container-fluid">
+     <div class="row jumbotron profile">
+          <div class="col-md-5">
+               <div class="pull-right">
+                    <h1 class="name">Curtis Moody</p>
+                    <h2 class="title">Full Stack Developer</p>
+                    <ul class="list-inline text-center social-list">
+                         <li><a href="https://github.com/CZMoodyDev" target="_blank"><i class="fa fa-github"></i></a></li>
+                         <li><a href="https://www.linkedin.com/in/curtis-zim-moody" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                         <li><a href="https://www.freecodecamp.com/czmoodydev" target="_blank"><i class="fa fa-free-code-camp"></i></a></li>
+                    </ul>                       
+               </div>                
+          </div>
+          <div class="col-md-7 pull-left">
+              <img id="headshot" class="img-responsive" src="https://avatars2.githubusercontent.com/u/19660232?v=3&s=460">           
+          </div>
+     </div>
+</div>
+<div class="container main-wrapper">
+     <div class="row">
+          <div class="col-md-8">
+               <div class="main">
+                    <div id="about" class="info-block">
+                         <h2 class="title">About Me</h2>
+                         <p>Hi, my name is Curtis. I enjoy developing for both sides of the technical stack both professionally and liesurely. I like to game in my free time (the nerdier, the better) and build in-house tools to make my life easier. I have a Bachelor of Computer Science and a Bachelor of Arts with a major in English so I like to drill down on problems using those two schools of knowledge. I like the middle seat on planes because it makes me feel safer and my favourite food is pizza.</p>
+                    </div>
+                    <div id="projects" class="info-block">
+                         <h2 class="title">Latest Projects</h2>
+                         <div class="row project">
+                              <div class="col-md-4 opac-hover">
+                                   <a href="https://github.com/CZMoodyDev/Meal-Planner" target="_blank"><img class="img-responsive" src="http://i.imgur.com/6VGs047.jpg"></a>
+                              </div>
+                              <div class="col-md-8">
+                                   <h3 class="project-flush project-name">Meal-Planner</h3>
+                                   <p>Using Meal-Planner, I can create shopping lists and instruction sheets for preparing as many frozen slow-cooker meals as I want. Built in HTML/CSS/Vanilla-JS and PHP, I host this project on my local machine along with my MySQL database.</p>
+                                   <ul class="list-inline">
+                                        <li><span class="label label-primary">WebApp</span></li>
+                                        <li><span class="label label-primary">Full Stack</span></li>
+                                   </ul>
+                                   <a href="https://github.com/CZMoodyDev/Meal-Planner" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+Check it out on GitHub</a>
+                              </div>
+                         </div>
+                         <div class="row project">
+                              <div class="col-md-4 opac-hover">
+                                   <a href="https://github.com/CZMoodyDev/DesktopDungeonBot" target="_blank"><img class="img-responsive" src="http://i.imgur.com/PHk3fBW.jpg"></a>
+                              </div>
+                              <div class="col-md-8">
+                                   <h3 class="project-flush project-name">DesktopDungeonBot</h3>
+                                   <p>I like to play games in my downtime and I thought it would be an interesting challenge to create a bot for Desktop Dungeons. It's a fun little strategy game. The bot traverses a grid and keeps track of tiles it can not step on, tiles occupied by enemies, and free tiles. There's also some more complicated game strategy involved to maximize profit that I won't go into here.</p>
+                                   <ul class="list-inline">
+                                        <li><span class="label label-primary">Python Application</span></li>
+                                        <li><span class="label label-primary">Image Search and Manipulation</span></li>
+                                   </ul>
+                                   <a href="https://github.com/CZMoodyDev/DesktopDungeonBot" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+Check it out on GitHub</a><br>
+                                   <a href="http://store.steampowered.com/app/226620/Desktop_Dungeons/" target="_blank"><i class="fa fa-steam-square" aria-hidden="true"></i>
+Steam Page for DesktopDungeons</a>
+                              </div>
+                         </div>                         
+                    </div>
+                    <div id="other-projects" class="info-block">
+                         <h2 class="title">Other Projects</h2>
+                         <div>
+                              <h3 class="project-name">OpenDental Business Reporting Module</h3>
+                              <p>I worked in a team of 6 other students to create a reporting module for the business side of dental practices including patient absence metrics and appointment data.</p>
+                              <ul class="list-inline">
+                                   <li><span class="label label-primary">Open Source</span></li>
+                                   <li><span class="label label-primary">C# Software</span></li>
+                              </ul>
+                              <a href="http://www.opendental.com/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Find out more or get involved</a>                              
+                         </div>
+                         <div>
+                              <h3 class="project-name">ScreenCaster</h3>
+                              <p>Instead of paying for professional screen capture programs or using free but malware bloated ones, I made my own instead. I eventually want to turn it into a more capable piece of software for my own use, but for now it does the job it is needed to do.</p>
+                              <ul class="list-inline">
+                                   <li><span class="label label-primary">Python Application</span></li>
+                                   <li><span class="label label-primary">Video Imaging</span></li>
+                              </ul>
+                              <a href="https://github.com/CZMoodyDev/ScreenCaster" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Check it out on GitHub</a>                              
+                         </div>                         
+                    </div>                    
+               </div>
+          </div>
+          <div class="col-md-4 margins">
+               <div id="education" class="info-block">
+                    <h2 class="title">Education</h2>
+                    <h3 class="school-name">University of British Columbia</h3>
+                    <h4 class="degree-name"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Bachelor of Computer Science</h4>
+                    <h3 class="school-name">Concordia University College of Alberta</h3>
+                    <h4 class="degree-name"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Bachelor of Arts in English</h4>                    
+               </div>
+               <div id="skills" class="info-block">
+                    <h2 class="title">Technical Skills</h2>
+                    <p class="skill-info">Here are some of my main skills. Many languages transfer decently between each other (like Java and C#), so it would be silly to make an exhaustive list.</p>
+                    <h4 class="skill-name">PHP</h4>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                        Proficient
+                      </div>
+                    </div>
+                    <h4 class="skill-name">HTML/CSS</h4>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                        Proficient
+                      </div>
+                    </div>
+                    <h4 class="skill-name">Javascript/JQuery</h4>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                        Proficient
+                      </div>
+                    </div>
+                    <h4 class="skill-name">Python</h4>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                        Proficient
+                      </div>
+                    </div>
+                    <h4 class="skill-name">Java</h4>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                      aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                        Proficient
+                      </div>
+                    </div>
+                    <h4 class="skill-name">C/C++</h4>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                      aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                        Intermediate
+                      </div>
+                    </div>   
+               </div>  
+               <div id="contact" class="info-block">
+                    <h2 class="title">Contact</h2>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i> chermans@alumni.ubc.ca</p>                   
+               </div>
+          </div>
+     </div>
+</div>
+</body>
+</html>
