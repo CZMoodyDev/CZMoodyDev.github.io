@@ -1,0 +1,96 @@
+body { 
+     background-color: #7D939C;
+     font-family: Varela Round;
+     font-size: 16px;
+}
+
+#headshot {
+     border-radius: 50%;
+     border-width: 3px;
+     border-color: #22425A;
+     border-style: solid;
+}
+
+.jumbotron {
+     background-color: #cfd7e5;
+}
+
+.jumbotron .name {
+     margin-bottom: 5px;
+     font-size: 40px;
+     color: #22425A;
+}
+
+.jumbotron .title {
+     margin-top: 0px;
+     font-size: 25px;
+     color: #22425A;    
+}
+
+.profile {
+     margin-bottom: 0px;
+}
+
+.main-wrapper {
+     padding-top: 30px;
+}
+
+.social-list {
+     color: #22425A;
+}
+
+.info-block {
+    background-color: #cfd7e5;
+    padding: 30px;
+    margin-bottom: 15px;
+    color: #22425A;
+}
+
+.opac-hover {
+    display: inline-block;
+
+}
+.opac-hover img:hover {
+    opacity: .5;
+}
+
+.project-flush {
+     margin-top: 0px;
+}
+
+#nav-bar {
+     background-color: #8da8b5;
+}
+#nav-bar ul li a {
+     color: #22425A;
+}
+#nav-bar {
+     margin-bottom: 0px;
+}
+
+.info-block .title {
+     margin-top: 0px;
+     font-weight: 800;
+}
+
+.project-name {
+     font-weight: 800;
+}
+
+.project {
+     margin-bottom: 10px;
+}
+
+.skill-name {
+     margin-bottom: 0px;
+     font-weight: 800;
+}
+
+.school-name {
+     font-weight: 800;
+     font-size: 20px;
+}
+
+.social-list a {
+     color: #22425A;
+}
