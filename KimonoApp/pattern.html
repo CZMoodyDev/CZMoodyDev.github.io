@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kimono Play</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kimono-app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <nav id="nav-bar" class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+           <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScenarioNav">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+           </button>
+           </div>
+           <div class="collapse navbar-collapse" id="ScenarioNav">
+           </div>
+        </div>
+   </nav>
+  <body class="text-center">
+    <div id="dressing-studio-container" class="row row-eq-height">
+      <div id="dressing-room-panel" class="col-sm-6">
+          <canvas id="DressingRoom" width="657" height="850"></canvas>
+          <a class="btn btn-primary back-btn" onClick="SendBackTo('obi.html', 'Obi');">Back</a>
+          <a class="btn btn-primary next-btn" onClick="ForwardTo('final.html', 'Final');" disabled>Next</a>
+        </div>
+    <div id="choice-panel" class="col-sm-6">
+      <h1>Pattern</h1>
+      <div id="pattern-container">
+          <div class="row">
+              <div class="col-sm-3"></div>
+              <img id="AutumnGrass" class="pattern col-sm-2" src="./Images/General/autumngrass_icon.png"></img>
+              <img id="Bamboo" class="pattern col-sm-2" src="./Images/General/bamboo_icon.png"></img>
+              <img id="Butterfly" class="pattern col-sm-2" src="./Images/General/butterfly_icon.png"></img>
+          </div>
+          <div class="row">
+              <div class="col-sm-3"></div>
+              <img id="Chrysanthemum" class="pattern col-sm-2" src="./Images/General/chrysanthemum_icon.png"></img>
+              <img id="CraneTurtle" class="pattern col-sm-2" src="./Images/General/craneturtle_icon.png"></img>
+              <img id="Iris" class="pattern col-sm-2" src="./Images/General/iris_icon.png"></img>
+          </div>
+          <div class="row">
+              <div class="col-sm-3"></div>
+              <img id="LongGrass" class="pattern col-sm-2" src="./Images/General/longgrass_icon.png"></img>
+              <img id="MapleLeaf" class="pattern col-sm-2" src="./Images/General/mapleleaf_icon.png"></img>
+              <img id="Matsu" class="pattern col-sm-2" src="./Images/General/matsu_icon.png"></img>
+          </div>
+          <div class="row">
+              <div class="col-sm-3"></div>
+              <img id="MatsuPlumBamboo" class="pattern col-sm-2" src="./Images/General/matsuplumbamboo_icon.png"></img>
+              <img id="Peony" class="pattern col-sm-2" src="./Images/General/peony_icon.png"></img>
+              <img id="Plum" class="pattern col-sm-2" src="./Images/General/plum_icon.png"></img>
+          </div>
+          <div class="row">
+              <div class="col-sm-3"></div>
+              <img id="Sakura" class="pattern col-sm-2" src="./Images/General/sakura_icon.png"></img>
+              <img id="Tsubaki" class="pattern col-sm-2" src="./Images/General/tsubaki_icon.png"></img> 
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common-fn.js"></script>
+    <script src="js/common-canvas-fn.js"></script>
+  </body>
+</html>
