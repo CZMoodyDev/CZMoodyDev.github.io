@@ -50,12 +50,12 @@ function PaintMaterial() {
     var Material = ScenarioValues.Material.Value;
     var Image = ScenarioValues.Material.Image;
     var DrawJuban = Material == "";
-
-    DrawBaseLayers(DrawJuban);
     
     if (Image != "") {
         DrawImage(Image);
     }
+    
+    DrawBaseLayers(DrawJuban);
 
 }
 
