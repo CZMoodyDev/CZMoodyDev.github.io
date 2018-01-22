@@ -34,13 +34,30 @@
   <body class="text-center">
     <h1>Material</h1> <!-- TODO Tooltip Descriptor for Materials -->
     <div id="material-container">
-        <button id="Awase" class="btn material">Awase</button>
-        <button id="Hitoe" class="btn material">Hitoe</button>
-        <button id="Usumono" class="btn material">Usumono</button>
+        <button id="Awase" class="btn material" data-toggle="popover" data-trigger="hover" title="Awase" data-content="It's totally a fabric.">Awase</button>
+        <button id="Hitoe" class="btn material" data-toggle="popover" data-trigger="hover" title="Hitoe" data-content="Wow it's so good.">Hitoe</button>   
+        <button id="Usumono" class="btn material" data-toggle="popover" data-trigger="hover" title="Usumono" data-content="Totally text!">Usumono</button> 
     </div>
     <canvas id="DressingRoom" width="657" height="850"></canvas>
     <a class="btn btn-primary back-btn" onClick="SendBackTo('marital.html', 'Marital');">Back</a>
     <a class="btn btn-primary next-btn" onClick="ForwardTo('obi.html', 'Obi');" disabled>Next</a>
+
+    <div class="modal fade" id="MaterialModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Oh no!</h4>
+          </div>
+          <div class="modal-body">
+            <p id="material-alert"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

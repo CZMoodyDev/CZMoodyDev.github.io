@@ -14,7 +14,6 @@ function SetCanvasValue(page, value) {
         ClearScenarioImage(page);
         WipeCanvas();
         PaintImage(GetPreviousPage(page));
-        //TODO Turn off border highlighting
         $(".next-btn").attr("disabled", true);
     } else {
         $("#" + value).addClass("selected");
@@ -25,7 +24,6 @@ function SetCanvasValue(page, value) {
             SetScenarioImage(page, Image);
         }
         PaintImage(page);
-        //TODO Turn on border highlighting
         $(".next-btn").attr("disabled", false);
     }
 }
@@ -50,12 +48,12 @@ function PaintMaterial() {
     var Material = ScenarioValues.Material.Value;
     var Image = ScenarioValues.Material.Image;
     var DrawJuban = Material == "";
+
+    DrawBaseLayers(DrawJuban);
     
     if (Image != "") {
         DrawImage(Image);
     }
-    
-    DrawBaseLayers(DrawJuban);
 
 }
 
@@ -339,13 +337,18 @@ function SetClickables (Page) {
     } else if (Page == "Obi") {
         SetObiClickables();
     } else if (Page == "Pattern") {
-        console.log("WERE HERE");
         SetPatternClickables();
     }
 }
 
 function ObiAlert(Season) {
-    console.log("OBIALERT");
+    var ThisSeason = ScenarioValues.Season.Value;
+    var AlertText = "That Obi does not go well with a";
+    AlertText += ThisSeason == "Autumn" ? "n" : ''; //For a/an
+    AlertText += " " + ThisSeason + " kimono.";
+
+    $("#season-alert").text(AlertText);
+    $("#ObiModal").modal('show');
 }
 
 function SetObiClickables() {
@@ -386,11 +389,6 @@ function GetClickableMaterialsBySleeve(PermittedMaterials, Season, SleeveLength)
     return PermittedMaterials[Season][SleeveLength];
 }
 
-/**
- * Material:
- * - Good click will set the canvas value and give successful feedback for choice
- * - Bad click will give alert feedback for bad choice
- */
 function SetMaterialClickables() {
     var PermittedMaterials = GetPermittedMaterials();
 
@@ -421,6 +419,7 @@ function SetMaterialClickables() {
     }
 
     var Materials = Object.keys(ReasonList);
+    localStorage.setItem("Reasons", JSON.stringify(ReasonList));
 
     for (var i = 0; i < Materials.length; i++) {
         var ThisMaterial = Materials[i];
@@ -430,7 +429,7 @@ function SetMaterialClickables() {
             $('#' + ThisMaterial).on('click', function() { SetCanvasValue('Material', this.id); });
         } else {
             //Set click alert with material name and reason(s)
-            document.getElementById(ThisMaterial).onclick = function(){ MaterialAlert(this.id, JSON.stringify(Reasons)); };
+            document.getElementById(ThisMaterial).onclick = function(){ MaterialAlert(this.id); };
         }
     }
 }
@@ -473,17 +472,39 @@ function SetPatternClickables() {
     }
 
     var Patterns = Object.keys(ReasonList);
+    localStorage.setItem("Reasons", JSON.stringify(ReasonList));
     
     for (var i = 0; i < Patterns.length; i++) {
         var ThisPattern = Patterns[i];
         var Reasons = ReasonList[ThisPattern];
 
         if (!Reasons) {
-            $('#' + ThisPattern).on('click', function() { SetCanvasValue('Pattern', this.id); });
+            $('#' + ThisPattern).on('click', function() { PatternDetail(this.id, true, this.src); });
         } else {
             //Set click alert with material name and reason(s)
-            document.getElementById(ThisPattern).onclick = function(){ PatternAlert(this.id, JSON.stringify(Reasons)); };
+            document.getElementById(ThisPattern).onclick = function(){ PatternDetail(this.id, false, this.src); };
         }
+    }
+}
+
+function PatternDetail(Pattern, Allowed, Source) {
+
+    if (ScenarioValues.Pattern.Value != Pattern) {
+        $('.modal-img').attr('src', Source);
+        $('.modal-title').text(Pattern);
+        $('#pattern-detail').text("DETAIL ABOUT PATTERN WOOOOOO");
+
+        $('#ChooseBtn').off("click");
+
+        if (!Allowed) {
+            $('#ChooseBtn').on("click", function() { PatternAlert(Pattern); });
+        } else {
+            $('#ChooseBtn').on("click", function() { SetCanvasValue('Pattern', Pattern); });
+        }
+
+        $("#DetailModal").modal("show");
+    } else {
+        SetCanvasValue('Pattern', Pattern);
     }
 }
 
@@ -535,19 +556,41 @@ function GetPermittedMaterials() {
     return PermittedMaterials;
 }
 
-function MaterialAlert(Material, Reasons) {
-    console.log("Not completed");
-    console.log(Material);
-    console.log(Reasons);
+function MaterialAlert(Material) {
+
+    var Reasons = JSON.parse(localStorage.getItem("Reasons"));
+
+    var ThisMaterialReasons = Reasons[Material];
+    var ThisSeason = ScenarioValues.Season.Value;
+
+    var SeasonAlert = ThisMaterialReasons.indexOf("x-season") > -1 ? "This material is not suitable for " + ThisSeason + "." : "";
+    var SleeveAlert = ThisMaterialReasons.indexOf("x-sleeve") > -1 ? "This material is not suitable for " + SleeveLength + " Sleeve kimonos." : "";
+
+    $("#material-alert").text(SeasonAlert + " " + SleeveAlert);
+    $("#MaterialModal").modal("show");
+
 }
 
-function PatternAlert(Pattern, Reasons) {
-    console.log("Not completed");
-    console.log(Pattern);
-    console.log(Reasons);
+function PatternAlert(Pattern) {
+    var Reasons = JSON.parse(localStorage.getItem("Reasons"));
+
+    var ThisPatternReasons = Reasons[Pattern];
+    var ThisSeason = ScenarioValues.Season.Value;
+    var ThisMaterial = ScenarioValues.Material.Value;
+
+    var SeasonAlert = ThisPatternReasons.indexOf("x-season") > -1 ? "This pattern is not suitable for " + ThisSeason + "." : "";
+    var MaterialAlert = ThisPatternReasons.indexOf("x-material") > -1 ? "This pattern is not suitable for use with the " + ThisMaterial + " material." : "";
+
+    $("#pattern-alert").text(SeasonAlert + " " + MaterialAlert);
+    $("#PatternModal").modal("show");
 }
 
 $(document).ready(function(){
+    $("#ObiModal").modal({ show: false});
+    $("#MaterialModal").modal({ show: false});
+    $("#PatternModal").modal({ show: false});
+    $('[data-toggle="popover"]').popover(); 
+    $("#DetailModal").modal({ show: false});
     SetNavigationBar();
 
     //Setup Canvas
