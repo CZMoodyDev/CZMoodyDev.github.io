@@ -7,6 +7,13 @@ body {
     min-width: 657px;
 }
 
+.DressingRoom {
+    background-image: url("../Images/General/dressing_room.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
 .btn-primary {
     background-color: #00cc44;
     border-color: #00cc44;
