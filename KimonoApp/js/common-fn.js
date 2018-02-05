@@ -119,9 +119,11 @@ function SetNavigationBar() {
     
             $("#"+NavID).removeClass();
             $("#"+NavID).addClass(ScenarioValues[PageOrder[i]].Class);
-            $("#"+NavID).on("click", function(){
-                SendBackTo(this.id.replace("Nav", "").toLowerCase() + ".html", this.id.replace("Nav", "").toLowerCase());
-            });
+            if (ScenarioValues[PageOrder[i]].Class != "locked") {
+                $("#"+NavID).on("click", function(){
+                    SendBackTo(this.id.replace("Nav", "").toLowerCase() + ".html", this.id.replace("Nav", "").toLowerCase());
+                });
+            }
         }
      }); //Load Navigation Bar
 }

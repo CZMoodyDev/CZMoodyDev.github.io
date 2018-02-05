@@ -1,0 +1,35 @@
+body {
+    background-color: #f9f8f4;
+    font-family: MuseoSansRounded;
+    color: #807da1;
+    cursor: default;
+    letter-spacing: 2pt;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.scene-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.season.selected img {
+    opacity: 0.55;
+}
+
+.btn-arrow {
+    width: 75px;
+    height: 75px;
+}
+.btn-arrow[disabled] {
+    opacity: 0.5;
+}

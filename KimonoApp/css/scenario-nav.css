@@ -1,0 +1,21 @@
+#nav-bar {
+    background-color: #88cca4;
+}
+
+#ScenarioNav a {
+    color: #f9f8f4;
+}
+
+#nav-bar .locked {
+    background-color: #61b482;
+}
+#nav-bar .locked:hover {
+    background-color:#88cca4;
+}
+
+.unlocked {
+    background-color: #88cca4;
+}
+.unlocked:hover {
+    background-color: #61b482;
+}

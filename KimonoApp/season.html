@@ -7,9 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">    
+    <link href="css/scenario-builder.css" rel="stylesheet">  
+    <link href="css/scenario-nav.css" rel="stylesheet">   
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,26 +35,34 @@
         </div>
    </nav>
   <body class="text-center">
-    <h1>Season</h1>
+    <h1>SEASON</h1>
     <div id="season-container" class="container">
         <div class="row row-eq-height">
             <div class="col-sm-2"></div>
             <div id="spring-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Spring')">
-                <p>Spring</p>
+                <img class="scene-icon" src="Images/General/spring_icon.png" />
+                <p>SPRING</p>
             </div>
             <div id="summer-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Summer')">
-                <p>Summer</p>
+                <img class="scene-icon" src="Images/General/summer_icon.png"/>
+                <p class="text-center">SUMMER</p>
             </div>
             <div id="autumn-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Autumn')">
-                <p>Autumn</p>
+                <img class="scene-icon" src="Images/General/autumn_icon.png"/>
+                <p class="text-center">AUTUMN</p>
             </div>
             <div id="winter-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Winter')">
-                <p>Winter</p>
+                <img class="scene-icon" src="Images/General/winter_icon.png"/>
+                <p class="text-center">WINTER</p>
             </div>  
         </div>
     </div>
 
-    <a class="btn btn-primary next-btn" onclick="ForwardTo('formality.html', 'Formality');" disabled>Next</a>
+    <div class="row row-eq-height buttons">
+        <img class="btn-arrow" src="Images/General/arrow_left.png" disabled />
+        <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onclick="ForwardTo('formality.html', 'Formality');" disabled />
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
