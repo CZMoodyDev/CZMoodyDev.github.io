@@ -7,9 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">
+    <link href="css/scenario-builder.css" rel="stylesheet">  
+    <link href="css/scenario-nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,24 +30,37 @@
            </button>
            </div>
            <div class="collapse navbar-collapse" id="ScenarioNav">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a id="SeasonNav" class="unlocked" onClick="SendBackTo('season.html', 'Season');">SEASON</a></li>
+                  <li><a id="FormalityNav" class="unlocked" onClick="SendBackTo('formality.html', 'Formality');">FORMALITY</a></li>
+                  <li><a id="MaritalNav" class="current">MARITAL STATUS</a></li>
+                  <li><a id="MaterialNav" class="locked">MATERIAL</a></li>
+                  <li><a id="ObiNav" class="locked">OBI</a></li>
+                  <li><a id="PatternNav" class="locked">PATTERN</a></li> 
+              </ul>
            </div>
         </div>
    </nav>
   <body class="text-center">
-    <h1>Marital Status</h1>
-    <div id="marital-container" class="container">
+    <h1>MARITAL STATUS</h1>
+    <div id="marital-container" class="container-fluid">
       <div class="row row-eq-height">
-        <div class="col-sm-4"></div>
-          <div id="married-card" class="marital col-sm-2" onClick="SetBuilderValue('Marital', 'Married')">
-              <p>Married</p>
+        <div class="col-xs-3"></div>
+          <div id="married-card" class="marital col-xs-3 card" onClick="SetBuilderValue('Marital', 'Married')">
+              <img class="scene-icon" src="Images/General/short_sleeve_icon.png" />
+              <p class="text-center scene-label">MARRIED</p>
           </div>
-          <div id="unmarried-card" class="marital col-sm-2" onClick="SetBuilderValue('Marital', 'Unmarried')">
-              <p>Unmarried</p>
+          <div id="unmarried-card" class="marital col-xs-3 card" onClick="SetBuilderValue('Marital', 'Unmarried')">
+              <img class="scene-icon" src="Images/General/long_sleeve_icon.png" />
+              <p class="text-center scene-label">UNMARRIED</p>
           </div>
       </div>
     <div>
-    <a class="btn btn-primary back-btn" onClick="SendBackTo('formality.html', 'Formality');">Back</a>
-    <a class="btn btn-primary next-btn" onClick="ForwardTo('material.html', 'Material');" disabled>Next</a>
+
+    <div class="row row-eq-height buttons">
+        <img class="btn-arrow" src="Images/General/arrow_left.png" onClick="SendBackTo('formality.html', 'Formality');"/>
+        <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onClick="ForwardTo('material.html', 'Material');" disabled/>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

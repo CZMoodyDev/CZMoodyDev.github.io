@@ -31,30 +31,38 @@
            </button>
            </div>
            <div class="collapse navbar-collapse" id="ScenarioNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="SeasonNav" class="current">SEASON</a></li>
+                    <li><a id="FormalityNav" class="locked">FORMALITY</a></li>
+                    <li><a id="MaritalNav" class="locked">MARITAL STATUS</a></li>
+                    <li><a id="MaterialNav" class="locked">MATERIAL</a></li>
+                    <li><a id="ObiNav" class="locked">OBI</a></li>
+                    <li><a id="PatternNav" class="locked">PATTERN</a></li> 
+                </ul>
            </div>
         </div>
    </nav>
   <body class="text-center">
     <h1>SEASON</h1>
-    <div id="season-container" class="container">
+    <div id="season-container" class="container-fluid">
         <div class="row row-eq-height">
-            <div class="col-sm-2"></div>
-            <div id="spring-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Spring')">
+            <div class="col-xs-2"></div>
+            <div id="spring-card" class="season col-xs-2 card" onClick="SetBuilderValue('Season', 'Spring')">
                 <img class="scene-icon" src="Images/General/spring_icon.png" />
-                <p>SPRING</p>
+                <p class="text-center scene-label">SPRING</p>
             </div>
-            <div id="summer-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Summer')">
+            <div id="summer-card" class="season col-xs-2 card" onClick="SetBuilderValue('Season', 'Summer')">
                 <img class="scene-icon" src="Images/General/summer_icon.png"/>
-                <p class="text-center">SUMMER</p>
+                <p class="text-center scene-label">SUMMER</p>
             </div>
-            <div id="autumn-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Autumn')">
+            <div id="autumn-card" class="season col-xs-2 card" onClick="SetBuilderValue('Season', 'Autumn')">
                 <img class="scene-icon" src="Images/General/autumn_icon.png"/>
-                <p class="text-center">AUTUMN</p>
+                <p class="text-center scene-label">AUTUMN</p>
             </div>
-            <div id="winter-card" class="season col-sm-2" onClick="SetBuilderValue('Season', 'Winter')">
+            <div id="winter-card" class="season col-xs-2 card" onClick="SetBuilderValue('Season', 'Winter')">
                 <img class="scene-icon" src="Images/General/winter_icon.png"/>
-                <p class="text-center">WINTER</p>
-            </div>  
+                <p class="text-center scene-label">WINTER</p>
+            </div>
         </div>
     </div>
 

@@ -7,9 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">
+    <link href="css/scenario-builder.css" rel="stylesheet">  
+    <link href="css/scenario-nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,24 +30,36 @@
            </button>
            </div>
            <div class="collapse navbar-collapse" id="ScenarioNav">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a id="SeasonNav" class="unlocked" onClick="SendBackTo('season.html', 'Season');">SEASON</a></li>
+                  <li><a id="FormalityNav" class="current">FORMALITY</a></li>
+                  <li><a id="MaritalNav" class="locked">MARITAL STATUS</a></li>
+                  <li><a id="MaterialNav" class="locked">MATERIAL</a></li>
+                  <li><a id="ObiNav" class="locked">OBI</a></li>
+                  <li><a id="PatternNav" class="locked">PATTERN</a></li> 
+              </ul>
            </div>
         </div>
    </nav>
   <body class="text-center">
-    <h1>Formality</h1>
-    <div id="formality-container" class="container">
+    <h1>FORMALITY</h1>
+    <div id="formality-container" class="container-fluid">
       <div class="row row-eq-height">
-          <div class="col-sm-4"></div>
-          <div id="formal-card" class="formality col-sm-2" onClick="SetBuilderValue('Formality', 'Formal')">
-              <p>Formal</p>
+          <div class="col-xs-3"></div>
+          <div id="formal-card" class="formality col-xs-3" onClick="SetBuilderValue('Formality', 'Formal')">
+              <p class="formality-btn">FORMAL</p>
           </div>
-          <div id="semiformal-card" class="formality col-sm-2" onClick="SetBuilderValue('Formality', 'SemiFormal')">
-              <p>Semi-formal</p>
+          <div id="semiformal-card" class="formality col-xs-3" onClick="SetBuilderValue('Formality', 'SemiFormal')">
+              <p class="formality-btn">SEMI&nbsp;FORMAL</p>
           </div> 
       </div>
     </div>
-    <a class="btn btn-primary back-btn" onClick="SendBackTo('season.html', 'Season');">Back</a>
-    <a class="btn btn-primary next-btn" onClick="ForwardTo('marital.html', 'Marital');" disabled>Next</a>
+
+    <div class="row row-eq-height buttons">
+      <img class="btn-arrow" src="Images/General/arrow_left.png" onClick="SendBackTo('season.html', 'Season');" />
+      <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onClick="ForwardTo('marital.html', 'Marital');" disabled/>
+    </div>
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

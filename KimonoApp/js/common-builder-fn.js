@@ -6,7 +6,6 @@ function SetBuilderValue(page, value) {
 
     if (IsAlreadySelected(page, value)) {
         ClearScenarioValue(page);
-        //TODO Turn off border highlighting
         $(".next-btn").attr("disabled", true);
     } else {
         $("#" + value.toLowerCase() + "-card").addClass("selected");
@@ -16,5 +15,5 @@ function SetBuilderValue(page, value) {
 }
 
 $(document).ready(function(){
-    SetNavigationBar();
+    //Debug
 });

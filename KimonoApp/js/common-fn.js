@@ -112,22 +112,6 @@ function ResetOrdered() {
     return localStorage.getItem("Back") !== null;
 }
 
-function SetNavigationBar() {
-    $('#ScenarioNav').load("./snippets/scenario-nav.html", function(){        
-        for (var i = 0; i < PageOrder.length; i++) {
-            var NavID = PageOrder[i]+"Nav";
-    
-            $("#"+NavID).removeClass();
-            $("#"+NavID).addClass(ScenarioValues[PageOrder[i]].Class);
-            if (ScenarioValues[PageOrder[i]].Class != "locked") {
-                $("#"+NavID).on("click", function(){
-                    SendBackTo(this.id.replace("Nav", "").toLowerCase() + ".html", this.id.replace("Nav", "").toLowerCase());
-                });
-            }
-        }
-     }); //Load Navigation Bar
-}
-
 function ResetScenarioValues() {
     localStorage.removeItem("Back");
     var page = localStorage.getItem("BackTo");
