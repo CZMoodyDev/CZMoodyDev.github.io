@@ -591,7 +591,6 @@ $(document).ready(function(){
     $("#PatternModal").modal({ show: false});
     $('[data-toggle="popover"]').popover(); 
     $("#DetailModal").modal({ show: false});
-    SetNavigationBar();
 
     //Setup Canvas
     Canvas = document.getElementById("DressingRoom");

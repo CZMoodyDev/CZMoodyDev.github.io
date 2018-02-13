@@ -7,9 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">
+    <link href="css/dressing-room.css" rel="stylesheet">
+    <link href="css/scenario-nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,27 +22,43 @@
   </head>
   <nav id="nav-bar" class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
-           <div class="navbar-header">
+           <div class="navbar-header pull-right">
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScenarioNav">
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
            </button>
            </div>
+           <ul class="nav navbar-nav navbar-left float-left list-inline">
+              <li class="col-xs-2"><img class="nav-btn-arrow img-responsive" src="Images/General/arrow_left.png" onClick="SendBackTo('marital.html', 'Marital');"/></li>
+              <li class="col-xs-2"><img class="next-btn nav-btn-arrow img-responsive" src="Images/General/arrow_right.png" onClick="ForwardTo('obi.html', 'Obi');" disabled/></li>
+          </ul>
            <div class="collapse navbar-collapse" id="ScenarioNav">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a id="SeasonNav" class="unlocked" onClick="SendBackTo('season.html', 'Season');">SEASON</a></li>
+                  <li><a id="FormalityNav" class="unlocked" onClick="SendBackTo('formality.html', 'Formality');">FORMALITY</a></li>
+                  <li><a id="MaritalNav" class="unlocked">MARITAL STATUS</a></li>
+                  <li><a id="MaterialNav" class="current">MATERIAL</a></li>
+                  <li><a id="ObiNav" class="locked">OBI</a></li>
+                  <li><a id="PatternNav" class="locked">PATTERN</a></li> 
+              </ul>
            </div>
         </div>
    </nav>
   <body class="text-center DressingRoom">
-    <h1>Material</h1> <!-- TODO Tooltip Descriptor for Materials -->
+    <h1 class="dressing-room-heading">Material</h1> <!-- TODO Tooltip Descriptor for Materials -->
     <div id="material-container">
         <button id="Awase" class="btn material" data-toggle="popover" data-trigger="hover" title="Awase" data-content="It's totally a fabric.">Awase</button>
         <button id="Hitoe" class="btn material" data-toggle="popover" data-trigger="hover" title="Hitoe" data-content="Wow it's so good.">Hitoe</button>   
         <button id="Usumono" class="btn material" data-toggle="popover" data-trigger="hover" title="Usumono" data-content="Totally text!">Usumono</button> 
     </div>
     <canvas id="DressingRoom" width="657" height="850"></canvas>
-    <a class="btn btn-primary back-btn" onClick="SendBackTo('marital.html', 'Marital');">Back</a>
-    <a class="btn btn-primary next-btn" onClick="ForwardTo('obi.html', 'Obi');" disabled>Next</a>
+      <div class="nav-btns container-fluid">
+        <div class="row row-eq-height buttons">
+            <img class="btn-arrow" src="Images/General/arrow_left.png" onClick="SendBackTo('marital.html', 'Marital');"/>
+            <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onClick="ForwardTo('obi.html', 'Obi');" disabled/>
+        </div>
+      </div>
 
     <div class="modal fade" id="MaterialModal" role="dialog">
       <div class="modal-dialog modal-sm">

@@ -6,11 +6,11 @@ function SetBuilderValue(page, value) {
 
     if (IsAlreadySelected(page, value)) {
         ClearScenarioValue(page);
-        $(".next-btn").attr("disabled", true);
+        DisableNextButton();
     } else {
         $("#" + value.toLowerCase() + "-card").addClass("selected");
         SetScenarioValue(page, value);
-        $(".next-btn").attr("disabled", false);
+        EnableNextButton();
     }
 }
 

@@ -7,6 +7,10 @@
     color: #f9f8f4;
 }
 
+#ScenarioNav img {
+    max-height: 100%;
+}
+
 #nav-bar .locked {
     background-color: #61b482;
 }
@@ -20,3 +24,5 @@
 .unlocked:hover {
     background-color: #61b482;
 }
+
+

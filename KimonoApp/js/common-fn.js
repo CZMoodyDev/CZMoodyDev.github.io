@@ -138,6 +138,18 @@ function MaintainStorageIntegrity() {
     }
 }
 
+function DisableNextButton() {
+    $(".next-btn").each(function(){
+        $(this).attr("disabled", true);
+    });
+}
+
+function EnableNextButton() {
+    $(".next-btn").each(function(){
+        $(this).attr("disabled", false);
+    });
+}
+
 //DEBUG BELOW. TO BE DELETED
 $(document).ready(function(){
     console.log(ScenarioValues);
