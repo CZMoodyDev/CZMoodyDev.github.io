@@ -1,6 +1,7 @@
 #nav-bar {
     background-color: #88cca4;
 }
+.navbar { margin-right: 0; }
 
 #ScenarioNav a {
     color: #f9f8f4;
