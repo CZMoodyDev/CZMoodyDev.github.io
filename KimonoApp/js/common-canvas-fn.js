@@ -7,7 +7,7 @@ var Canvas = "";
 var Context = "";
 
 //Prevent firing resize on Android
-var ScreenWidth = $(window).width(), ScreenHeight = $(window).height();
+//var ScreenWidth = $(window).width(), ScreenHeight = $(window).height();
 
 function SetCanvasValue(page, value) {
     $(".selected").removeClass("selected");
@@ -87,10 +87,7 @@ function DrawImage(Src) {
         Context.imageSmoothingEnabled = false; /// future
         Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height * Image.height / Image.width);
     }*/
-    var Today = new Date();
-    var NoCacher = "?version=" + Today.getTime();
-
-    Image.src = Src + NoCacher;
+    Image.src = Src
 }
 
 function PaintObi() {
@@ -609,16 +606,15 @@ function PatternAlert(Pattern) {
   function Resize(){    
     //$("#DressingRoom").outerHeight($(window).height()-$("#DressingRoom").offset().top- Math.abs($("#DressingRoom").outerHeight(true) - $("#DressingRoom").outerHeight()));
     
-    if ($(window).width() != ScreenWidth && $(window).height() != ScreenHeight) {
-        $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
-        
-        var NewHeight = (Canvas.height * -1) - Canvas.height / 2;
-
-        $('#choice-panel').css("top", NewHeight + "px");
-        $('#choice-panel').css("left", "0px");
-    }
-
     
+    $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
+    
+    var NewHeight = (Canvas.height * -1) - Canvas.height / 2;
+
+    $('#choice-panel').css("top", NewHeight + "px");
+    $('#choice-panel').css("left", "0px");
+
+
   }
 
 $(document).ready(function(){
