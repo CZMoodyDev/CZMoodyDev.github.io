@@ -87,7 +87,7 @@ function DrawImage(Src) {
         Context.imageSmoothingEnabled = false; /// future
         Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height * Image.height / Image.width);
     }*/
-    Image.src = Src
+    Image.src = Src;
 }
 
 function PaintObi() {
