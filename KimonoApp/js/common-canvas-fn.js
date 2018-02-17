@@ -6,6 +6,9 @@ var SleeveLength = GetSleeveLength(KimonoType);
 var Canvas = "";
 var Context = "";
 
+//Prevent firing resize on Android
+var ScreenWidth = $(window).width(), ScreenHeight = $(window).height();
+
 function SetCanvasValue(page, value) {
     $(".selected").removeClass("selected");
 
@@ -605,12 +608,15 @@ function PatternAlert(Pattern) {
 
   function Resize(){    
     //$("#DressingRoom").outerHeight($(window).height()-$("#DressingRoom").offset().top- Math.abs($("#DressingRoom").outerHeight(true) - $("#DressingRoom").outerHeight()));
-    $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
     
-    var NewHeight = (Canvas.height * -1) - Canvas.height / 2;
+    if ($(window).width() != ScreenWidth && $(window).height() != ScreenHeight) {
+        $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
+        
+        var NewHeight = (Canvas.height * -1) - Canvas.height / 2;
 
-    $('#choice-panel').css("top", NewHeight + "px");
-    $('#choice-panel').css("left", "0px");
+        $('#choice-panel').css("top", NewHeight + "px");
+        $('#choice-panel').css("left", "0px");
+    }
 
     
   }
