@@ -75,12 +75,12 @@ function DrawImage(Src) {
     var Image = new window.Image();
     Canvas = document.getElementById("DressingRoom");
     
-    
+
     Image.onload = function() {
         Context.drawImage(Image, 0, 0, Image.width, Image.height,
                           0, 0, Canvas.width, Canvas.height);
     }
-    
+  
     /*Image.onload = function() {
         Context.webkitImageSmoothingEnabled = false;
         Context.mozImageSmoothingEnabled = false;
@@ -375,11 +375,11 @@ function SetObiClickables() {
 
         if (ThisSeason == Season) {
             $('#' + ThisSeason).on('click', function() { SetCanvasValue('Obi', this.id); });
-            $('#' + ThisSeason + "-coll").on('click', function() { SetCanvasValue('Obi', this.id); });
+            $('#' + ThisSeason + "-coll").on('click', function() { SetCanvasValue('Obi', this.id.replace("-coll", "")); });
         } else {
             //Set click alert with material name and reason(s)
             document.getElementById(ThisSeason).onclick = function(){ ObiAlert(this.id); };
-            document.getElementById(ThisSeason + "-coll").onclick = function(){ ObiAlert(this.id); };
+            document.getElementById(ThisSeason + "-coll").onclick = function(){ ObiAlert(this.id.replace("-coll", "")); };
         }
     }
 }
@@ -498,9 +498,11 @@ function SetPatternClickables() {
 
         if (!Reasons) {
             $('#' + ThisPattern).on('click', function() { PatternDetail(this.id, true, this.src); });
+            $('#' + ThisPattern + "-coll").on('click', function() { PatternDetail(this.id.replace("-coll", ""), true, this.src); });
         } else {
             //Set click alert with material name and reason(s)
             document.getElementById(ThisPattern).onclick = function(){ PatternDetail(this.id, false, this.src); };
+            document.getElementById(ThisPattern+"-coll").onclick = function(){ PatternDetail(this.id.replace("-coll", ""), false, this.src); };
         }
     }
 }
@@ -606,7 +608,7 @@ function PatternAlert(Pattern) {
   function Resize(){    
     //$("#DressingRoom").outerHeight($(window).height()-$("#DressingRoom").offset().top- Math.abs($("#DressingRoom").outerHeight(true) - $("#DressingRoom").outerHeight()));
     
-    
+    $('#Choices').removeClass("in");
     $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
     
     var NewHeight = (Canvas.height * -1) - Canvas.height / 2;

@@ -45,6 +45,21 @@ body {
     margin-bottom: 15px;
 }
 
+
+#pattern-container *{
+    background-color: #f9f8f4;
+}
+
+#pattern-container .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
+.obi {
+    margin: auto;
+}
+
 .draggableIcon {
     margin-right: 20px;
 }
@@ -88,6 +103,11 @@ h1 {
     margin-bottom: 15px;
 }
 
+#choice-modal .pattern {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .choice-collapser {
     width: 100%;
     height: 40px;
@@ -95,10 +115,6 @@ h1 {
     background-color: #88cca4;
     color: #f9f8f4;
     font-size: 2.7em;
-}
-
-.obi {
-    margin: auto;
 }
 
 #DressingRoom {

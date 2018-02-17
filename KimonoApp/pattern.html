@@ -7,9 +7,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
+    <link href="./css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/dressing-room.css" rel="stylesheet">
+    <link href="css/scenario-nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,61 +24,115 @@
     
   </head>
   <nav id="nav-bar" class="navbar navbar-default navbar-static-top">
-        <div class="container-fluid">
-           <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScenarioNav">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-           </button>
-           </div>
-           <div class="collapse navbar-collapse" id="ScenarioNav">
-           </div>
+      <div class="container-fluid">
+         <div class="navbar-header pull-right">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScenarioNav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </button>
+         </div>
+         <ul class="nav navbar-nav navbar-left float-left list-inline">
+            <li class="col-xs-2"><img class="nav-btn-arrow img-responsive" src="Images/General/arrow_left.png" onClick="SendBackTo('obi.html', 'Obi');"/></li>
+            <li class="col-xs-2"><img class="next-btn nav-btn-arrow img-responsive" src="Images/General/arrow_right.png" onClick="ForwardTo('final.html', 'Final');" disabled/></li>
+         </ul>
+         <div class="collapse navbar-collapse" id="ScenarioNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="SeasonNav" class="unlocked" onClick="SendBackTo('season.html', 'Season');">SEASON</a></li>
+                <li><a id="FormalityNav" class="unlocked" onClick="SendBackTo('formality.html', 'Formality');">FORMALITY</a></li>
+                <li><a id="MaritalNav" class="unlocked" onClick="SendBackTo('marital.html', 'Marital');">MARITAL STATUS</a></li>
+                <li><a id="MaterialNav" class="unlocked" onClick="SendBackTo('material.html', 'Material');">MATERIAL</a></li>
+                <li><a id="ObiNav" class="unlocked" onClick="SendBackTo('obi.html', 'Obi');">OBI</a></li>
+                <li><a id="PatternNav" class="current">PATTERN</a></li> 
+            </ul>
+         </div>
+      </div>
+  </nav>
+  <body class="text-center">
+    <div class="container DressingRoom col-xs-12">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 main-room">
+                <h1 class="dressing-room-heading">Pattern</h1>
+                <canvas id="DressingRoom"></canvas>
+            </div>
         </div>
-   </nav>
-  <body class="text-center DressingRoom">
-    <div id="dressing-studio-container" class="row row-eq-height">
-      <div id="dressing-room-panel" class="col-sm-6">
-          <canvas id="DressingRoom" width="657" height="850"></canvas>
-          <a class="btn btn-primary back-btn" onClick="SendBackTo('obi.html', 'Obi');">Back</a>
-          <a class="btn btn-primary next-btn" onClick="ForwardTo('final.html', 'Final');" disabled>Next</a>
+    </div>
+    <div id="choice-modal" class="container">
+        <div id="Choices" class="collapse">
+          <div id="pattern-container">
+              <div class="row">
+                  <div class="col-xs-3"></div>
+                  <img id="AutumnGrass-coll" class="pattern col-xs-2" src="./Images/General/autumngrass_icon.png"></img>
+                  <img id="Bamboo-coll" class="pattern col-xs-2" src="./Images/General/bamboo_icon.png"></img>
+                  <img id="Butterfly-coll" class="pattern col-xs-2" src="./Images/General/butterfly_icon.png"></img>
+              </div>
+              <div class="row">
+                  <div class="col-xs-3"></div>
+                  <img id="Chrysanthemum-coll" class="pattern col-xs-2" src="./Images/General/chrysanthemum_icon.png"></img>
+                  <img id="CraneTurtle-coll" class="pattern col-xs-2" src="./Images/General/craneturtle_icon.png"></img>
+                  <img id="Iris-coll" class="pattern col-xs-2" src="./Images/General/iris_icon.png"></img>
+              </div>
+              <div class="row">
+                  <div class="col-xs-3"></div>
+                  <img id="LongGrass-coll" class="pattern col-xs-2" src="./Images/General/longgrass_icon.png"></img>
+                  <img id="MapleLeaf-coll" class="pattern col-xs-2" src="./Images/General/mapleleaf_icon.png"></img>
+                  <img id="Matsu-coll" class="pattern col-xs-2" src="./Images/General/matsu_icon.png"></img>
+              </div>
+              <div class="row">
+                  <div class="col-xs-3"></div>
+                  <img id="MatsuPlumBamboo-coll" class="pattern col-xs-2" src="./Images/General/matsuplumbamboo_icon.png"></img>
+                  <img id="Peony-coll" class="pattern col-xs-2" src="./Images/General/peony_icon.png"></img>
+                  <img id="Plum-coll" class="pattern col-xs-2" src="./Images/General/plum_icon.png"></img>
+              </div>
+              <div class="row">
+                  <div class="col-xs-3"></div>
+                  <img id="Sakura-coll" class="pattern col-xs-2" src="./Images/General/sakura_icon.png"></img>
+                  <img id="Tsubaki-coll" class="pattern col-xs-2" src="./Images/General/tsubaki_icon.png"></img> 
+              </div>
+          </div>
         </div>
-    <div id="choice-panel" class="col-sm-6">
-      <h1>Pattern</h1>
+      </div>
+      <button type="button" class="choice-collapser" data-toggle="collapse" data-target="#Choices">
+          PATTERN <i id="caret" class="pull-right fa fa-caret-up"></i>
+        </button>
+      </div>
+    <div class="nav-btns container-fluid">
+        <div class="row row-eq-height buttons">
+            <img class="btn-arrow" src="Images/General/arrow_left.png" onClick="SendBackTo('material.html', 'Material');"/>
+            <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onClick="ForwardTo('pattern.html', 'Pattern');" disabled/>
+        </div>
+    </div>
+    <div id="choice-panel" class="col-xs-4 text-center ui-widget-content">
+      <h1>PATTERN<span class="draggableIcon fa fa-arrows-alt pull-right"></span></h1>
       <div id="pattern-container">
           <div class="row">
-              <div class="col-sm-3"></div>
-              <img id="AutumnGrass" class="pattern col-sm-2" src="./Images/General/autumngrass_icon.png"></img>
-              <img id="Bamboo" class="pattern col-sm-2" src="./Images/General/bamboo_icon.png"></img>
-              <img id="Butterfly" class="pattern col-sm-2" src="./Images/General/butterfly_icon.png"></img>
+              <img id="AutumnGrass" class="pattern col-xs-4 img-responsive" src="./Images/General/autumngrass_icon.png"></img>
+              <img id="Bamboo" class="pattern col-xs-4 img-responsive" src="./Images/General/bamboo_icon.png"></img>
+              <img id="Butterfly" class="pattern col-xs-4 img-responsive" src="./Images/General/butterfly_icon.png"></img>
           </div>
           <div class="row">
-              <div class="col-sm-3"></div>
-              <img id="Chrysanthemum" class="pattern col-sm-2" src="./Images/General/chrysanthemum_icon.png"></img>
-              <img id="CraneTurtle" class="pattern col-sm-2" src="./Images/General/craneturtle_icon.png"></img>
-              <img id="Iris" class="pattern col-sm-2" src="./Images/General/iris_icon.png"></img>
+              <img id="Chrysanthemum" class="pattern col-xs-4 img-responsive" src="./Images/General/chrysanthemum_icon.png"></img>
+              <img id="CraneTurtle" class="pattern col-xs-4 img-responsive" src="./Images/General/craneturtle_icon.png"></img>
+              <img id="Iris" class="pattern col-xs-4 img-responsive" src="./Images/General/iris_icon.png"></img>
           </div>
           <div class="row">
-              <div class="col-sm-3"></div>
-              <img id="LongGrass" class="pattern col-sm-2" src="./Images/General/longgrass_icon.png"></img>
-              <img id="MapleLeaf" class="pattern col-sm-2" src="./Images/General/mapleleaf_icon.png"></img>
-              <img id="Matsu" class="pattern col-sm-2" src="./Images/General/matsu_icon.png"></img>
+              <img id="LongGrass" class="pattern col-xs-4 img-responsive" src="./Images/General/longgrass_icon.png"></img>
+              <img id="MapleLeaf" class="pattern col-xs-4 img-responsive" src="./Images/General/mapleleaf_icon.png"></img>
+              <img id="Matsu" class="pattern col-xs-4 img-responsive" src="./Images/General/matsu_icon.png"></img>
           </div>
           <div class="row">
-              <div class="col-sm-3"></div>
-              <img id="MatsuPlumBamboo" class="pattern col-sm-2" src="./Images/General/matsuplumbamboo_icon.png"></img>
-              <img id="Peony" class="pattern col-sm-2" src="./Images/General/peony_icon.png"></img>
-              <img id="Plum" class="pattern col-sm-2" src="./Images/General/plum_icon.png"></img>
+              <img id="MatsuPlumBamboo" class="pattern col-xs-4 img-responsive" src="./Images/General/matsuplumbamboo_icon.png"></img>
+              <img id="Peony" class="pattern col-xs-4 img-responsive" src="./Images/General/peony_icon.png"></img>
+              <img id="Plum" class="pattern col-xs-4 img-responsive" src="./Images/General/plum_icon.png"></img>
           </div>
           <div class="row">
-              <div class="col-sm-3"></div>
-              <img id="Sakura" class="pattern col-sm-2" src="./Images/General/sakura_icon.png"></img>
-              <img id="Tsubaki" class="pattern col-sm-2" src="./Images/General/tsubaki_icon.png"></img> 
+              <img id="Sakura" class="pattern col-xs-4 img-responsive" src="./Images/General/sakura_icon.png"></img>
+              <img id="Tsubaki" class="pattern col-xs-4 img-responsive" src="./Images/General/tsubaki_icon.png"></img> 
           </div>
       </div>
       </div>
     </div>
-  </div>
   
   <div class="modal fade" id="PatternModal" role="dialog">
     <div class="modal-dialog modal-sm">
@@ -115,6 +173,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/common-fn.js"></script>
     <script src="js/common-canvas-fn.js"></script>
   </body>
