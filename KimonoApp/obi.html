@@ -7,9 +7,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
+    <link href="./css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/dressing-room.css" rel="stylesheet">
+    <link href="css/scenario-nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,46 +23,84 @@
     <![endif]-->
   </head>
   <nav id="nav-bar" class="navbar navbar-default navbar-static-top">
-        <div class="container-fluid">
-           <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScenarioNav">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-           </button>
-           </div>
-           <div class="collapse navbar-collapse" id="ScenarioNav">
-           </div>
+    <div class="container-fluid">
+       <div class="navbar-header pull-right">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScenarioNav">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+       </button>
+       </div>
+       <ul class="nav navbar-nav navbar-left float-left list-inline">
+          <li class="col-xs-2"><img class="nav-btn-arrow img-responsive" src="Images/General/arrow_left.png" onClick="SendBackTo('material.html', 'Material');"/></li>
+          <li class="col-xs-2"><img class="next-btn nav-btn-arrow img-responsive" src="Images/General/arrow_right.png" onClick="ForwardTo('pattern.html', 'Pattern');" disabled/></li>
+       </ul>
+       <div class="collapse navbar-collapse" id="ScenarioNav">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a id="SeasonNav" class="unlocked" onClick="SendBackTo('season.html', 'Season');">SEASON</a></li>
+              <li><a id="FormalityNav" class="unlocked" onClick="SendBackTo('formality.html', 'Formality');">FORMALITY</a></li>
+              <li><a id="MaritalNav" class="unlocked" onClick="SendBackTo('marital.html', 'Marital');">MARITAL STATUS</a></li>
+              <li><a id="MaterialNav" class="unlocked" onClick="SendBackTo('material.html', 'Material');">MATERIAL</a></li>
+              <li><a id="ObiNav" class="current">OBI</a></li>
+              <li><a id="PatternNav" class="locked">PATTERN</a></li> 
+          </ul>
+       </div>
+    </div>
+</nav>
+  <body class="text-center">
+    <div class="container DressingRoom col-xs-12">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 main-room">
+                <h1 class="dressing-room-heading">Obi</h1>
+                <canvas id="DressingRoom"></canvas>
+            </div>
         </div>
-   </nav>
-  <body class="text-center DressingRoom">
-    <div id="dressing-room-studio" class="container">
-      <div class="row row-eq-height">
-        <div id="room-panel" class="col-sm-6">
-          <canvas id="DressingRoom" width="657" height="850"></canvas>
-          <a class="btn btn-primary back-btn" onClick="SendBackTo('material.html', 'Material');">Back</a>
-          <a class="btn btn-primary next-btn" onClick="ForwardTo('pattern.html', 'Pattern');" disabled>Next</a>
-      </div>
-
-        <div id="choice-panel" class="col-sm-6">
-            <h1>Obi</h1>
-            <div id="obi-container">
-              <div class="col-sm-12">
-                  <div class="row">
-                <div class="col-sm-6"><img id="Spring" class="obi" src="./Images/General/spring.png"></img></div>
-                <div class="col-sm-6"><img id="Summer" class="obi" src="./Images/General/summer.png"></img></div>
-                  </div>
+    </div>
+    <div id="choice-modal" class="container">
+        <div id="Choices" class="collapse">
+          <div class="col-xs-12">
+              <div class="row">
+                  <div class="col-xs-6"><img id="Spring-coll" class="obi img-responsive" src="./Images/General/spring.png"></img></div>
+                  <div class="col-xs-6"><img id="Summer-coll" class="obi img-responsive" src="./Images/General/summer.png"></img></div>
+                </div>
+          </div>
+          <div class="col-xs-12">
+              <div class="row">
+                <div class="col-xs-6"><img id="Autumn-coll" class="obi img-responsive" src="./Images/General/fall.png"></img></div>
+                <div class="col-xs-6"><img id="Winter-coll" class="obi img-responsive" src="./Images/General/winter.png"></img></div>
               </div>
-              <div class="col-sm-12">
-                  <div class="row">
-                      <div class="col-sm-6"><img id="Autumn" class="obi" src="./Images/General/fall.png"></img></div>
-                      <div class="col-sm-6"><img id="Winter" class="obi" src="./Images/General/winter.png"></img></div>
-                  </div>
+            </div>
+        </div>
+        <button type="button" class="choice-collapser" data-toggle="collapse" data-target="#Choices">
+            OBI <i id="caret" class="pull-right fa fa-caret-up"></i>
+          </button>
+      </div>
+    <div class="nav-btns container-fluid">
+        <div class="row row-eq-height buttons">
+            <img class="btn-arrow" src="Images/General/arrow_left.png" onClick="SendBackTo('material.html', 'Material');"/>
+            <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onClick="ForwardTo('pattern.html', 'Pattern');" disabled/>
+        </div>
+    </div>
+    </div>
+
+    <div id="choice-panel" class="col-xs-5 text-center ui-widget-content">
+        <h1>OBI</h1>
+        <div id="obi-container">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-6"><img id="Spring" class="obi img-responsive" src="./Images/General/spring.png"></img></div>
+              <div class="col-xs-6"><img id="Summer" class="obi img-responsive" src="./Images/General/summer.png"></img></div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+              <div class="row">
+                  <div class="col-xs-6"><img id="Autumn" class="obi img-responsive" src="./Images/General/fall.png"></img></div>
+                  <div class="col-xs-6"><img id="Winter" class="obi img-responsive" src="./Images/General/winter.png"></img></div>
               </div>
           </div>
-        </div>
       </div>
-    </div>
+      </div>
     <div class="modal fade" id="ObiModal" role="dialog">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -75,10 +117,12 @@
         </div>
       </div>
     </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/common-fn.js"></script>
     <script src="js/common-canvas-fn.js"></script>
   </body>

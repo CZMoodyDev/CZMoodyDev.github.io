@@ -13,6 +13,55 @@ body {
     width: 100%;
 }
 
+.choice-collapser {
+    visibility: hidden;
+}
+
+#choice-panel {
+    background-color: #88cca4;
+    font-family: MuseoSansRounded;
+    color: #807da1;
+    cursor: default;
+    letter-spacing: 2pt;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    border-radius: 0.1in;
+    padding: 0px;
+}
+
+#choice-panel h1 {
+    margin-bottom: 15px;
+    color: #f9f8f4;
+}
+
+#obi-container *{
+    background-color: #f9f8f4;
+}
+
+#obi-container .obi {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+nav {
+    margin-bottom: 0px !important;
+}
+
+.dressing-room-heading {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    color: #f9f8f4;
+}
+
+.main-room {
+    background-image: url("../Images/General/dressing_room.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 h1 {
     margin-bottom: 30px;
 }
@@ -24,6 +73,35 @@ h1 {
 #material-container .material {
     color: #f9f8f4;
     background-color: #88cca4;
+}
+
+#choice-modal {
+    width: 100%;
+    padding: 0px;
+}
+
+#choice-modal .obi {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.choice-collapser {
+    width: 100%;
+    height: 40px;
+    border:none;
+    background-color: #88cca4;
+    color: #f9f8f4;
+    font-size: 2.7em;
+}
+
+.obi {
+    margin: auto;
+}
+
+#DressingRoom {
+    width: 100%;
+    max-height: 700px;
+    max-width: 541px;
 }
 
 .btn-arrow {
@@ -41,39 +119,59 @@ h1 {
     opacity: 0.5;
 }
 
-.dressing-room-heading {
-    color: #f9f8f4;
-}
-
 @media all and (max-width: 1200px) { /* screen size until 1200px */
-    body {
+    body, #choice-panel {
         font-size: 1.5em; /* 1.5x default size */
     }
     .nav-btn-arrow {
         visibility: hidden;
     }
+    .choice-collapser {
+        visibility: hidden;
+    }
 }
 @media all and (max-width: 1000px) { /* screen size until 1000px */
-    body {
+    body, #choice-panel h1 {
         font-size: 1.2em; /* 1.2x default size */
     }
     .nav-btn-arrow {
         visibility: hidden;
     }
+    .choice-collapser {
+        visibility: hidden;
+    }
 }
 
 @media all and (max-width: 734px) { /* screen size until 500px */
-    body {
+    body, #choice-panel h1 {
         font-size: 0.8em; /* 0.8x default size */
     }
     .nav-btn-arrow {
         visibility: visible;
    }
+   .choice-collapser {
+        visibility: hidden;
+    }
 }
 
 @media all and (max-width: 500px) { /* screen size until 500px */
-    body {
+    body{
         font-size: 0.8em; /* 0.8x default size */
+    }
+    .material {
+        font-size: 1.1em;
+        padding: 2px 4px;
+    }
+    .main-room {
+        width: 100%;
+    }
+
+    #choice-panel {
+        display: none;
+    }
+
+    .choice-collapser {
+        visibility: visible;
     }
 }
 

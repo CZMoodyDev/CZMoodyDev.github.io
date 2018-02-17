@@ -18,10 +18,10 @@
     background-color:#88cca4;
 }
 
-.unlocked {
+#nav-bar .unlocked {
     background-color: #88cca4;
 }
-.unlocked:hover {
+#nav-bar .unlocked:hover {
     background-color: #61b482;
 }
 

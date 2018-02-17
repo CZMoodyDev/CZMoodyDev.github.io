@@ -13,7 +13,3 @@ function SetBuilderValue(page, value) {
         EnableNextButton();
     }
 }
-
-$(document).ready(function(){
-    //Debug
-});

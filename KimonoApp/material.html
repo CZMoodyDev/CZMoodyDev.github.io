@@ -32,12 +32,12 @@
            <ul class="nav navbar-nav navbar-left float-left list-inline">
               <li class="col-xs-2"><img class="nav-btn-arrow img-responsive" src="Images/General/arrow_left.png" onClick="SendBackTo('marital.html', 'Marital');"/></li>
               <li class="col-xs-2"><img class="next-btn nav-btn-arrow img-responsive" src="Images/General/arrow_right.png" onClick="ForwardTo('obi.html', 'Obi');" disabled/></li>
-          </ul>
+           </ul>
            <div class="collapse navbar-collapse" id="ScenarioNav">
               <ul class="nav navbar-nav navbar-right">
                   <li><a id="SeasonNav" class="unlocked" onClick="SendBackTo('season.html', 'Season');">SEASON</a></li>
                   <li><a id="FormalityNav" class="unlocked" onClick="SendBackTo('formality.html', 'Formality');">FORMALITY</a></li>
-                  <li><a id="MaritalNav" class="unlocked">MARITAL STATUS</a></li>
+                  <li><a id="MaritalNav" class="unlocked" onClick="SendBackTo('marital.html', 'Marital');">MARITAL STATUS</a></li>
                   <li><a id="MaterialNav" class="current">MATERIAL</a></li>
                   <li><a id="ObiNav" class="locked">OBI</a></li>
                   <li><a id="PatternNav" class="locked">PATTERN</a></li> 
@@ -45,20 +45,28 @@
            </div>
         </div>
    </nav>
-  <body class="text-center DressingRoom">
-    <h1 class="dressing-room-heading">Material</h1> <!-- TODO Tooltip Descriptor for Materials -->
-    <div id="material-container">
-        <button id="Awase" class="btn material" data-toggle="popover" data-trigger="hover" title="Awase" data-content="It's totally a fabric.">Awase</button>
-        <button id="Hitoe" class="btn material" data-toggle="popover" data-trigger="hover" title="Hitoe" data-content="Wow it's so good.">Hitoe</button>   
-        <button id="Usumono" class="btn material" data-toggle="popover" data-trigger="hover" title="Usumono" data-content="Totally text!">Usumono</button> 
+  <body class="text-center">
+    <div class="container DressingRoom col-xs-12">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 main-room">
+                <h1 class="dressing-room-heading">Material</h1> <!-- TODO Tooltip Descriptor for Materials -->
+                <div id="material-container">
+                    <button id="Awase" class="btn material" data-toggle="popover" data-trigger="hover" title="Awase" data-content="It's totally a fabric.">AWASE</button>
+                    <button id="Hitoe" class="btn material" data-toggle="popover" data-trigger="hover" title="Hitoe" data-content="Wow it's so good.">HITOE</button>   
+                    <button id="Usumono" class="btn material" data-toggle="popover" data-trigger="hover" title="Usumono" data-content="Totally text!">USUMONO</button> 
+                </div>
+                <canvas id="DressingRoom"></canvas>
+            </div>
+        </div>
     </div>
-    <canvas id="DressingRoom" width="657" height="850"></canvas>
-      <div class="nav-btns container-fluid">
+    
+    <div class="nav-btns container-fluid">
         <div class="row row-eq-height buttons">
             <img class="btn-arrow" src="Images/General/arrow_left.png" onClick="SendBackTo('marital.html', 'Marital');"/>
             <img class="next-btn btn-arrow" src="Images/General/arrow_right.png" onClick="ForwardTo('obi.html', 'Obi');" disabled/>
         </div>
-      </div>
+    </div>
 
     <div class="modal fade" id="MaterialModal" role="dialog">
       <div class="modal-dialog modal-sm">

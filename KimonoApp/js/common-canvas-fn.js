@@ -33,15 +33,17 @@ function WipeCanvas() {
 }
 
 function PaintImage(page) {
+    Resize();
     if (page == "Material") {
-        return PaintMaterial();
+        PaintMaterial();
     } else if (page == "Obi") {
-        return PaintObi();
+        PaintObi();
     } else if (page == "Pattern") {
-        return PaintPattern();
+        PaintPattern();
     } else {
-        return DrawBaseLayers(true);
+        DrawBaseLayers(true);
     }
+    
 }
 
 function PaintMaterial() {
@@ -68,10 +70,24 @@ function DrawBaseLayers(DrawJuban) {
 function DrawImage(Src) {
 
     var Image = new window.Image();
+    Canvas = document.getElementById("DressingRoom");
+    
+    
     Image.onload = function() {
-        Context.drawImage(Image, 0, 0);
+        Context.drawImage(Image, 0, 0, Image.width, Image.height,
+                          0, 0, Canvas.width, Canvas.height);
     }
-    Image.src = Src;
+    
+    /*Image.onload = function() {
+        Context.webkitImageSmoothingEnabled = false;
+        Context.mozImageSmoothingEnabled = false;
+        Context.imageSmoothingEnabled = false; /// future
+        Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height * Image.height / Image.width);
+    }*/
+    var Today = new Date();
+    var NoCacher = "?version=" + Today.getTime();
+
+    Image.src = Src + NoCacher;
 }
 
 function PaintObi() {
@@ -359,9 +375,11 @@ function SetObiClickables() {
 
         if (ThisSeason == Season) {
             $('#' + ThisSeason).on('click', function() { SetCanvasValue('Obi', this.id); });
+            $('#' + ThisSeason + "-coll").on('click', function() { SetCanvasValue('Obi', this.id); });
         } else {
             //Set click alert with material name and reason(s)
             document.getElementById(ThisSeason).onclick = function(){ ObiAlert(this.id); };
+            document.getElementById(ThisSeason + "-coll").onclick = function(){ ObiAlert(this.id); };
         }
     }
 }
@@ -585,6 +603,18 @@ function PatternAlert(Pattern) {
     $("#PatternModal").modal("show");
 }
 
+  function Resize(){    
+    //$("#DressingRoom").outerHeight($(window).height()-$("#DressingRoom").offset().top- Math.abs($("#DressingRoom").outerHeight(true) - $("#DressingRoom").outerHeight()));
+    $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
+    
+    var NewHeight = (Canvas.height * -1) - Canvas.height / 2;
+
+    $('#choice-panel').css("top", NewHeight + "px");
+    $('#choice-panel').css("left", "0px");
+
+    
+  }
+
 $(document).ready(function(){
     $("#ObiModal").modal({ show: false});
     $("#MaterialModal").modal({ show: false});
@@ -595,10 +625,30 @@ $(document).ready(function(){
     //Setup Canvas
     Canvas = document.getElementById("DressingRoom");
     Context = Canvas.getContext("2d");
+    Canvas.width = $(".main-room").width();
+    Canvas.height = $(".main-room").height();
 
     var Page = GetPage();
     SetClickables(Page);
     PaintImage(Page);
+    
+    $(window).on("resize", function(){                      
+        PaintImage(Page);
+    });
 
+    $( function() {
+        $( "#choice-panel" ).draggable();
+    });
 
+    $(".choice-collapser").click(function(){
+        $("#choice-modal").focus();
+
+        if ($("#caret").hasClass("fa-caret-up")) {
+            $("#caret").removeClass("fa-caret-up");
+            $("#caret").addClass("fa-caret-down");
+        } else {
+            $("#caret").removeClass("fa-caret-down");
+            $("#caret").addClass("fa-caret-up");
+        }
+    });
 });
