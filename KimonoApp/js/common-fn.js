@@ -152,6 +152,16 @@ function EnableNextButton() {
 
 //DEBUG BELOW. TO BE DELETED
 $(document).ready(function(){
+
+    if (localStorage.getItem("ScenarioAlerts") == null) {
+
+        var Alerts = {
+            "Season": ""
+        };
+
+        localStorage.setItem("ScenarioAlerts", JSON.stringify(Alerts)); 
+    }
+
     console.log(ScenarioValues);
     console.log(GetPage());
 });

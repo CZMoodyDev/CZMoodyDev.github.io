@@ -13,6 +13,11 @@ body {
     width: 100%;
 }
 
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+padding-right: 17px;
+}
+
 .choice-collapser {
     visibility: hidden;
 }

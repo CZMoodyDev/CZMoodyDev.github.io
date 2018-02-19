@@ -6,9 +6,6 @@ var SleeveLength = GetSleeveLength(KimonoType);
 var Canvas = "";
 var Context = "";
 
-//Prevent firing resize on Android
-//var ScreenWidth = $(window).width(), ScreenHeight = $(window).height();
-
 function SetCanvasValue(page, value) {
     $(".selected").removeClass("selected");
 
@@ -600,7 +597,9 @@ function PatternAlert(Pattern) {
 
   function Resize(){    
     
-    $('#Choices').removeClass("in");
+    if (screen.width > 500) {
+        $('#Choices').removeClass("in");
+    }
     
     var NewHeight = $(".main-room").height() * -1;
 
