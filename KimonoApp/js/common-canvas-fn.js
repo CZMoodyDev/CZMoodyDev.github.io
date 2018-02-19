@@ -36,7 +36,6 @@ function WipeCanvas() {
 }
 
 function PaintImage(page) {
-    Resize();
     if (page == "Material") {
         PaintMaterial();
     } else if (page == "Obi") {
@@ -75,18 +74,12 @@ function DrawImage(Src) {
     var Image = new window.Image();
     Canvas = document.getElementById("DressingRoom");
     
+    var Ratio = 0.77294;
 
     Image.onload = function() {
-        Context.drawImage(Image, 0, 0, Image.width, Image.height,
-                          0, 0, Canvas.width, Canvas.height);
+        Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height);
     }
   
-    /*Image.onload = function() {
-        Context.webkitImageSmoothingEnabled = false;
-        Context.mozImageSmoothingEnabled = false;
-        Context.imageSmoothingEnabled = false; /// future
-        Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height * Image.height / Image.width);
-    }*/
     Image.src = Src;
 }
 
@@ -606,16 +599,13 @@ function PatternAlert(Pattern) {
 }
 
   function Resize(){    
-    //$("#DressingRoom").outerHeight($(window).height()-$("#DressingRoom").offset().top- Math.abs($("#DressingRoom").outerHeight(true) - $("#DressingRoom").outerHeight()));
     
     $('#Choices').removeClass("in");
-    $('#DressingRoom').height($('#DressingRoom').width() / 0.77294);
     
-    var NewHeight = (Canvas.height * -1) - Canvas.height / 2;
+    var NewHeight = $(".main-room").height() * -1;
 
     $('#choice-panel').css("top", NewHeight + "px");
     $('#choice-panel').css("left", "0px");
-
 
   }
 
@@ -630,14 +620,15 @@ $(document).ready(function(){
     Canvas = document.getElementById("DressingRoom");
     Context = Canvas.getContext("2d");
     Canvas.width = $(".main-room").width();
-    Canvas.height = $(".main-room").height();
+    Canvas.height = $(".main-room").width() / 0.77294;
 
     var Page = GetPage();
     SetClickables(Page);
     PaintImage(Page);
+    Resize();
     
     $(window).on("resize", function(){                      
-        PaintImage(Page);
+        Resize();
     });
 
     $( function() {
