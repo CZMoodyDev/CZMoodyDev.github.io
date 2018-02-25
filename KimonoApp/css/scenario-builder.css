@@ -58,6 +58,27 @@ h1 {
     opacity: 0.5;
 }
 
+.start-btn {
+    background-color: #88cca4;
+    border-color:  #88cca4;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+}
+.start-btn:hover {
+    background-color: #88cca4;
+    border-color:  #88cca4;
+    opacity: 0.7;
+}
+
+.intro-body {
+    background: url("../Images/General/Kimono_Play_title_page.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 @media all and (max-width: 1200px) { /* screen size until 1200px */
     body {
         font-size: 1.5em; /* 1.5x default size */

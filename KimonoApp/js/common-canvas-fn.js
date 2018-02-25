@@ -600,6 +600,18 @@ function PatternAlert(Pattern) {
     if (screen.width > 500) {
         $('#Choices').removeClass("in");
     }
+
+    if (window.innerWidth < 1000) {
+        $("#MainRoom").removeClass("col-xs-8");
+        $("#MainRoom").addClass("col-xs-12");
+        $("#LeftGrid").hide();
+    }
+
+    if (window.innerWidth >= 1000) {
+        $("#MainRoom").removeClass("col-xs-12");
+        $("#MainRoom").addClass("col-xs-8");
+        $("#LeftGrid").show();
+    }
     
     var NewHeight = $(".main-room").height() * -1;
 

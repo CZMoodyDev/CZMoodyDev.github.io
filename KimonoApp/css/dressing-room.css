@@ -75,7 +75,7 @@ nav {
 
 .dressing-room-heading {
     margin-bottom: 0px !important;
-    margin-top: 0px !important;
+    margin-top: 15px !important;
     color: #f9f8f4;
 }
 
@@ -84,6 +84,7 @@ nav {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
 
 h1 {
     margin-bottom: 30px;

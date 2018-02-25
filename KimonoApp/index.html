@@ -7,9 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kimono Play</title>
 
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kimono-app.css" rel="stylesheet">
+    <link href="css/scenario-builder.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,11 +19,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="text-center">
-    <h1>Kimono Play</h1>
-    <a class="btn btn-primary" href="season.html">START</a>
-    </div>
+  <body class="intro-body">
+    <a class="start-btn btn btn-primary" href="season.html">START</a>
     <script type="text/javascript">
         localStorage.removeItem("ScenarioValues");
         localStorage.removeItem("ScenarioAlerts");
