@@ -37,7 +37,7 @@ function PaintImage(page) {
         PaintMaterial();
     } else if (page == "Obi") {
         PaintObi();
-    } else if (page == "Pattern") {
+    } else if (page == "Pattern" || page == "Final") {
         PaintPattern();
     } else {
         DrawBaseLayers(true);
@@ -192,9 +192,9 @@ function GetPatternImage() {
             Summer: {
                 Bamboo: "bamboo_summer_tsukesage.png",
                 Butterfly: "butterfly_summer_tsukesage.png",
-                CraneTurtle: "crane-turtle_summer_tsukesage_" + Material.toLowerCase() + ".png",
-                Iris: "iris_summer_tsukesage_" + Material.toLowerCase() + ".png",
-                Matsu: "matsu_summer_tsukesage_" + Material.toLowerCase() + ".png"
+                CraneTurtle: "crane-turtle_summer_tsukesage.png",
+                Iris: "iris_summer_tsukesage.png",
+                Matsu: "matsu_summer_tsukesage.png"
             },
             Spring: {
                 Butterfly: "butterfly_spring_tsukesage_" + Material.toLowerCase() + ".png",
@@ -225,9 +225,9 @@ function GetPatternImage() {
             Summer: {
                 Bamboo: "bamboo_summer_iro-tomesode.png",
                 Butterfly: "butterfly_summer_iro-tomesode.png",
-                CraneTurtle: "crane-turtle_summer_iro-tomesode_" + Material.toLowerCase() + ".png",
-                Iris: "iris_summer_iro-tomesode_" + Material.toLowerCase() + ".png",
-                Matsu: "matsu_summer_iro-tomesode_" + Material.toLowerCase() + ".png"  
+                CraneTurtle: "crane-turtle_summer_iro-tomesode.png",
+                Iris: "iris_summer_iro-tomesode.png",
+                Matsu: "matsu_summer_iro-tomesode.png"  
             },
             Spring: {
                 Butterfly: "butterfly_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
@@ -238,6 +238,7 @@ function GetPatternImage() {
                 Sakura: "sakura_spring_iro-tomesode_" + Material.toLowerCase() + ".png"
             },
             Winter: {
+                Butterfly: "butterfly_winter_iro-tomesode_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_winter_iro-tomesode_" + Material.toLowerCase() + ".png",
                 Matsu: "matsu_winter_iro-tomesode_" + Material.toLowerCase() + ".png",
                 MatsuPlumBamboo: "matsu-plum-bamboo_winter_iro-tomesode_" + Material.toLowerCase() + ".png",
@@ -257,9 +258,9 @@ function GetPatternImage() {
             Summer: {
                 Bamboo: "bamboo_summer_houmongi.png",
                 Butterfly: "butterfly_summer_houmongi.png",
-                CraneTurtle: "crane-turtle_summer_houmongi_" + Material.toLowerCase() + ".png",
-                Iris: "iris_summer_houmongi_" + Material.toLowerCase() + ".png",
-                Matsu: "matsu_summer_houmongi_" + Material.toLowerCase() + ".png"
+                CraneTurtle: "crane-turtle_summer_houmongi.png",
+                Iris: "iris_summer_houmongi.png",
+                Matsu: "matsu_summer_houmongi.png"
             },
             Spring: {
                 Butterfly: "butterfly_spring_houmongi_" + Material.toLowerCase() + ".png",
@@ -290,9 +291,9 @@ function GetPatternImage() {
             Summer: {
                 Bamboo: "bamboo_summer_furisode.png",
                 Butterfly: "butterfly_summer_furisode.png",
-                CraneTurtle: "crane-turtle_summer_furisode_" + Material.toLowerCase() + ".png",
-                Iris: "iris_summer_furisode_" + Material.toLowerCase() + ".png",
-                Matsu: "matsu_summer_furisode_" + Material.toLowerCase() + ".png"  
+                CraneTurtle: "crane-turtle_summer_furisode.png",
+                Iris: "iris_summer_furisode.png",
+                Matsu: "matsu_summer_furisode.png"  
             },
             Spring: {
                 Butterfly: "butterfly_spring_furisode_" + Material.toLowerCase() + ".png",
@@ -657,4 +658,22 @@ $(document).ready(function(){
             $("#caret").addClass("fa-caret-up");
         }
     });
+
+    if (Page == "Final") {
+        $(".main-room").addClass(ScenarioValues.Season.Value.toLowerCase() + "-finale");
+    }
+    
+    var ShowPageAlert = JSON.parse(localStorage.getItem("ScenarioAlerts"));
+
+    if (ShowPageAlert["Material"] == "" && GetPage() == "Material") {
+        $("#AlertModal").modal("show");
+    }
+
+    if (ShowPageAlert["Obi"] == "" && GetPage() == "Obi") {
+        $("#AlertModal").modal("show");
+    }
+
+    if (ShowPageAlert["Pattern"] == "" && GetPage() == "Pattern") {
+        $("#AlertModal").modal("show");
+    }
 });

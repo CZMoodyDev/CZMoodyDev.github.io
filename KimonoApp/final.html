@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kimono Play</title>
+
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
+    <link href="./css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/dressing-room.css" rel="stylesheet">
+    <link href="css/scenario-nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="text-center">
+    <div class="container DressingRoom col-xs-12">
+        <div class="row">
+            <div id="LeftGrid" class="col-xs-2"></div>
+            <div id="MainRoom" class="col-xs-8 main-room">
+                <canvas id="DressingRoom"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-btns container-fluid">
+        <h3>Congratulations and stuff!</h3>
+        <div class="row row-eq-height buttons">
+          <a class="btn btn-primary end-btn" onClick="SendBackTo('index.html', 'Final');">Play Again</a>
+          <a class="btn btn-primary end-btn">Learn More <span class="fa fa-external-link"></span></a>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common-fn.js"></script>
+    <script src="js/common-canvas-fn.js"></script>
+  </body>
+</html>

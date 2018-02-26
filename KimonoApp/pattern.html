@@ -53,7 +53,7 @@
         <div class="row">
             <div id="LeftGrid" class="col-xs-2"></div>
             <div id="MainRoom" class="col-xs-8 main-room">
-                <h1 class="dressing-room-heading">Pattern</h1>
+                <h1 class="dressing-room-heading">PATTERN</h1>
                 <canvas id="DressingRoom"></canvas>
             </div>
         </div>
@@ -62,31 +62,25 @@
         <div id="Choices" class="collapse">
           <div id="pattern-container">
               <div class="row">
-                  <div class="col-xs-3"></div>
+                  <div class="col-xs-1"></div>
                   <img id="AutumnGrass-coll" class="pattern col-xs-2" src="./Images/General/autumngrass_icon.png"></img>
                   <img id="Bamboo-coll" class="pattern col-xs-2" src="./Images/General/bamboo_icon.png"></img>
                   <img id="Butterfly-coll" class="pattern col-xs-2" src="./Images/General/butterfly_icon.png"></img>
-              </div>
-              <div class="row">
-                  <div class="col-xs-3"></div>
                   <img id="Chrysanthemum-coll" class="pattern col-xs-2" src="./Images/General/chrysanthemum_icon.png"></img>
                   <img id="CraneTurtle-coll" class="pattern col-xs-2" src="./Images/General/craneturtle_icon.png"></img>
-                  <img id="Iris-coll" class="pattern col-xs-2" src="./Images/General/iris_icon.png"></img>
               </div>
               <div class="row">
-                  <div class="col-xs-3"></div>
+                  <div class="col-xs-1"></div>
+                  <img id="Iris-coll" class="pattern col-xs-2" src="./Images/General/iris_icon.png"></img>
                   <img id="LongGrass-coll" class="pattern col-xs-2" src="./Images/General/longgrass_icon.png"></img>
                   <img id="MapleLeaf-coll" class="pattern col-xs-2" src="./Images/General/mapleleaf_icon.png"></img>
-                  <img id="Matsu-coll" class="pattern col-xs-2" src="./Images/General/matsu_icon.png"></img>
-              </div>
-              <div class="row">
-                  <div class="col-xs-3"></div>
                   <img id="MatsuPlumBamboo-coll" class="pattern col-xs-2" src="./Images/General/matsuplumbamboo_icon.png"></img>
                   <img id="Peony-coll" class="pattern col-xs-2" src="./Images/General/peony_icon.png"></img>
-                  <img id="Plum-coll" class="pattern col-xs-2" src="./Images/General/plum_icon.png"></img>
               </div>
               <div class="row">
-                  <div class="col-xs-3"></div>
+                  <div class="col-xs-2"></div>
+                  <img id="Plum-coll" class="pattern col-xs-2" src="./Images/General/plum_icon.png"></img>
+                  <img id="Matsu-coll" class="pattern col-xs-2" src="./Images/General/matsu_icon.png"></img>
                   <img id="Sakura-coll" class="pattern col-xs-2" src="./Images/General/sakura_icon.png"></img>
                   <img id="Tsubaki-coll" class="pattern col-xs-2" src="./Images/General/tsubaki_icon.png"></img> 
               </div>
@@ -104,7 +98,7 @@
         </div>
     </div>
     <div id="choice-panel" class="col-xs-3 text-center ui-widget-content">
-      <h1>PATTERN<span class="draggableIcon fa fa-arrows-alt pull-right"></span></h1>
+      <h1>PATTERN<span class="draggableIcon fa fa-drag-handle pull-right"></span></h1>
       <div id="pattern-container">
           <div class="row">
               <img id="AutumnGrass" class="pattern col-xs-4 img-responsive" src="./Images/General/autumngrass_icon.png"></img>
@@ -169,6 +163,28 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="AlertModal" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Kimono Pattern</h4>
+              </div>
+              <div class="modal-body">
+                  <h4>PATTERN</h4>
+                  <p>
+                    Choose a pattern that is suitable for the season. There are six possible patterns for every season and some 
+                    patterns can be worn in multiple seasons. Patterns worn in more than one season may have a more suitable colour 
+                    to match the seasonal Kimono fabric colour.
+                  </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onClick="TurnOffRulesAlert('Pattern');">Let's go!</button>
+              </div>
+            </div>
+          </div>
+        </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -14,18 +14,12 @@ function SetBuilderValue(page, value) {
     }
 }
 
-function TurnOffRulesAlert() {
-    var Alerts = JSON.parse(localStorage.getItem("ScenarioAlerts"));
-    Alerts["Season"] = "off";
-    localStorage.setItem("ScenarioAlerts", JSON.stringify(Alerts));
-
-}
-
 $(document).ready(function(){
 
     var ShowPageAlert = JSON.parse(localStorage.getItem("ScenarioAlerts"));
 
-    if (ShowPageAlert["Season"] == "") {
+    if (ShowPageAlert["Season"] == "" && GetPage() == "Season") {
         $("#AlertModal").modal("show");
     }
+
 });

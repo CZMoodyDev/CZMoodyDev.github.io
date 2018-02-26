@@ -91,7 +91,7 @@ function SendBackTo(pageURL, page) {
 
 //Goes to next page
 function ForwardTo(pageURL, page) {
-    if (!$(".next-btn").attr("disabled")) {
+    if (!$(".next-btn").attr("disabled") && page != "Final") {
 
         var ThisPage = GetPreviousPage(page);
         SetScenarioNavClass(ThisPage, "unlocked");
@@ -100,6 +100,9 @@ function ForwardTo(pageURL, page) {
         SetStorage(ScenarioValues);
         window.location.href = pageURL;
         
+    } else if (!$(".next-btn").attr("disabled")) {
+        SetStorage(ScenarioValues);
+        window.location.href = pageURL;
     }
 }
 
@@ -150,20 +153,28 @@ function EnableNextButton() {
     });
 }
 
+function TurnOffRulesAlert(Page) {
+    var Alerts = JSON.parse(localStorage.getItem("ScenarioAlerts"));
+    Alerts[Page] = "off";
+    localStorage.setItem("ScenarioAlerts", JSON.stringify(Alerts));
+
+}
+
 //DEBUG BELOW. TO BE DELETED
 $(document).ready(function(){
 
     if (localStorage.getItem("ScenarioAlerts") == null) {
 
         var Alerts = {
-            "Season": ""
+            "Season": "",
+            "Material": "",
+            "Obi": "",
+            "Pattern": ""
         };
 
         localStorage.setItem("ScenarioAlerts", JSON.stringify(Alerts)); 
     }
 
-    console.log(ScenarioValues);
-    console.log(GetPage());
 });
 
 

@@ -11,12 +11,26 @@ body {
     width: auto !important;
     width: 610px;*/
     width: 100%;
+    padding-right: 0px !important;
 }
 
-.modal-open .navbar-fixed-top,
-.modal-open .navbar-fixed-bottom {
-padding-right: 17px;
+.modal {
+    overflow-y: auto;
 }
+   
+.modal-open {
+    overflow: auto;
+    padding-right: 0px !important; 
+}
+
+.end-btn {
+    background-color: #88cca4;
+    border-color:  #88cca4;
+}.end-btn:hover {
+    background-color: #88cca4;
+    border-color:  #88cca4;
+}
+
 
 .choice-collapser {
     visibility: hidden;
@@ -85,6 +99,29 @@ nav {
     background-size: 100% 100%;
 }
 
+.summer-finale {
+    background-image: url("../Images/General/summer_background.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.spring-finale {
+    background-image: url("../Images/General/spring_background.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.winter-finale {
+    background-image: url("../Images/General/winter_background.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.autumn-finale {
+    background-image: url("../Images/General/fall_background.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 h1 {
     margin-bottom: 30px;
@@ -110,8 +147,8 @@ h1 {
 }
 
 #choice-modal .pattern {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .choice-collapser {
@@ -203,5 +240,11 @@ h1 {
     .choice-collapser {
         visibility: visible;
     }
+}
+
+/* Drag Handle for movable modal*/
+.fa-drag-handle:before {
+    content: "\f142 \f142";
+    letter-spacing: 2px;
 }
 
