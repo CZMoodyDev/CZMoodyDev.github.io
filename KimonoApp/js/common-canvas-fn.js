@@ -710,10 +710,10 @@ $(document).ready(function(){
         var KimonoTypeText = KimonoType == "Iro-tomesode" ? "n " + KimonoType : " " + KimonoType; 
         $("#CongratsHeader").text(CongratsText + KimonoTypeText + " " +  ScenarioValues.Material.Value + " Kimono" + ExtraDetail);
 
-        var MaterialText = TextDict[ScenarioValues.Material.Value + " Congrats"];
-        MaterialText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? MaterialText.replace("%semi%", "semi-") : MaterialText.replace("%semi%", "") : MaterialText;
+        var TypeText = TextDict[KimonoType];
+        TypeText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? TypeText.replace("%semi%", "semi-") : TypeText.replace("%semi%", "") : TypeText;
 
-        $("#CongratsText").text("This kimono is suitable " + TextDict[KimonoType] + " during " + MaterialText);
+        $("#CongratsText").text("This kimono is suitable " + TypeText + " during " + TextDict[ScenarioValues.Material.Value + " Congrats"]);
 
         $("#KimonoTypeTitle").text(KimonoType);
         $("#KimonoTypeText").text(TextDict[KimonoType + " Details"]);
