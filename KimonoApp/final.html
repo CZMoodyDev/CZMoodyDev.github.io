@@ -33,11 +33,29 @@
     </div>
     
     <div class="nav-btns container-fluid">
-        <h3>Congratulations and stuff!</h3>
+        <h3 id="CongratsHeader">Congratulations! You are wearing a</h3>
+        <p id="CongratsText"></p>
         <div class="row row-eq-height buttons">
           <a class="btn btn-primary end-btn" onClick="SendBackTo('index.html', 'Final');">Play Again</a>
-          <a class="btn btn-primary end-btn">Learn More <span class="fa fa-external-link"></span></a>
+          <a class="btn btn-primary end-btn" onClick="KimonoTypeAlert();">Learn More</span></a>
+          <a class="btn btn-primary end-btn" target="_blank" href="PDFLINK">Kimono Culture Exhibit <span class="fa fa-external-link"></span></a>
+          <a class="btn btn-primary end-btn" href="./acknowledgements.html">Acknowledgements</a>
         </div>
+    </div>
+
+    <div class="modal fade" id="AlertModal" role="dialog">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header correct">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 id="KimonoTypeTitle" class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+              <p id="KimonoTypeText">
+              </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -45,6 +63,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/text-dictionary.js"></script>
     <script src="js/common-fn.js"></script>
     <script src="js/common-canvas-fn.js"></script>
   </body>

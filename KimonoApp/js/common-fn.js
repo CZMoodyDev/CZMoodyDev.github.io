@@ -160,6 +160,12 @@ function TurnOffRulesAlert(Page) {
 
 }
 
+function AddClassIfNotThere(Selector, ClassName) {
+    if (!$(Selector).hasClass(ClassName)) {
+        $(Selector).addClass(ClassName);
+    }
+}
+
 //DEBUG BELOW. TO BE DELETED
 $(document).ready(function(){
 

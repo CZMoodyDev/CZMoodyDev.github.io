@@ -181,6 +181,31 @@ h1 {
     opacity: 0.5;
 }
 
+.modal-header {
+    background-color: #807da1;
+}
+
+.modal-title {
+    color: #f9f8f4;
+}
+
+.correct {
+    background-color: #88cca4 !important;
+}
+
+#DetailModal .modal-header {
+    background-color: #f9f8f4 !important;
+}
+
+#DetailModal .modal-title {
+    color: #807da1 !important; 
+}
+
+.modal-img {
+    width: 75px;
+    height: 75px;
+}
+
 @media all and (max-width: 1200px) { /* screen size until 1200px */
     body, #choice-panel {
         font-size: 1.5em; /* 1.5x default size */

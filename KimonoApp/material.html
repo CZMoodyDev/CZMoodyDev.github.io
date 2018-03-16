@@ -51,11 +51,11 @@
         <div class="row">
             <div id="LeftGrid" class="col-xs-2"></div>
             <div id="MainRoom" class="col-xs-8 main-room">
-                <h1 class="dressing-room-heading">Material</h1> <!-- TODO Tooltip Descriptor for Materials -->
+                <h1 class="dressing-room-heading">Material</h1>
                 <div id="material-container">
-                    <button id="Awase" class="btn material" data-toggle="popover" data-trigger="hover" title="Awase" data-content="It's totally a fabric.">AWASE</button>
-                    <button id="Hitoe" class="btn material" data-toggle="popover" data-trigger="hover" title="Hitoe" data-content="Wow it's so good.">HITOE</button>   
-                    <button id="Usumono" class="btn material" data-toggle="popover" data-trigger="hover" title="Usumono" data-content="Totally text!">USUMONO</button> 
+                    <button id="Awase" class="btn material" data-toggle="popover" data-trigger="hover" title="Awase" data-content="Kimono sewn with full lining. All areas of the kimono have double-layers.">AWASE</button>
+                    <button id="Hitoe" class="btn material" data-toggle="popover" data-trigger="hover" title="Hitoe" data-content="Kimono sewn without a lining, except for the back lower panel.">HITOE</button>   
+                    <button id="Usumono" class="btn material" data-toggle="popover" data-trigger="hover" title="Usumono" data-content="Kimono sewn with a single layer of thin, light and breezy material. ">USUMONO</button> 
                 </div>
                 <canvas id="DressingRoom"></canvas>
             </div>
@@ -74,7 +74,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Oh no!</h4>
+            <h4 class="modal-title"></h4>
           </div>
           <div class="modal-body">
             <p id="material-alert"></p>
@@ -89,7 +89,7 @@
     <div class="modal fade" id="AlertModal" role="dialog">
         <div class="modal-dialog modal-md">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header correct">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Choose Kimono</h4>
             </div>
@@ -117,6 +117,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/text-dictionary.js"></script>
     <script src="js/common-fn.js"></script>
     <script src="js/common-canvas-fn.js"></script>
   </body>

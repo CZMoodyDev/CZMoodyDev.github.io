@@ -300,7 +300,8 @@ function GetPatternImage() {
                 CraneTurtle: "crane-turtle_spring_furisode_" + Material.toLowerCase() + ".png",
                 Iris: "iris_spring_furisode_" + Material.toLowerCase() + ".png",
                 Peony: "peony_spring_furisode_" + Material.toLowerCase() + ".png",
-                Sakura: "sakura_spring_furisode_" + Material.toLowerCase() + ".png"
+                Sakura: "sakura_spring_furisode_" + Material.toLowerCase() + ".png",
+                MapleLeaf: "maple_leaf_spring_furisode_" + Material.toLowerCase() + ".png"  
             },
             Winter: {
                 Butterfly: "butterfly_winter_furisode_" + Material.toLowerCase() + ".png",
@@ -348,14 +349,24 @@ function SetClickables (Page) {
     }
 }
 
-function ObiAlert(Season) {
-    var ThisSeason = ScenarioValues.Season.Value;
-    var AlertText = "That Obi does not go well with a";
-    AlertText += ThisSeason == "Autumn" ? "n" : ''; //For a/an
-    AlertText += " " + ThisSeason + " kimono.";
+function ObiAlert(Season, Correct) {
 
-    $("#season-alert").text(AlertText);
-    $("#ObiModal").modal('show');
+    if (Correct) {
+
+        $("#ObiModal .modal-title").text("Hai (Yes)!");
+        $("#obi-alert").text("You chose an obi that matches your kimono!");
+
+        AddClassIfNotThere("#ObiModal .modal-header", "correct");
+        $("#ObiModal").modal("show");
+
+    } else {
+
+        $("#ObiModal .modal-title").text("Try Again");
+        $("#ObiModal .modal-header").removeClass("correct");
+
+        $("#obi-alert").text("Choose the obi that matches the colour of your kimono.");
+        $("#ObiModal").modal('show');
+    }
 }
 
 function SetObiClickables() {
@@ -365,12 +376,22 @@ function SetObiClickables() {
         var ThisSeason = Seasons[i];
 
         if (ThisSeason == Season) {
-            $('#' + ThisSeason).on('click', function() { SetCanvasValue('Obi', this.id); });
-            $('#' + ThisSeason + "-coll").on('click', function() { SetCanvasValue('Obi', this.id.replace("-coll", "")); });
+            $('#' + ThisSeason).on('click', function() { 
+                SetCanvasValue('Obi', this.id); 
+                ObiAlert(this.id, true);
+            });
+            $('#' + ThisSeason + "-coll").on('click', function() { 
+                SetCanvasValue('Obi', this.id.replace("-coll", ""));
+                ObiAlert(this.id, true); 
+            });
         } else {
             //Set click alert with material name and reason(s)
-            document.getElementById(ThisSeason).onclick = function(){ ObiAlert(this.id); };
-            document.getElementById(ThisSeason + "-coll").onclick = function(){ ObiAlert(this.id.replace("-coll", "")); };
+            document.getElementById(ThisSeason).onclick = function(){ 
+                ObiAlert(this.id, false);
+             };
+            document.getElementById(ThisSeason + "-coll").onclick = function(){ 
+                ObiAlert(this.id.replace("-coll", ""), false); 
+            };
         }
     }
 }
@@ -435,10 +456,15 @@ function SetMaterialClickables() {
         var Reasons = ReasonList[Materials[i]];
 
         if (!Reasons) {
-            $('#' + ThisMaterial).on('click', function() { SetCanvasValue('Material', this.id); });
+            $('#' + ThisMaterial).on('click', function() { 
+                SetCanvasValue('Material', this.id); 
+                MaterialAlert(this.id, true);
+            });
         } else {
             //Set click alert with material name and reason(s)
-            document.getElementById(ThisMaterial).onclick = function(){ MaterialAlert(this.id); };
+            document.getElementById(ThisMaterial).onclick = function(){ 
+                MaterialAlert(this.id, false); 
+            };
         }
     }
 }
@@ -502,15 +528,17 @@ function PatternDetail(Pattern, Allowed, Source) {
 
     if (ScenarioValues.Pattern.Value != Pattern) {
         $('.modal-img').attr('src', Source);
-        $('.modal-title').text(Pattern);
-        $('#pattern-detail').text("DETAIL ABOUT PATTERN WOOOOOO");
+        $('.modal-title').text(TextDict[Pattern + " Title"]);
+        $('#pattern-detail').text(TextDict[Pattern]);
 
         $('#ChooseBtn').off("click");
 
         if (!Allowed) {
             $('#ChooseBtn').on("click", function() { PatternAlert(Pattern); });
         } else {
-            $('#ChooseBtn').on("click", function() { SetCanvasValue('Pattern', Pattern); });
+            $('#ChooseBtn').on("click", function() { 
+                SetCanvasValue('Pattern', Pattern);
+             });
         }
 
         $("#DetailModal").modal("show");
@@ -538,7 +566,7 @@ function GetClickablePatternsByMaterial() {
     var AllowedMaterials = {
         Awase: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "LongGrass", "MapleLeaf", "Matsu", "MatsuPlumBamboo", "Peony", "Plum", "Sakura", "Tsubaki"],
         Hitoe: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "LongGrass", "MapleLeaf", "Matsu", "MatsuPlumBamboo"],
-        Usumono: ["Bamboo"]
+        Usumono: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "LongGrass", "MapleLeaf", "Matsu", "MatsuPlumBamboo"]
     }
 
     return AllowedMaterials[Material];
@@ -567,18 +595,28 @@ function GetPermittedMaterials() {
     return PermittedMaterials;
 }
 
-function MaterialAlert(Material) {
+function MaterialAlert(Material, Correct) {
 
-    var Reasons = JSON.parse(localStorage.getItem("Reasons"));
+    if (Correct) {
+        $("#MaterialModal .modal-title").text("Hai (Yes)!");
+        $("#material-alert").text(TextDict[Material]);
 
-    var ThisMaterialReasons = Reasons[Material];
-    var ThisSeason = ScenarioValues.Season.Value;
+        AddClassIfNotThere("#MaterialModal .modal-header", "correct");
+        $("#MaterialModal").modal("show");
+    } else {
+        var Reasons = JSON.parse(localStorage.getItem("Reasons"));
 
-    var SeasonAlert = ThisMaterialReasons.indexOf("x-season") > -1 ? "This material is not suitable for " + ThisSeason + "." : "";
-    var SleeveAlert = ThisMaterialReasons.indexOf("x-sleeve") > -1 ? "This material is not suitable for " + SleeveLength + " Sleeve kimonos." : "";
+        var ThisMaterialReasons = Reasons[Material];
+        var ThisSeason = ScenarioValues.Season.Value;
 
-    $("#material-alert").text(SeasonAlert + " " + SleeveAlert);
-    $("#MaterialModal").modal("show");
+        var SeasonAlert = ThisMaterialReasons.indexOf("x-season") > -1 ? "This material is not suitable for " + ThisSeason + "." : "";
+        var SleeveAlert = ThisMaterialReasons.indexOf("x-sleeve") > -1 ? "This material is not suitable for " + SleeveLength + " Sleeve kimonos." : "";
+
+        $("#material-alert").text(SeasonAlert + " " + SleeveAlert);
+        $("#MaterialModal .modal-title").text("Try Again");
+        $("#MaterialModal .modal-header").removeClass("correct");
+        $("#MaterialModal").modal("show");
+    }
 
 }
 
@@ -590,13 +628,14 @@ function PatternAlert(Pattern) {
     var ThisMaterial = ScenarioValues.Material.Value;
 
     var SeasonAlert = ThisPatternReasons.indexOf("x-season") > -1 ? "This pattern is not suitable for " + ThisSeason + "." : "";
-    var MaterialAlert = ThisPatternReasons.indexOf("x-material") > -1 ? "This pattern is not suitable for use with the " + ThisMaterial + " material." : "";
 
-    $("#pattern-alert").text(SeasonAlert + " " + MaterialAlert);
+    $("#PatternModal .modal-title").text("Try Again");
+
+    $("#pattern-alert").text(SeasonAlert);
     $("#PatternModal").modal("show");
 }
 
-  function Resize(){    
+function Resize(){    
     
     if (screen.width > 500) {
         $('#Choices').removeClass("in");
@@ -619,7 +658,11 @@ function PatternAlert(Pattern) {
     $('#choice-panel').css("top", NewHeight + "px");
     $('#choice-panel').css("left", "0px");
 
-  }
+}
+
+function KimonoTypeAlert() {
+    $("#AlertModal").modal("show");
+}
 
 $(document).ready(function(){
     $("#ObiModal").modal({ show: false});
@@ -661,6 +704,20 @@ $(document).ready(function(){
 
     if (Page == "Final") {
         $(".main-room").addClass(ScenarioValues.Season.Value.toLowerCase() + "-finale");
+        var CongratsText = $("#CongratsHeader").text();
+        
+        var ExtraDetail =  KimonoType == "Iro-tomesode" ? " with 5 Family Crests" : "";
+        var KimonoTypeText = KimonoType == "Iro-tomesode" ? "n " + KimonoType : " " + KimonoType; 
+        $("#CongratsHeader").text(CongratsText + KimonoTypeText + " " +  ScenarioValues.Material.Value + " Kimono" + ExtraDetail);
+
+        var MaterialText = TextDict[ScenarioValues.Material.Value + " Congrats"];
+        MaterialText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? MaterialText.replace("%semi%", "semi-") : MaterialText.replace("%semi%", "") : MaterialText;
+
+        $("#CongratsText").text("This kimono is suitable " + TextDict[KimonoType] + " during " + MaterialText);
+
+        $("#KimonoTypeTitle").text(KimonoType);
+        $("#KimonoTypeText").text(TextDict[KimonoType + " Details"]);
+    
     }
     
     var ShowPageAlert = JSON.parse(localStorage.getItem("ScenarioAlerts"));
