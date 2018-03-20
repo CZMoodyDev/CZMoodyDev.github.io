@@ -100,25 +100,25 @@ nav {
 }
 
 .summer-finale {
-    background-image: url("../Images/General/summer_background.png") !important;
+    background-image: url("../Images/General/summer_background_wide.png") !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .spring-finale {
-    background-image: url("../Images/General/spring_background.png") !important;
+    background-image: url("../Images/General/spring_background_wide.png") !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .winter-finale {
-    background-image: url("../Images/General/winter_background.png") !important;
+    background-image: url("../Images/General/winter_background_wide.png") !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .autumn-finale {
-    background-image: url("../Images/General/fall_background.png") !important;
+    background-image: url("../Images/General/fall_background_wide.png") !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -244,6 +244,36 @@ h1 {
    .choice-collapser {
         visibility: hidden;
     }
+    
+    .main-room {
+        background-image: url("../Images/General/dressing_room_background_phone.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .summer-finale {
+        background-image: url("../Images/General/summer_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .spring-finale {
+        background-image: url("../Images/General/spring_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .winter-finale {
+        background-image: url("../Images/General/winter_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .autumn-finale {
+        background-image: url("../Images/General/fall_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
 }
 
 @media all and (max-width: 500px) { /* screen size until 500px */
@@ -265,6 +295,37 @@ h1 {
     .choice-collapser {
         visibility: visible;
     }
+    
+    .main-room {
+        background-image: url("../Images/General/dressing_room_background_phone.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .summer-finale {
+        background-image: url("../Images/General/summer_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .spring-finale {
+        background-image: url("../Images/General/spring_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .winter-finale {
+        background-image: url("../Images/General/winter_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .autumn-finale {
+        background-image: url("../Images/General/fall_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }    
+    
 }
 
 /* Drag Handle for movable modal*/
