@@ -186,7 +186,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_fall_tsukesage_" + Material.toLowerCase() + ".png",
                 Chrysanthemum: "chrysanthemum_fall_tsukesage_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_fall_tsukesage_" + Material.toLowerCase() + ".png",
-                LongGrass: "long_grass_fall_tsukesage_" + Material.toLowerCase() + ".png",
+                Susuki: "long_grass_fall_tsukesage_" + Material.toLowerCase() + ".png",
                 MapleLeaf: "maple_leaf_fall_tsukesage_" + Material.toLowerCase() + ".png"
             },
             Summer: {
@@ -200,7 +200,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_spring_tsukesage_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_spring_tsukesage_" + Material.toLowerCase() + ".png",
                 Iris: "iris_spring_tsukesage_" + Material.toLowerCase() + ".png",
-                MapleLeaf: "maple_leaf_spring_tsukesage_" + Material.toLowerCase() + ".png",
+                GreenMapleLeaf: "maple_leaf_spring_tsukesage_" + Material.toLowerCase() + ".png",
                 Peony: "peony_spring_tsukesage_" + Material.toLowerCase() + ".png",
                 Sakura: "sakura_spring_tsukesage_" + Material.toLowerCase() + ".png"
             },
@@ -219,7 +219,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_fall_iro-tomesode_" + Material.toLowerCase() + ".png",
                 Chrysanthemum: "chrysanthemum_fall_iro-tomesode_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_fall_iro-tomesode_" + Material.toLowerCase() + ".png",
-                LongGrass: "long_grass_fall_iro-tomesode_" + Material.toLowerCase() + ".png",
+                Susuki: "long_grass_fall_iro-tomesode_" + Material.toLowerCase() + ".png",
                 MapleLeaf: "maple_leaf_fall_iro-tomesode_" + Material.toLowerCase() + ".png"
             },
             Summer: {
@@ -233,7 +233,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
                 Iris: "iris_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
-                MapleLeaf: "maple_leaf_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
+                GreenMapleLeaf: "maple_leaf_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
                 Peony: "peony_spring_iro-tomesode_" + Material.toLowerCase() + ".png",
                 Sakura: "sakura_spring_iro-tomesode_" + Material.toLowerCase() + ".png"
             },
@@ -252,7 +252,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_fall_houmongi_" + Material.toLowerCase() + ".png",
                 Chrysanthemum: "chrysanthemum_fall_houmongi_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_fall_houmongi_" + Material.toLowerCase() + ".png",
-                LongGrass: "long_grass_fall_houmongi_" + Material.toLowerCase() + ".png",
+                Susuki: "long_grass_fall_houmongi_" + Material.toLowerCase() + ".png",
                 MapleLeaf: "maple_leaf_fall_houmongi_" + Material.toLowerCase() + ".png"                   
             }, 
             Summer: {
@@ -266,7 +266,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_spring_houmongi_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_spring_houmongi_" + Material.toLowerCase() + ".png",
                 Iris: "iris_spring_houmongi_" + Material.toLowerCase() + ".png",
-                MapleLeaf: "maple_leaf_spring_houmongi_" + Material.toLowerCase() + ".png",
+                GreenMapleLeaf: "maple_leaf_spring_houmongi_" + Material.toLowerCase() + ".png",
                 Peony: "peony_spring_iro-houmongi_" + Material.toLowerCase() + ".png",
                 Sakura: "sakura_spring_houmongi_" + Material.toLowerCase() + ".png"
             },
@@ -285,7 +285,7 @@ function GetPatternImage() {
                 Butterfly: "butterfly_fall_furisode_" + Material.toLowerCase() + ".png",
                 Chrysanthemum: "chrysanthemum_fall_furisode_" + Material.toLowerCase() + ".png",
                 CraneTurtle: "crane-turtle_fall_furisode_" + Material.toLowerCase() + ".png",
-                LongGrass: "long_grass_fall_furisode_" + Material.toLowerCase() + ".png",
+                Susuki: "long_grass_fall_furisode_" + Material.toLowerCase() + ".png",
                 MapleLeaf: "maple_leaf_fall_furisode_" + Material.toLowerCase() + ".png"                    
             },
             Summer: {
@@ -301,7 +301,7 @@ function GetPatternImage() {
                 Iris: "iris_spring_furisode_" + Material.toLowerCase() + ".png",
                 Peony: "peony_spring_furisode_" + Material.toLowerCase() + ".png",
                 Sakura: "sakura_spring_furisode_" + Material.toLowerCase() + ".png",
-                MapleLeaf: "maple_leaf_spring_furisode_" + Material.toLowerCase() + ".png"  
+                GreenMapleLeaf: "maple_leaf_spring_furisode_" + Material.toLowerCase() + ".png"  
             },
             Winter: {
                 Butterfly: "butterfly_winter_furisode_" + Material.toLowerCase() + ".png",
@@ -353,15 +353,19 @@ function ObiAlert(Season, Correct) {
 
     if (Correct) {
 
-        $("#ObiModal .modal-title").text("Hai (Yes)!");
-        $("#obi-alert").text("You chose an obi that matches your kimono!");
+        if (ScenarioValues.Obi.Value != "") {
 
-        AddClassIfNotThere("#ObiModal .modal-header", "correct");
-        $("#ObiModal").modal("show");
+            $("#ObiModal .modal-title").text("HAI (YES)!");
+            $("#obi-alert").text("You chose an obi that matches your kimono!");
+
+            AddClassIfNotThere("#ObiModal .modal-header", "correct");
+            $("#ObiModal").modal("show");
+
+        }
 
     } else {
 
-        $("#ObiModal .modal-title").text("Try Again");
+        $("#ObiModal .modal-title").text("TRY AGAIN");
         $("#ObiModal .modal-header").removeClass("correct");
 
         $("#obi-alert").text("Choose the obi that matches the colour of your kimono.");
@@ -477,8 +481,9 @@ function SetPatternClickables() {
         Chrysanthemum: ["x-material", "x-season"],
         CraneTurtle: ["x-material", "x-season"],
         Iris: ["x-material", "x-season"],
-        LongGrass: ["x-material", "x-season"],
+        Susuki: ["x-material", "x-season"],
         MapleLeaf: ["x-material", "x-season"],
+        GreenMapleLeaf: ["x-material", "x-season"],
         Matsu: ["x-material", "x-season"],
         MatsuPlumBamboo: ["x-material", "x-season"],
         Peony: ["x-material", "x-season"],
@@ -552,8 +557,8 @@ function GetClickablePatternsThisSeason() {
 
     var AllowablePatterns = {
         Summer: ["Bamboo", "Butterfly", "CraneTurtle", "Iris", "Matsu"],
-        Autumn: ["AutumnGrass", "Butterfly", "Chrysanthemum", "CraneTurtle", "LongGrass", "MapleLeaf"],
-        Spring: ["Butterfly", "CraneTurtle", "Iris", "MapleLeaf", "Peony", "Sakura"],
+        Autumn: ["AutumnGrass", "Butterfly", "Chrysanthemum", "CraneTurtle", "Susuki", "MapleLeaf"],
+        Spring: ["Butterfly", "CraneTurtle", "Iris", "GreenMapleLeaf", "Peony", "Sakura"],
         Winter: ["Butterfly", "CraneTurtle", "Matsu", "MatsuPlumBamboo", "Plum", "Tsubaki"]
     }
 
@@ -564,9 +569,9 @@ function GetClickablePatternsByMaterial() {
     var Material = ScenarioValues.Material.Value;
 
     var AllowedMaterials = {
-        Awase: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "LongGrass", "MapleLeaf", "Matsu", "MatsuPlumBamboo", "Peony", "Plum", "Sakura", "Tsubaki"],
-        Hitoe: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "LongGrass", "MapleLeaf", "Matsu", "MatsuPlumBamboo"],
-        Usumono: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "LongGrass", "MapleLeaf", "Matsu", "MatsuPlumBamboo"]
+        Awase: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "Susuki", "GreenMapleLeaf", "MapleLeaf", "Matsu", "MatsuPlumBamboo", "Peony", "Plum", "Sakura", "Tsubaki"],
+        Hitoe: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "Susuki", "GreenMapleLeaf", "MapleLeaf", "Matsu", "MatsuPlumBamboo"],
+        Usumono: ["AutumnGrass", "Bamboo", "Butterfly", "Chrysanthemum", "CraneTurtle", "Iris", "Susuki", "GreenMapleLeaf", "MapleLeaf", "Matsu", "MatsuPlumBamboo"]
     }
 
     return AllowedMaterials[Material];
@@ -598,11 +603,13 @@ function GetPermittedMaterials() {
 function MaterialAlert(Material, Correct) {
 
     if (Correct) {
-        $("#MaterialModal .modal-title").text("Hai (Yes)!");
-        $("#material-alert").text(TextDict[Material]);
+        if (ScenarioValues.Material.Value != "") {
+            $("#MaterialModal .modal-title").text("HAI (YES)!");
+            $("#material-alert").text(TextDict[Material]);
 
-        AddClassIfNotThere("#MaterialModal .modal-header", "correct");
-        $("#MaterialModal").modal("show");
+            AddClassIfNotThere("#MaterialModal .modal-header", "correct");
+            $("#MaterialModal").modal("show");
+        }
     } else {
         var Reasons = JSON.parse(localStorage.getItem("Reasons"));
 
@@ -613,7 +620,7 @@ function MaterialAlert(Material, Correct) {
         var SleeveAlert = ThisMaterialReasons.indexOf("x-sleeve") > -1 ? "This material is not suitable for " + SleeveLength + " Sleeve kimonos." : "";
 
         $("#material-alert").text(SeasonAlert + " " + SleeveAlert);
-        $("#MaterialModal .modal-title").text("Try Again");
+        $("#MaterialModal .modal-title").text("TRY AGAIN");
         $("#MaterialModal .modal-header").removeClass("correct");
         $("#MaterialModal").modal("show");
     }
@@ -629,7 +636,7 @@ function PatternAlert(Pattern) {
 
     var SeasonAlert = ThisPatternReasons.indexOf("x-season") > -1 ? "This pattern is not suitable for " + ThisSeason + "." : "";
 
-    $("#PatternModal .modal-title").text("Try Again");
+    $("#PatternModal .modal-title").text("TRY AGAIN");
 
     $("#pattern-alert").text(SeasonAlert);
     $("#PatternModal").modal("show");
@@ -660,32 +667,30 @@ function Resize(){
 
 }
 
-function KimonoTypeAlert() {
-    $("#AlertModal").modal("show");
+function ShowAlert(id) {
+    $("#" + id).modal("show");
 }
 
-$(document).ready(function(){
+function HideSelectionModals() {
     $("#ObiModal").modal({ show: false});
     $("#MaterialModal").modal({ show: false});
     $("#PatternModal").modal({ show: false});
-    $('[data-toggle="popover"]').popover(); 
     $("#DetailModal").modal({ show: false});
+}
 
-    //Setup Canvas
+function SetupCanvas(Page) {
+
     Canvas = document.getElementById("DressingRoom");
     Context = Canvas.getContext("2d");
     Canvas.width = $(".main-room").width();
     Canvas.height = $(".main-room").width() / 0.77294;
 
-    var Page = GetPage();
     SetClickables(Page);
     PaintImage(Page);
     Resize();
-    
-    $(window).on("resize", function(){                      
-        Resize();
-    });
+}
 
+function SetupChoicePanels() {
     $( function() {
         $( "#choice-panel" ).draggable();
     });
@@ -701,25 +706,26 @@ $(document).ready(function(){
             $("#caret").addClass("fa-caret-up");
         }
     });
+}
 
-    if (Page == "Final") {
-        $(".main-room").addClass(ScenarioValues.Season.Value.toLowerCase() + "-finale");
-        var CongratsText = $("#CongratsHeader").text();
-        
-        var ExtraDetail =  KimonoType == "Iro-tomesode" ? " with 5 Family Crests" : "";
-        var KimonoTypeText = KimonoType == "Iro-tomesode" ? "n " + KimonoType : " " + KimonoType; 
-        $("#CongratsHeader").text(CongratsText + KimonoTypeText + " " +  ScenarioValues.Material.Value + " Kimono" + ExtraDetail);
-
-        var TypeText = TextDict[KimonoType];
-        TypeText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? TypeText.replace("%semi%", "semi-") : TypeText.replace("%semi%", "") : TypeText;
-
-        $("#CongratsText").text("This kimono is suitable " + TypeText + " during " + TextDict[ScenarioValues.Material.Value + " Congrats"]);
-
-        $("#KimonoTypeTitle").text(KimonoType);
-        $("#KimonoTypeText").text(TextDict[KimonoType + " Details"]);
+function SetupFinalPageAlert() {
+    $(".main-room").addClass(ScenarioValues.Season.Value.toLowerCase() + "-finale");
+    var CongratsText = $("#CongratsHeader").text();
     
-    }
-    
+    var ExtraDetail =  KimonoType == "Iro-tomesode" ? " with 5 Family Crests" : "";
+    var KimonoTypeText = KimonoType == "Iro-tomesode" ? "n " + KimonoType : " " + KimonoType; 
+    $("#CongratsHeader").text(CongratsText + KimonoTypeText + " " +  ScenarioValues.Material.Value + " Kimono" + ExtraDetail);
+
+    var TypeText = TextDict[KimonoType];
+    TypeText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? TypeText.replace("%semi%", "semi-") : TypeText.replace("%semi%", "") : TypeText;
+
+    $("#CongratsText").text("This kimono is suitable " + TypeText + " during " + TextDict[ScenarioValues.Material.Value + " Congrats"]);
+
+    $("#KimonoTypeTitle").text(KimonoType.toUpperCase());
+    $("#KimonoTypeText").text(TextDict[KimonoType + " Details"]);
+}
+
+function ShowLandingAlert() {
     var ShowPageAlert = JSON.parse(localStorage.getItem("ScenarioAlerts"));
 
     if (ShowPageAlert["Material"] == "" && GetPage() == "Material") {
@@ -733,4 +739,27 @@ $(document).ready(function(){
     if (ShowPageAlert["Pattern"] == "" && GetPage() == "Pattern") {
         $("#AlertModal").modal("show");
     }
+}
+
+$(document).ready(function(){
+    
+    var Page = GetPage();
+
+    $('[data-toggle="popover"]').popover(); 
+    
+    SetupCanvas(Page);
+
+    $(window).on("resize", function(){                      
+        Resize();
+    });
+
+    SetupChoicePanels();
+
+    if (Page == "Final") {
+        SetupFinalPageAlert();
+    }
+
+    ShowLandingAlert();
+    Resize();
+    
 });

@@ -17,6 +17,21 @@ h1 {
     margin-bottom: 30px;
 }
 
+.modal-body p {
+    font-family: MuseoSansCyrl;
+    letter-spacing: 0pt;
+}
+
+.end-btn {
+    background-color: #88cca4;
+    border-color:  #88cca4;
+    color:  #f9f8f4;
+}.end-btn:hover {
+    color:  #f9f8f4;
+}.end-btn:focus {
+    color:  #f9f8f4;
+}
+
 .buttons {
     margin-top: 20px;
 }
@@ -31,7 +46,6 @@ h1 {
     margin-right: 5px;
     min-width: 25%;
 }
-
 
 .scene-icon {
     width: 100%;
@@ -99,10 +113,31 @@ h1 {
 @media all and (max-width: 1000px) { /* screen size until 1000px */
     body {
         font-size: 1.2em; /* 1.2x default size */
-        }
     }
+}
 @media all and (max-width: 500px) { /* screen size until 500px */
     body {
         font-size: 0.8em; /* 0.8x default size */
-        }
     }
+
+    .start-btn {
+        background-color: #88cca4;
+        border-color:  #88cca4;
+        position: absolute;
+        top: 32%;
+        left: 42%;
+    }
+    .start-btn:hover {
+        background-color: #88cca4;
+        border-color:  #88cca4;
+        opacity: 0.7;
+    }
+    
+    .intro-body {
+        background: url("../Images/General/Kimono_Play_title_page_mobile.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}

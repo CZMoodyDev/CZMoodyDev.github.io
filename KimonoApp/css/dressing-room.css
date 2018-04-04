@@ -17,20 +17,35 @@ body {
 .modal {
     overflow-y: auto;
 }
-   
-.modal-open {
-    overflow: auto;
-    padding-right: 0px !important; 
+
+.modal-body p {
+    font-family: MuseoSansCyrl;
+    letter-spacing: 0pt;
+}
+
+.cancel-btn {
+    color:  #807da1;
 }
 
 .end-btn {
     background-color: #88cca4;
     border-color:  #88cca4;
+    color:  #f9f8f4;
 }.end-btn:hover {
-    background-color: #88cca4;
-    border-color:  #88cca4;
+    color:  #f9f8f4;
+}.end-btn:focus {
+    color:  #f9f8f4;
 }
 
+.buttons a {
+    margin-bottom: 5px;
+}
+
+   
+.modal-open {
+    overflow: auto;
+    padding-right: 0px !important; 
+}
 
 .choice-collapser {
     visibility: hidden;
@@ -208,7 +223,7 @@ h1 {
 
 @media all and (max-width: 1200px) { /* screen size until 1200px */
     body, #choice-panel {
-        font-size: 1.5em; /* 1.5x default size */
+        font-size: 1.2em; /* 1.4x default size */
     }
     .nav-btn-arrow {
         visibility: hidden;
@@ -219,7 +234,7 @@ h1 {
 }
 @media all and (max-width: 1000px) { /* screen size until 1000px */
     body, #choice-panel h1 {
-        font-size: 1.2em; /* 1.2x default size */
+        font-size: 1.5em; /* 1.2x default size */
     }
     .nav-btn-arrow {
         visibility: hidden;
@@ -229,13 +244,13 @@ h1 {
     }
 }
 
-@media all and (max-width: 734px) { /* screen size until 500px */
+@media all and (max-width: 734px) { /* Pseudo removed */
     body{
-        font-size: 0.8em; /* 0.8x default size */
+        font-size: 1.5em; /* 0.8x default size */
     }
 
     #choice-panel h1 {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .nav-btn-arrow {
@@ -276,7 +291,7 @@ h1 {
     }
 }
 
-@media all and (max-width: 500px) { /* screen size until 500px */
+@media all and (max-width: 800px) { /* screen size until 500px */
     body{
         font-size: 0.8em; /* 0.8x default size */
     }

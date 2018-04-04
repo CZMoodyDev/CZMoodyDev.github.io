@@ -36,10 +36,10 @@
         <h3 id="CongratsHeader">Congratulations! You are wearing a</h3>
         <p id="CongratsText"></p>
         <div class="row row-eq-height buttons">
-          <a class="btn btn-primary end-btn" onClick="SendBackTo('index.html', 'Final');">Play Again</a>
-          <a class="btn btn-primary end-btn" onClick="KimonoTypeAlert();">Learn More</span></a>
-          <a class="btn btn-primary end-btn" target="_blank" href="PDFLINK">Kimono Culture Exhibit <span class="fa fa-external-link"></span></a>
-          <a class="btn btn-primary end-btn" href="./acknowledgements.html">Acknowledgements</a>
+          <a class="btn end-btn" onClick="SendBackTo('index.html', 'Final');">Play Again</a>
+          <a class="btn end-btn" onClick="ShowAlert('AlertModal');">Learn More</span></a>
+          <a class="btn end-btn" target="_blank" href="files/KimonoCultureMuseumHandout.pdf">Kimono Culture Exhibit <span class="fa fa-external-link"></span></a>
+          <a class="btn end-btn" onClick="ShowAlert('AcknowledgementModal');">Acknowledgements</a>
         </div>
     </div>
 
@@ -53,6 +53,29 @@
           <div class="modal-body">
               <p id="KimonoTypeText">
               </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="AcknowledgementModal" role="dialog">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header correct">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Nikkei National Museum & Cultural Centre would like to thank: </h4>
+          </div>
+          <div class="modal-body text-left">
+            <ul class="list-unstyled credits">
+              <li>BC Multiculturalism</li>
+              <li><strong>Project & Content Management:</strong> Karah Goshinmon</li>
+              <li><strong>Developer:</strong> <a target="_blank" href="https://czmoodydev.github.io">Curtis Zim Moody</a></li>
+              <li><strong>Graphics:</strong> <a target="_blank" href="https://www.daniellejette.com/">Danielle Jette</a></li>
+              <li><strong>Content Development Assistant:</strong> Rachelle Cheung</li>
+              <li>Content from the Kimono Culture Exhibit produced by Guest Curator Hitomi </li>
+              <li>Special thanks to Yoko Matsuno & Kaori Lytton</li>
+              <li>Nikkei National Museum & Cultural Centre: Sherri Kajiwara, Carolyn Nakagawa, Noriko Muraoka</li>
+            </ul>
           </div>
         </div>
       </div>
