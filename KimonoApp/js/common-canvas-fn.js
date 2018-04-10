@@ -6,7 +6,12 @@ var SleeveLength = GetSleeveLength(KimonoType);
 var Canvas = "";
 var Context = "";
 
+var ImageQueue = [];
+var ImageCount = 0;
+
 function SetCanvasValue(page, value) {
+    ImageQueue = [];
+    ImageCount = 0;
     $(".selected").removeClass("selected");
 
     if (IsAlreadySelected(page, value)) {
@@ -32,7 +37,14 @@ function WipeCanvas() {
     Context.clearRect(0, 0, Canvas.width, Canvas.height);
 }
 
+function DrawLoadedImages() {
+    ImageQueue.forEach(function(Image){
+        Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height);
+    });
+}
+
 function PaintImage(page) {
+
     if (page == "Material") {
         PaintMaterial();
     } else if (page == "Obi") {
@@ -49,21 +61,22 @@ function PaintMaterial() {
     var Material = ScenarioValues.Material.Value;
     var Image = ScenarioValues.Material.Image;
     var DrawJuban = Material == "";
-
-    DrawBaseLayers(DrawJuban);
     
     if (Image != "") {
-        DrawImage(Image);
+        ImageQueue.push(DrawImage(Image));
     }
 
+    DrawBaseLayers(DrawJuban);
 }
 
 function DrawBaseLayers(DrawJuban) {
-    DrawImage("./Images/Mannequin/mannequin.png");
 
     if (DrawJuban) {
-        DrawImage("./Images/Mannequin/juban.png");
+        ImageQueue.push(DrawImage("./Images/Mannequin/juban.png"));
     }
+
+    ImageQueue.push(DrawImage("./Images/Mannequin/mannequin.png"));
+
 }
 
 function DrawImage(Src) {
@@ -74,22 +87,28 @@ function DrawImage(Src) {
     var Ratio = 0.77294;
 
     Image.onload = function() {
-        Context.drawImage(Image, 0, 0, Canvas.width, Canvas.height);
+        ImageCount++;
+        if (ImageCount == ImageQueue.length) {
+            DrawLoadedImages();
+        }
     }
   
     Image.src = Src;
+
+    return Image;
 }
 
 function PaintObi() {
     var MaterialImage = ScenarioValues.Material.Image;
     var ObiImage = ScenarioValues.Obi.Image;
 
-    DrawImage(MaterialImage);
+    ImageQueue.push(DrawImage(MaterialImage));
     if (ObiImage != "") {
-        DrawImage(ObiImage);
+        ImageQueue.push(DrawImage(ObiImage));
     }
 
     DrawBaseLayers();
+
 }
 
 function PaintPattern() {
@@ -97,13 +116,13 @@ function PaintPattern() {
     var ObiImage = ScenarioValues.Obi.Image;
     var PatternImage = ScenarioValues.Pattern.Image;
 
-    DrawImage(MaterialImage);
+    ImageQueue.push(DrawImage(MaterialImage));
     if (ObiImage != "") {
-        DrawImage(ObiImage);
+        ImageQueue.push(DrawImage(ObiImage));
     }
 
     if (PatternImage != "") {
-        DrawImage(PatternImage);
+        ImageQueue.push(DrawImage(PatternImage));
     }
 
     DrawBaseLayers();
@@ -534,7 +553,7 @@ function PatternDetail(Pattern, Allowed, Source) {
     if (ScenarioValues.Pattern.Value != Pattern) {
         $('.modal-img').attr('src', Source);
         $('.modal-title').text(TextDict[Pattern + " Title"]);
-        $('#pattern-detail').text(TextDict[Pattern]);
+        $('#pattern-detail').html(TextDict[Pattern]);
 
         $('#ChooseBtn').off("click");
 
@@ -605,7 +624,7 @@ function MaterialAlert(Material, Correct) {
     if (Correct) {
         if (ScenarioValues.Material.Value != "") {
             $("#MaterialModal .modal-title").text("HAI (YES)!");
-            $("#material-alert").text(TextDict[Material]);
+            $("#material-alert").html(TextDict[Material]);
 
             AddClassIfNotThere("#MaterialModal .modal-header", "correct");
             $("#MaterialModal").modal("show");
@@ -617,9 +636,8 @@ function MaterialAlert(Material, Correct) {
         var ThisSeason = ScenarioValues.Season.Value;
 
         var SeasonAlert = ThisMaterialReasons.indexOf("x-season") > -1 ? "This material is not suitable for " + ThisSeason + "." : "";
-        var SleeveAlert = ThisMaterialReasons.indexOf("x-sleeve") > -1 ? "This material is not suitable for " + SleeveLength + " Sleeve kimonos." : "";
 
-        $("#material-alert").text(SeasonAlert + " " + SleeveAlert);
+        $("#material-alert").html(SeasonAlert);
         $("#MaterialModal .modal-title").text("TRY AGAIN");
         $("#MaterialModal .modal-header").removeClass("correct");
         $("#MaterialModal").modal("show");
@@ -638,7 +656,7 @@ function PatternAlert(Pattern) {
 
     $("#PatternModal .modal-title").text("TRY AGAIN");
 
-    $("#pattern-alert").text(SeasonAlert);
+    $("#pattern-alert").html(SeasonAlert);
     $("#PatternModal").modal("show");
 }
 
@@ -717,12 +735,15 @@ function SetupFinalPageAlert() {
     $("#CongratsHeader").text(CongratsText + KimonoTypeText + " " +  ScenarioValues.Material.Value + " Kimono" + ExtraDetail);
 
     var TypeText = TextDict[KimonoType];
-    TypeText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? TypeText.replace("%semi%", "semi-") : TypeText.replace("%semi%", "") : TypeText;
+    TypeText = KimonoType == "Tsukesage" ? ScenarioValues.Material.Value == "Awase" ? TypeText.replace("%semi%", "semi&#8209;") : TypeText.replace("%semi%", "") : TypeText;
 
-    $("#CongratsText").text("This kimono is suitable " + TypeText + " during " + TextDict[ScenarioValues.Material.Value + " Congrats"]);
+    var KimonoText = KimonoType == "Tsukesage" ? "tsuke&#8209;sage " : KimonoType + " ";
+    KimonoText += ScenarioValues.Material.Value;
+
+    $("#CongratsText").html("The " + KimonoText.toLowerCase() + " kimono is suitable " + TypeText + " during " + TextDict[ScenarioValues.Material.Value + " Congrats"]);
 
     $("#KimonoTypeTitle").text(KimonoType.toUpperCase());
-    $("#KimonoTypeText").text(TextDict[KimonoType + " Details"]);
+    $("#KimonoTypeText").html(TextDict[KimonoType + " Details"]);
 }
 
 function ShowLandingAlert() {
