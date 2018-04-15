@@ -1,4 +1,5 @@
 MaintainStorageIntegrity();
+Resize();
 
 function SetBuilderValue(page, value) {
 
@@ -12,6 +13,10 @@ function SetBuilderValue(page, value) {
         SetScenarioValue(page, value);
         EnableNextButton();
     }
+}
+
+function ShowAllCards() {
+    $(".card").show();
 }
 
 function Resize(){    
@@ -45,6 +50,8 @@ function Resize(){
         $('.card-holder').removeClass("col-xs-" + CardHolderForLargeCards);
         $('.card-holder').addClass("col-xs-" + CardHolderForSmallCards);
     }
+
+    ShowAllCards();
 }
 
 $(document).ready(function(){
@@ -58,7 +65,4 @@ $(document).ready(function(){
     $(window).on("resize", function(){                      
         Resize();
     });
-
-    Resize();
-
 });
