@@ -374,7 +374,7 @@ function ObiAlert(Season, Correct) {
 
         if (ScenarioValues.Obi.Value != "") {
 
-            $("#ObiModal .modal-title").text("HAI (YES)!");
+            $("#ObiModal .modal-title").text("ATARI (YES)!");
             $("#obi-alert").text("You chose an obi that matches your kimono!");
 
             AddClassIfNotThere("#ObiModal .modal-header", "correct");
@@ -384,7 +384,7 @@ function ObiAlert(Season, Correct) {
 
     } else {
 
-        $("#ObiModal .modal-title").text("TRY AGAIN");
+        $("#ObiModal .modal-title").text("(MŌ ICHIDO) TRY AGAIN");
         $("#ObiModal .modal-header").removeClass("correct");
 
         $("#obi-alert").text("Choose the obi that matches the colour of your kimono.");
@@ -623,7 +623,7 @@ function MaterialAlert(Material, Correct) {
 
     if (Correct) {
         if (ScenarioValues.Material.Value != "") {
-            $("#MaterialModal .modal-title").text("HAI (YES)!");
+            $("#MaterialModal .modal-title").text("ATARI (YES)!");
             $("#material-alert").html(TextDict[Material]);
 
             AddClassIfNotThere("#MaterialModal .modal-header", "correct");
@@ -638,7 +638,7 @@ function MaterialAlert(Material, Correct) {
         var SeasonAlert = ThisMaterialReasons.indexOf("x-season") > -1 ? "This material is not suitable for " + ThisSeason + "." : "";
 
         $("#material-alert").html(SeasonAlert);
-        $("#MaterialModal .modal-title").text("TRY AGAIN");
+        $("#MaterialModal .modal-title").text("(MŌ ICHIDO) TRY AGAIN");
         $("#MaterialModal .modal-header").removeClass("correct");
         $("#MaterialModal").modal("show");
     }
@@ -654,7 +654,7 @@ function PatternAlert(Pattern) {
 
     var SeasonAlert = ThisPatternReasons.indexOf("x-season") > -1 ? "This pattern is not suitable for " + ThisSeason + "." : "";
 
-    $("#PatternModal .modal-title").text("TRY AGAIN");
+    $("#PatternModal .modal-title").text("(MŌ ICHIDO) TRY AGAIN");
 
     $("#pattern-alert").html(SeasonAlert);
     $("#PatternModal").modal("show");
