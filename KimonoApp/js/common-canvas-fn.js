@@ -10,6 +10,8 @@ var Context = "";
 var ImageQueue = [];
 var ImageCount = 0;
 
+var TriggeredByCollapse = false;
+
 function SetCanvasValue(page, value) {
     ImageQueue = [];
     ImageCount = 0;
@@ -661,10 +663,15 @@ function PatternAlert(Pattern) {
     $("#PatternModal").modal("show");
 }
 
-function Resize(){    
-    
-    if (screen.width > 500) {
-        $('#Choices').removeClass("in");
+function Resize(){
+
+    if (window.innerWidth >= 800) {
+        $("#Choices").hide();
+    } else {
+        if (!TriggeredByCollapse) {
+            $("#Choices").show();
+        }
+
     }
 
     if (window.innerWidth < 1000) {
@@ -683,6 +690,8 @@ function Resize(){
 
     $('#choice-panel').css("top", NewHeight + "px");
     $('#choice-panel').css("left", "0px");
+
+    TriggeredByCollapse = false;
 
 }
 
@@ -716,6 +725,7 @@ function SetupChoicePanels() {
 
     $(".choice-collapser").click(function(){
         $("#choice-modal").focus();
+        TriggeredByCollapse = true;
 
         if ($("#caret").hasClass("fa-caret-up")) {
             $("#caret").removeClass("fa-caret-up");

@@ -18,7 +18,7 @@ body {
     overflow-y: auto;
 }
 
-.modal-body p, .credits {
+.modal-body p, .credits, .popover, .popover-content {
     font-family: MuseoSansCyrl;
     color: #404041;
     letter-spacing: 0pt;
@@ -151,6 +151,13 @@ h1 {
 #material-container .material {
     color: #f9f8f4;
     background-color: #88cca4;
+}
+
+#Awase, #Hitoe, #Usumono {
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+
 }
 
 #choice-modal {
@@ -343,6 +350,53 @@ h1 {
         background-size: 100% 100%;
     }    
     
+}
+
+@media all and (max-width: 440px) { /* screen size until 440px */
+    body{
+        font-size: 0.8em; /* 0.8x default size */
+    }
+    .material {
+        font-size: 1.1em;
+        padding: 2px 4px;
+    }
+    .main-room {
+        background-image: url("../Images/General/dressing_room_background_phone_small.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .summer-finale {
+        background-image: url("../Images/General/summer_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .spring-finale {
+        background-image: url("../Images/General/spring_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .winter-finale {
+        background-image: url("../Images/General/winter_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .autumn-finale {
+        background-image: url("../Images/General/fall_background.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    } 
+
+    #choice-panel {
+        display: none;
+    }
+
+    .choice-collapser {
+        visibility: visible;
+    }
 }
 
 /* Drag Handle for movable modal*/

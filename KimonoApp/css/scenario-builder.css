@@ -14,7 +14,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-.modal-body p, .credits {
+.modal-body p, .credits, .popover, .popover-content {
     font-family: MuseoSansCyrl;
     color: #404041;
     letter-spacing: 0pt;

@@ -166,7 +166,6 @@ function AddClassIfNotThere(Selector, ClassName) {
     }
 }
 
-//DEBUG BELOW. TO BE DELETED
 $(document).ready(function(){
 
     if (localStorage.getItem("ScenarioAlerts") == null) {
