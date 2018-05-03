@@ -1,0 +1,82 @@
+@font-face {
+	font-family: MontserratRegular;
+	src: url(../font/Montserrat-Regular.otf);
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: MontserratRegular;
+    background-color: #4c5c68;
+    color: #dcdcdd;
+}
+
+/** Teaser Section **/
+#TeaserSection {
+    display: table;
+    height: 100vh;
+    text-align: center;
+}
+
+.vertically-centered {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+
+#FullName {
+    font-size: calc(3vw + 3vh);
+    font-weight: 900;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+#JobTitle {
+    font-size: calc(2vw + 2vh);
+    font-weight: 900;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+span.type-caret {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #FullName {
+        font-size: calc(2vw + 2vh);
+    }
+
+    #JobTitle {
+        font-size: calc(1.5vw + 1.5vh);
+    }
+}
+
+/*
+body {
+    font-family: MontserratRegular;
+    background-color: #4c5c68;
+    color: #dcdcdd;
+}
+
+.btn, .list-group a.active{
+    background-color: #5c9ead;
+}
+.btn:hover {
+    background-color: #5c9eadab;
+}
+
+
+.card {
+    background-color: #c5c3c6;
+    color: #46494c;
+}
+*/
