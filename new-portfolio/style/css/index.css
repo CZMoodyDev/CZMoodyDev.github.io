@@ -3,6 +3,11 @@
 	src: url(../font/Montserrat-Regular.otf);
 }
 
+@font-face {
+	font-family: MontserratBold;
+	src: url(../font/Montserrat-Bold.otf);
+}
+
 html {
     width: 100%;
 }
@@ -11,6 +16,7 @@ body {
     font-family: MontserratRegular;
     background-color: #4c5c68;
     color: #dcdcdd;
+    font-size: calc(1vw + 1vh);
 }
 
 /** Teaser Section **/
@@ -28,7 +34,7 @@ body {
 
 #FullName {
     font-size: calc(3vw + 3vh);
-    font-weight: 900;
+    font-family: MontserratBold;
     white-space: nowrap;
     margin-bottom: 0;
 }
@@ -39,6 +45,15 @@ body {
     white-space: nowrap;
     opacity: 0;
 }
+
+.social-icon {
+    font-size: calc(2.5vw + 2.5vh);
+    margin-right: 3rem !important;
+}.social-icon a {
+    color: #dcdcdd;
+    opacity: 0;
+}
+
 
 span.type-caret {
     border-right: .05em solid;

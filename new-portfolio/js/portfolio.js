@@ -27,16 +27,27 @@ function TypeOutName(LetterIndex) {
 
         setTimeout(function(){
             TypeOutName(LetterIndex + 1)
-        }, 100);
+        }, 150);
 
     } else {
 
-        $("span.type-caret").delay(2100).fadeOut(400, TitleFadeIn);
+        $("span.type-caret").delay(1500).fadeOut(400, TeaserFadeIn);
 
     }
 }
 
-//Makes job title fade in
-function TitleFadeIn() {
-    $("#JobTitle").fadeTo(1000, 1);
+//Makes job title fade in in time
+function TeaserFadeIn() {
+    var Time = 800;
+    var IncrementTime = 800;
+
+    $("#JobTitle").fadeTo(Time, 1);
+
+    $(".social-icon a").each(function(){
+
+        Time += IncrementTime;
+
+        $(this).delay(400).fadeTo(Time, 1);
+
+    });
 }
