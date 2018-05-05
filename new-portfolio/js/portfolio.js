@@ -12,7 +12,15 @@ Event Listeners
 */
 $(document).ready(function(){
     TypeOutName(0);
+
+    $("#MenuOpener").click(function(){
+        $(this).toggleClass('active');
+        $("#Menu").toggleClass('open');
+        $("#TeaserSection").toggle();
+    });
 }); 
+
+
 
 /*
 Functions
@@ -49,5 +57,9 @@ function TeaserFadeIn() {
 
         $(this).delay(400).fadeTo(Time, 1);
 
+    }).after(function(){
+        $("#MenuOpener").delay(1000).fadeTo(800, 1);
     });
+
+
 }

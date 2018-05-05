@@ -19,6 +19,96 @@ body {
     font-size: calc(1vw + 1vh);
 }
 
+/** Navigation **/
+#MenuOpener {
+    opacity: 0;
+}
+
+.three-sticks {
+    position: fixed;
+    right: 2%;
+    font-size: calc(3vw + 3vh);
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+}.three-sticks:hover {
+    opacity: .7;
+}.active span.fa.fa-bars:before {
+    content: "\f00d";
+}
+
+.fullscreen-menu {
+    position: fixed;
+    background: #46494c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+}#Menu.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%;
+}#Menu.open li {
+    animation: fadeInRight .5s ease forwards;
+    animation-delay: .35s;
+}#Menu nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(3vw + 3vh);
+    font-family: MontserratRegular;
+    color: #dcdcdd;
+    text-align: center;
+}#Menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}#Menu ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+}#Menu ul li a {
+    display: block;
+    position: relative;
+    color: #dcdcdd;
+    text-decoration: none;
+    overflow: hidden;
+}#Menu ul li a:hover:after, #Menu ul li a:focus:after, #Menu ul li a:active:after {
+    width: 100%;
+}#Menu ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #dcdcdd;
+    transition: .35s;
+}
+
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
 /** Teaser Section **/
 #TeaserSection {
     display: table;
@@ -48,7 +138,7 @@ body {
 
 .social-icon {
     font-size: calc(2.5vw + 2.5vh);
-    margin-right: 3rem !important;
+    margin-right: 2.5rem !important;
 }.social-icon a {
     color: #dcdcdd;
     opacity: 0;
@@ -72,6 +162,11 @@ span.type-caret {
 
     #JobTitle {
         font-size: calc(1.5vw + 1.5vh);
+    }
+
+    .social-icon {
+        font-size: calc(1.75vw + 1.75vh);
+        margin-right: 1rem !important;
     }
 }
 
