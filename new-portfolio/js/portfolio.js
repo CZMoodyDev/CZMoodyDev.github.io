@@ -17,6 +17,7 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $("#Menu").toggleClass('open');
         $("#TeaserSection").toggle();
+        $("#RightNav").toggle();
     });
 }); 
 
@@ -59,6 +60,8 @@ function TeaserFadeIn() {
 
     }).after(function(){
         $("#MenuOpener").delay(1000).fadeTo(800, 1);
+        $("#RightNav").fadeTo(800, 1);
+        $("#BottomNav").fadeTo(800, 1);
     });
 
 

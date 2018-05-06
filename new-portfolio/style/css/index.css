@@ -109,7 +109,7 @@ body {
     }
   }
 
-/** Teaser Section **/
+/** Teaser **/
 #TeaserSection {
     display: table;
     height: 100vh;
@@ -138,10 +138,82 @@ body {
 
 .social-icon {
     font-size: calc(2.5vw + 2.5vh);
-    margin-right: 2.5rem !important;
+    margin-right: 1rem !important;
 }.social-icon a {
     color: #dcdcdd;
     opacity: 0;
+}
+
+#ToPortfolio {
+    position: relative;
+    text-align: center;
+    right: 95px;
+}#ToPortfolio a {
+    text-decoration: none;
+    color: #dcdcdd;
+    position: absolute;
+    bottom: 0.6rem;
+    animation: arrow-hover-y 3s infinite;
+}#ToPortfolio a:hover {
+    animation: none;
+}#ToPortfolio i {
+    font-size: calc(2.5vw + 2.5vh);
+}#ToPortfolio p {
+    font-size: calc(2vw + 2vh);
+    margin-bottom: 0;
+    opacity: 0;
+    transition:opacity 0.5s linear;
+}
+#BottomNav {
+    opacity: 0;
+}#BottomNav:hover * {
+    opacity: 1;
+}
+
+#ToAboutMe {
+    position: fixed;
+    z-index: 1;
+    font-size: calc(2.5vw + 2.5vh);
+}#ToAboutMe a {
+    text-decoration: none;
+    color: #dcdcdd;
+    position: fixed;
+    left: 94%;
+    top: 50%;
+    font-size: calc(2.5vw + 2.5vh);
+    animation: arrow-hover-x 3s infinite;
+}#ToAboutMe a:hover {
+    animation: none;
+}#ToAboutMe i {
+    font-size: calc(2.5vw + 2.5vh);
+}#ToAboutMe p {
+    font-size: calc(2vw + 2vh);
+    margin-left: 0;
+    opacity: 0;
+    transition:opacity 0.5s linear;
+    white-space: nowrap;
+}
+#RightNav {
+    opacity: 0;
+}#RightNav:hover * {
+    opacity: 1;
+}
+
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+}
+
+@keyframes arrow-hover-x {
+    50% {
+        left: 92%;
+    }
+}
+
+@keyframes arrow-hover-y {
+    50% {
+        bottom: 1.25rem;
+    }
 }
 
 
@@ -167,6 +239,18 @@ span.type-caret {
     .social-icon {
         font-size: calc(1.75vw + 1.75vh);
         margin-right: 1rem !important;
+    }
+
+    #ToPortfolio {
+        right: 50px;
+    }
+
+    #ToAboutMe a{
+        left: 90%;
+    }@keyframes arrow-hover-x {
+        50% {
+            left: 87%;
+        }
     }
 }
 
