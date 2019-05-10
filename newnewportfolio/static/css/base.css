@@ -1,0 +1,60 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section {
+    scroll-behavior: smooth;
+}
+
+/* Splash Page */
+#splash {
+    height: 100vh;
+    position: relative;
+}
+
+#splash canvas, #splash-overlay {
+    position: absolute;
+}
+
+#splash-overlay {
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+}
+#splash-overlay h1 {
+    font-size: 58pt;
+    line-height: 64pt;
+    color: #50514F;
+}
+#splash-overlay p {
+    font-size: 24pt;
+    line-height: 28pt;
+    color: #ad7a99;
+}
+#splash-overlay .btn {
+    border-color: #59abe3;
+    color: #59abe3;
+    border-width: 0.15rem;
+    border-radius: 0;
+}
+#splash-overlay .btn:hover {
+    border-color: #ad7a99;
+    color: #d9f0ff;
+    background-color: #ad7a99;
+    border-width: 0.15rem;
+    border-radius: 0;
+}
+#splash-overlay a:focus {
+    outline: none;
+}
+
+#splash canvas {
+    top: 0;
+    left: 0;
+}
