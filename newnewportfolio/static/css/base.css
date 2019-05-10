@@ -28,12 +28,13 @@ section {
     width: 100vw;
 }
 #splash-overlay h1 {
-    font-size: 58pt;
-    line-height: 64pt;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 30pt;
     color: #50514F;
 }
 #splash-overlay p {
-    font-size: 24pt;
+    font-size: 1.25rem;
     line-height: 28pt;
     color: #ad7a99;
 }
