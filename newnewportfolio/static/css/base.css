@@ -10,6 +10,17 @@ section {
     scroll-behavior: smooth;
 }
 
+/* Mobile Nav */
+@media (max-width: 1200px) {
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        top: 0;
+    }
+}
+
 /* Splash Page */
 #splash {
     height: 100vh;
