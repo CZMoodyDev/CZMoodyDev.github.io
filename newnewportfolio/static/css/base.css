@@ -20,7 +20,17 @@ section {
                                     supported by Chrome and Opera */
   }
 
-/* Mobile Nav */
+/*  Nav */
+nav {
+    background-color: #59ABE3;
+}
+.navbar-brand {
+    color: #50514F !important;
+}
+.nav-item.active .nav-link {
+    color: #50514F !important;
+}
+
 @media (max-width: 1200px) {
     .navbar {
         position: fixed;
@@ -81,3 +91,17 @@ section {
     top: 0;
     left: 0;
 }
+
+/* About */
+.overview-circle {
+    color: #ad7a99;
+}
+
+#about h5 {
+    color: #50514F;
+}
+
+.about-blurb {
+    font-size: 1rem;
+}
+
