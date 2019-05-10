@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    color: #50514F;
 }
 
 section {
@@ -63,7 +64,6 @@ nav {
     font-size: 3rem;
     font-weight: 600;
     line-height: 30pt;
-    color: #50514F;
 }
 #splash-overlay p {
     font-size: 1.25rem;
@@ -99,9 +99,22 @@ nav {
 
 #about h5 {
     color: #50514F;
+    font-weight: 400;
 }
 
 .about-blurb {
     font-size: 1rem;
+}
+
+.progress-label {
+    margin: 0;
+}
+
+.bar-lavender {
+    background-color: #ad7a99 !important;
+}
+
+.bar-winter {
+    background-color: #a3d5ff !important;
 }
 
