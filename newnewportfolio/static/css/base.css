@@ -178,8 +178,9 @@ nav {
 
 /* Services */
 #services {
-    height: 75vh;
+    height: auto;
 }
+
 #services .btn {
     border-color: #59abe3;
     color: #59abe3;
