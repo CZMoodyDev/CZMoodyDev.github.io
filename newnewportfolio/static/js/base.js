@@ -15,3 +15,13 @@ $("#portfolio .fa-external-link-alt, #portfolio .fa-steam, #portfolio .fa-youtub
 }, function(){
     $(this).prev().css("color", "#ad7a99");
 });
+
+$('.hiddenMail').on('click',function(event)
+{
+    event.preventDefault();
+    $(this).off("click");
+    var email = $(this).attr("data-email").replace(/AT/,'@').replace(/DOT/,'.');
+    $(this).removeClass("hiddenMail");
+    $(this).html(email);
+    $(this).attr("href","mailto:"+email);
+});

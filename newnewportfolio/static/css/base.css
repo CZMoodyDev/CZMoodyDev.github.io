@@ -78,7 +78,7 @@ nav {
 }
 #splash-overlay .btn:hover {
     border-color: #ad7a99;
-    color: #d9f0ff;
+    color: #FFF;
     background-color: #ad7a99;
     border-width: 0.15rem;
     border-radius: 0;
@@ -170,5 +170,59 @@ nav {
 
 .uniform-img-top {
     height: 14rem;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+/* Services */
+#services {
+    height: 75vh;
+}
+#services .btn {
+    border-color: #59abe3;
+    color: #59abe3;
+    border-width: 0.15rem;
+    border-radius: 0;
+}
+#custom-websites .btn:hover {
+    border-color: #ad7a99;
+    color: #FFF;
+    background-color: #ad7a99;
+    border-width: 0.15rem;
+    border-radius: 0;
+}
+
+#services .coming-soon {
+    cursor: default;
+    border-color: #50514F;
+    background-color: #FFF;
+    color: #50514F;
+}
+
+#services .coming-soon .btn:hover {
+    border-color: #50514F;
+    color: #59abe3;
+    border-width: 0.15rem;
+    border-radius: 0;
+    background-color: #FFF;
+}
+
+/* Contact */
+#contact {
+    background-color: #50514F;
+    color: #FFF;
+    height: 75vh;
+}
+
+#contact a {
+    text-decoration: #ad7a99 !important;
+    color: #ad7a99;
+    cursor: pointer;
+}
+
+#contact-info {
+    height: 100%;
 }
 
