@@ -1,0 +1,29 @@
+#description {
+    height: 100vh;
+    background-color: #a3d5ff;
+}
+
+#description-container {
+    height: 100%;
+}
+
+#description i {
+    color: #ad7a99;
+    outline: none;
+}
+#description a:hover{
+    text-decoration: none;
+}
+
+.popover-header {
+    background-color: #ad7a99;
+    color: #FFF;
+}
+
+#pricing {
+    height: auto;
+}
+
+#pricing-guide {
+    height: 100%;
+}

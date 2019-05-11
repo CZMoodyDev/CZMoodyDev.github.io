@@ -1,3 +1,7 @@
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
 $(".card-flip").toggleClass("flip");
 
 $( ".card-flip" ).click(function(e) {
