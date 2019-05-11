@@ -11,6 +11,7 @@
             <link rel="stylesheet" href="./static/css/base.css"/>
             <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
         </head>
         <body>
             <section id="splash" class="text-center">
@@ -34,7 +35,7 @@
                 </div>
             </nav>
             <section id="about">
-                <div class="container pt-5">
+                <div class="container pt-5 pb-2">
                     <div class="row text-center pt-5">
                         <div class="col-md-4">
                             <span class="fa-stack fa-3x mb-2">
@@ -115,56 +116,154 @@
                     </div>
                 </div>
             </section>
-            <section id="portfolio"class="jumbotron text-center" >
-                <div class="container">
-                    <h1 class="jumbotron-heading">
-                        Portfolio
-                    </h1>
-                    <p class="lead text-muted"></p>
-                </div>
-            </section>
-            <div class="album py-5 light">
-                <div class="container">
+            <section id="portfolio">
+                <div class="container text-center pt-5">
+                    <h1 class="pb-2">Latest Projects</h1>
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="card md-4 box-shadow">
-                                <img class="card-img-top" src="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Card Title
-                                    </h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Button</a>
+                            <div class="card-flip">
+                                <div class="flip">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class="card">
+                                            <img class="card-img-top uniform-img-top" src="./static/img/Kimono.png"  data-holder-rendered="true">
+                                            <div class="card-block">
+                                                <h4 class="card-title pt-3">Kimono Play App</h4>
+                                                <p class="card-text">An educational web app to teach the different styles and rules of kimono culture</p>
+                                                <p class="text-center font-weight-bold">Learn More <i class="fas fa-sync-alt"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class="card">
+                                            <div class="card-block pt-3">
+                                                <h4 class="card-title">Kimono Play</h4>
+                                                <h6 class="card-subtitle text-muted mb-2">Mobile Capable Web App</h6>
+                                                <div class="card-block pl-3 pr-3 text-left">
+                                                    <p>The Nikkei Cultural Museum needed an educational web app as a companion to their Kimono exhibit. I used modals to apply selections to a canvas and provide user feedback.</p>
+                                                    <hr>
+                                                    <h5>Stack</h5>
+                                                    <p>HTML5, CSS3, JS</p>
+                                                    <hr>
+                                                    <div class="text-left container">
+                                                        <span class="fa-stack fa-1x mb-2">
+                                                            <a href="http://kimonoplayapp.nikkeiplace.org/" target="_blank">
+                                                                <i class="fas fa-circle fa-stack-2x"></i>
+                                                                <i class="fas fa-external-link-alt fa-stack-1x fa-inverse"></i>
+                                                            </a>
+                                                        </span>
+                                                        <span class="fa-stack fa-2x mb-2">
+                                                            <a href="https://github.com/CZMoodyDev/KimonoPlayApp" target="_blank">
+                                                                <i class="fab fa-github fa-stack-1x"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text-center font-weight-bold"><i class="fas fa-sync-alt"></i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card md-4 box-shadow">
-                                <img class="card-img-top" src="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Card Title
-                                    </h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Button</a>
+                            <div class="card-flip">
+                                <div class="flip">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class="card">
+                                            <img class="card-img-top uniform-img-top" src="https://i.imgur.com/6VGs047.jpg"  data-holder-rendered="true">
+                                            <div class="card-block">
+                                                <h4 class="card-title pt-3">React Meal Planner</h4>
+                                                <p class="card-text">An in-home project I use every few months to help create freezer meals</p>
+                                                <p class="text-center font-weight-bold">Learn More <i class="fas fa-sync-alt"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class="card">
+                                            <div class="card-block pt-3">
+                                                <h4 class="card-title">React Meal Planner</h4>
+                                                <h6 class="card-subtitle text-muted mb-2">Local Web Application</h6>
+                                                <div class="card-block pl-3 pr-3 text-left">
+                                                    <p>Every few months, I bulk create meals to save time on meal preparation. This tool creates a grocery list from recipes and outputs bag labels and instructions.</p>
+                                                    <hr>
+                                                    <h5>Stack</h5>
+                                                    <p>Node.js, React</p>
+                                                    <hr>
+                                                    <div class="text-left container">
+                                                        <span class="fa-stack fa-2x mb-2">
+                                                            <a href="https://github.com/CZMoodyDev/react-meal-planner" target="_blank">
+                                                                <i class="fab fa-github fa-stack-1x"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text-center font-weight-bold"><i class="fas fa-sync-alt"></i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card md-4 box-shadow">
-                                <img class="card-img-top" src="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Card Title
-                                    </h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Button</a>
+                            <div class="card-flip">
+                                <div class="flip">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class="card">
+                                            <img class="card-img-top uniform-img-top" src="https://i.imgur.com/PHk3fBW.jpg"  data-holder-rendered="true">
+                                            <div class="card-block">
+                                                <h4 class="card-title pt-3">DesktopDungeonBot</h4>
+                                                <p class="card-text">A bot that farms gold by reading the screen and using the mouse to execute moves</p>
+                                                <p class="text-center font-weight-bold">Learn More <i class="fas fa-sync-alt"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class="card">
+                                            <div class="card-block pt-3">
+                                                <h4 class="card-title">Kimono Play</h4>
+                                                <h6 class="card-subtitle text-muted mb-2">Mobile Capable Web App</h6>
+                                                <div class="card-block pl-3 pr-3 text-left">
+                                                    <p>For one of my favourite casual games, I made a bot that accumulates wealth by reading images to determine the most profitable path through a dungeon.</p>
+                                                    <hr>
+                                                    <h5>Stack</h5>
+                                                    <p>Python</p>
+                                                    <hr>
+                                                    <div id="card-links-kimono" class="text-left container">
+                                                        <span class="fa-stack fa-1x mb-2">
+                                                            <a href="https://github.com/CZMoodyDev/DesktopDungeonBot" target="_blank">
+                                                                <i class="fab fa-github fa-stack-2x"></i>
+                                                            </a>
+                                                        </span>
+                                                        <span class="fa-stack fa-1x mb-2">
+                                                            <a href="https://www.youtube.com/watch?v=04jKrCTWsSQ" target="_blank">
+                                                                <i class="fas fa-circle fa-stack-2x"></i>
+                                                                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                                                            </a>
+                                                        </span>
+                                                        <span class="fa-stack fa-1x mb-2">
+                                                            <a href="http://store.steampowered.com/app/226620/Desktop_Dungeons/" target="_blank">
+                                                                <i class="fas fa-circle fa-stack-2x"></i>
+                                                                <i class="fab fa-steam fa-stack-1x fa-inverse"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text-center font-weight-bold"><i class="fas fa-sync-alt"></i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                      
                     </div>
                 </div>
-            </div>
+            </section>
             <section id="services" >
                 <div class="container-fluid">
                     <div class="row">
