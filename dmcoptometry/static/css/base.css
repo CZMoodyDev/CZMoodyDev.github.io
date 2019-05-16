@@ -1,0 +1,138 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Slabo 27px', serif;
+    color: #1C2021;
+    overflow-x:hidden;
+    min-width: 300px;
+}
+
+section {
+    scroll-behavior: smooth;
+}
+
+/*  Nav */
+nav {
+    background-color: #00B3EF;
+    font-weight: 800;
+}
+
+.nav-item.active .nav-link {
+    color: #50616B !important;
+}
+
+/* Home */
+#overviewCarousel img {
+    height: 550px;
+}
+
+@media screen and (max-width: 600px) {
+    #overviewCarousel img {
+        height: 300px;
+    }
+}
+
+#overviewCarousel .btn {
+    border: 2px solid white !important;
+}
+#overviewCarousel .btn:hover {
+    background-color: #FFF !important;
+    color: #1C2021 !important;
+}
+
+/* Schedule Block */
+#scheduleBlock {
+    background-color: #EFEFEF;
+    padding: 0.8rem;
+    display: revert;
+}
+
+#scheduleMobileBlock {
+    position: fixed;
+    padding: 0.8rem;
+    bottom: 0;
+    width:100%;
+    background-color: #EFEFEF;
+    padding: 0.8rem;
+    visibility: hidden;
+}
+
+.float-parent {
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    #scheduleBlock {
+        display:none;
+    }
+
+    #scheduleMobileBlock {
+        visibility: visible;
+    }
+
+    .float-parent {
+        margin-top: 120px;
+    }
+}
+
+#scheduleBlock .btn, #scheduleMobileBlock .btn {
+    background-color: #25428e;
+    color: white;
+}
+
+/* Service Cards */
+#serviceCards {
+    height: 100%;
+}
+
+#serviceCards .card-title {
+    color: #00B4DB;
+}
+
+#serviceCards .card {
+    margin-bottom: 0.8rem;
+}
+
+#serviceCards .card-href {
+    color: #25428e;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+#serviceCards .btn {
+    border: 2px solid #25428e !important;
+    color: #25428e;
+}
+
+#serviceCards .btn:hover {
+    background-color: #25428e !important;
+    color: #FFF !important;
+}
+
+/* Footer */
+#footer {
+    width: 100%;
+    background-color: #1C2021;
+    padding-top: 1rem;
+    color: #c7c7c7;
+}
+
+#footer h5, #footer h3{
+    color: #FFF;
+}
+
+#contactBlock p {
+    margin-bottom: 0px;
+}
+
+#footer td {
+    padding: 0.25rem;
+}
+
+#footer .footer-copyright a {
+    text-decoration: none;
+    color: #c7c7c7;
+}
