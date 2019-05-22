@@ -2,8 +2,18 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Adelle';
+    src: url("./Adelle_Reg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'ZAG';
+    src: url("./ZAG Regular.otf") format("opentype");
+}
+
 body {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Adelle';
     color: #1C2021;
     overflow-x:hidden;
     min-width: 300px;
@@ -14,13 +24,23 @@ section {
 }
 
 /*  Nav */
-nav {
-    background-color: #00B3EF;
-    font-weight: 800;
+.navbar-custom {
+    background-color: #EFEFEF;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #00B4DB;
 }
 
-.nav-item.active .nav-link {
-    color: #50616B !important;
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #00B4DB;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #25428e;
 }
 
 /* Home */
@@ -79,8 +99,12 @@ nav {
 }
 
 #scheduleBlock .btn, #scheduleMobileBlock .btn {
-    background-color: #25428e;
+    background-color: #00B4DB;
     color: white;
+}
+
+#scheduleBlock .btn:hover, #scheduleMobileBlock .btn:hover {
+    background-color: #25428e;
 }
 
 /* Service Cards */
@@ -112,16 +136,86 @@ nav {
     color: #FFF !important;
 }
 
+/* Info */
+#info {
+    font-family: 'ZAG';
+    font-size: 1.2rem;
+}
+
+#info .pbg-border-gray .btn, #info .pbg-dark .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #FFF !important;
+    text-decoration: none;
+    color: #FFF;
+    margin-bottom: 1.2rem;
+}
+
+#info .pbg-border-gray .btn:hover, #info .pbg-dark .btn:hover {
+    background-color: #FFF !important;
+    color: #1C2021;
+}
+
+#info .pbg-border-blue .btn:hover, #info .pbg-light-gray .btn:hover {
+    background-color: #1C2021 !important;
+    color: #FFF;
+}
+
+#info .pbg-border-blue .btn, #info .pbg-light-gray .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #1C2021 !important;
+    margin-bottom: 1.2rem;
+    text-decoration: none;
+    color: #1C2021;
+}
+
+
+.pbg-border-gray {
+    background-color: #50616B;
+    color: #FFF;
+    font-weight: bolder;
+}
+
+.pbg-border-blue {
+    background-color: #00B4DB;
+    color: #1c2021;
+    font-weight: bolder;
+}
+
+.pbg-light-gray {
+    background-color: #EFEFEF;
+    color: #1C2021;
+    font-weight: bolder;
+}
+
+.pbg-dark {
+    background-color: #1C2021;
+    color: #FFF;
+    font-weight: bolder;
+}
+
+.info-text {
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
 /* Footer */
 #footer {
     width: 100%;
-    background-color: #1C2021;
+    background-color: #50616B;
     padding-top: 1rem;
-    color: #c7c7c7;
+    color: #FFF;
+    font-family: 'ZAG';
 }
 
 #footer h5, #footer h3{
     color: #FFF;
+    font-family: 'Adelle';
 }
 
 #contactBlock p {
@@ -135,4 +229,58 @@ nav {
 #footer .footer-copyright a {
     text-decoration: none;
     color: #c7c7c7;
+}
+
+/* About */
+.border-blue {
+    color: #00B4DB;
+}
+
+/* Contact Us */
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+@media screen and (max-width: 770px) {
+    .offset-4-unresponsive {
+        margin-left: 0 !important;
+    }
+}
+
+#lethbridgeMap {
+    display: none;
+}
+#lethbridgeMap h1 {
+    color:#00B4DB;
+}
+#lethbridgeMap tr:nth-child(even) {
+    background-color: #EFEFEF;
+}
+
+#medicineHatMap {
+    display: none;
+}
+
+#lethbridgeControl, #medicineHatControl, #lethbridgeMap .btn:hover {
+    color: #FFF;
+    background-color: #00B4DB;
+}
+
+#lethbridgeControl:hover, #medicineHatControl:hover, #lethbridgeMap .btn:hover {
+    color: #FFF;
+    background-color: #25428e;
+}
+
+.active-control {
+    background-color: #25428e !important;
 }

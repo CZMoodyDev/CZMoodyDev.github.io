@@ -19,8 +19,8 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../our-practice/index.html">Services</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="../contact/index.html">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="../index.html#info">Patient Information</a></li>
                         <li class="nav-item"><a class="nav-link" href="../careers/index.html">Careers</a></li>
                     </ul>
@@ -29,25 +29,130 @@
             <div class="container p-5">
                 <div class="row">
                     <div class="col-md-12 mb-5">
-                        <img class="img-fluid" src="../static/img/moremounins.jpg">
+                        <h1 class="border-blue">Contact&nbsp;Us</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Comprehensive Eye Exams</h3>
-                        <p>More details than what was on the front page. Or exactly the same, its really up to you. Here you can talk about the service procedure or give a blurb about it</p>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-1">
+                        <a id="lethbridgeControl" class="btn" onclick="turnOnLethbridge();">Lethbridge</a>
                     </div>
-                    <div class="col-md-12">
-                        <h3>Dry Eyes Evaluation</h3>
-                        <p>Not living in Vancouver sucks, it's true. But don't let your eyes, which are supposed to be wet, be dry. We'll fix you up so you can cry yourself to sleep at night.</p>
+                    <div class="offset-4-unresponsive col-md-4 offset-4 mb-1">
+                        <a id="medicineHatControl" class="btn" onclick="turnOnMedicineHat();">Medicine Hat</a>
                     </div>
-                    <div class="col-md-12">
-                        <h3>Sclera Refactoring</h3>
-                        <p>We will take our stethopthomometer and prod your sclera near the iris. You get two for flinching.</p>
+                </div>
+                <div id="lethbridgeMap" class="container">
+                    <div class="text-center col-md-12 mb-2">
+                        <p class="m-0">#1, 405 Highlands Blvd West</p>
+                        <p class="m-0">Lethbridge, AB T1J 5E8</p>
+                        <p class="m-0">(Inside Optiks International)</p>
+                        <p class="m-0">(403) 381 - 1198</p>
                     </div>
-                    <div class="col-md-12">
-                        <h3>Free Eye Exams</h3>
-                        <p>In exchange for a lunch, you promised</p>
+                    <div class="map-responsive mb-5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2580.8921775802974!2d-112.89846048398267!3d49.6940032494595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536e88419d1f3fef%3A0x2b38b190ebac1c91!2sDMC+Optometry!5e0!3m2!1sen!2sca!4v1558498841295!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>Clinic Hours</h1>
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        Monday
+                                    </td>
+                                    <td>
+                                        Closed
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Tuesday
+                                    </td>
+                                    <td>
+                                        9:00am - 6:00pm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Wednesday
+                                    </td>
+                                    <td>
+                                        9:00am - 6:00pm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Thursday
+                                    </td>
+                                    <td>
+                                        11:00am - 7:00pm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Friday
+                                    </td>
+                                    <td>
+                                        9:00am - 6:00pm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Saturday
+                                    </td>
+                                    <td>
+                                        9:00am - 3:00pm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Sunday
+                                    </td>
+                                    <td>
+                                        Closed
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h1>Email Us</h1>
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name">Name *</label>
+                                    <input type="text" class="form-control" id="name" placeholder="First name" value="" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailAddress">Email address *</label>
+                                    <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <button class="btn btn-primary float-right" type="submit">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="medicineHatMap" class="container">
+                    <div class="text-center col-md-12 mb-2">
+                        <p class="m-0">#109-1424 Southview Dr. S.E.</p>
+                        <p class="m-0">Medicine Hat, AB T1B 4E7</p>
+                        <p class="mb-2">(403) 580 - 5531</p>
+                        <div class="alert alert-info">Thanks to all the patients from Medicine Hat. Your new optometrist is Dr. Kris Duguay and associate. To book your eye exam, please call the number listed above.</div>
+                    </div>
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.0526473018817!2d-110.66500094840283!3d50.010368426755996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53132d75551cc8af%3A0xb65aeb77ac4eb3d0!2sOptiks+International+(Medicine+Hat)!5e0!3m2!1sen!2sca!4v1558499371550!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

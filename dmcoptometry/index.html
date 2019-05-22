@@ -9,20 +9,20 @@
             <script src="./static/js/jquery-3.4.0.min.js"></script>
             <script src="./static/js/bootstrap.min.js"></script>
             <link href="./static/css/base.css" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         </head>
         <body>
-            <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-default navbar-expand-lg navbar-custom navbar-light">
                 <a class="navbar-brand" href="#">DMC Optometry</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a  class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about/index.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="./our-practice/index.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contact/index.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#info">Patient Information</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./careers/index.html">Careers</a></li>
                     </ul>
                 </div>
             </nav>
@@ -118,6 +118,50 @@
                     </div>
                 </div>
             </div>
+            <div id="info" class="container-fluid col-md-12 pb-5">
+                <div class="row text-center">
+                    <div class="col-md-3 pbg-dark pt-5 pb-5">
+                        <i class="fas fa-check fa-4x mb-3"></i>
+                        <p class="mb-5">OUR GUARANTEE</p>
+                        <div class="container">
+                            <p class="info-text">All our spectacles and contact lenses are backed by our 90 day guarantee</p>
+                            <a href="./patient-information/guarantee.html" class="btn bg-transparent mt-auto">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pbg-border-gray pt-5 pb-5">
+                        <i class="far fa-eye fa-4x mb-3"></i>
+                        <p class="mb-5">CONTACT LENS FITTINGS</p>
+                        <div class="container">
+                            <p class="info-text">Learn about our easy contact lenses fitting procedure</p>
+                            <a href="./patient-information/contact-lens-fitting.html" class="btn bg-transparent mt-auto">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pbg-light-gray pt-5 pb-5">
+                        <i class="fas fa-tint fa-4x mb-3"></i>
+                        <p class="mb-5">EYE DROPS AND OTHER PRODUCTS</p>
+                        <div class="container">
+                            <p class="info-text">We retail exclusive eye drops and other lid hygiene products for dry eyes</p>
+                            <a href="./our-practice/index.html" class="btn bg-transparent mt-auto">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pbg-border-blue pt-5 pb-5">
+                        <i class="far fa-comments fa-4x mb-3"></i>
+                        <p class="mb-5">FREQUENTLY ASKED QUESTIONS</p>
+                        <div class="container">
+                            <p class="info-text">Some answers to some common questions we get</p>
+                            <a href="./patient-information/faq.html" class="btn bg-transparent">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="float-parent">
                 <div id="scheduleMobileBlock" class="sticky-bottom container-fluid">
                     <div class="row">
@@ -135,11 +179,9 @@
                 <div class="row col-md-12">
                     <div class="col-md-4 mb-2">
                         <h3 class="font-weight-bold">DMC Optometry</h3>
-                        <p>Placeholder blurb about DMC Optometry featuring things that are typed into...this spot.
-                           One time Dan Mark cooked my steak using a block of ice. Lol. One time Dan Mark got 'sick'
-                           instead of dealing with a kid who liked to punch people in the testicles.</p>
+                        <p>%%PLACEHOLDER_TEXT_FOOTER%%</p>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4 mx-auto mb-3">
                         <h5 class="font-weight-bold">CONTACT INFORMATION</h5>
                         <div id="contactBlock" class="mb-2">
                             <p><i class="fas fa-globe"></i> #1, 405 Highlands Blvd West</p>
