@@ -19,20 +19,29 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#">Services</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="../our-practice/index.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#info">Patient Information</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="patientInfoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Patient Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="patientInfoDropdown">
+                                <a class="dropdown-item" href="../patient-information/guarantee.html">Guarantee</a>
+                                <a class="dropdown-item" href="../patient-information/contact-lens-fitting.html">Contact Lens Fitting</a>
+                                <a class="dropdown-item" href="../patient-information/faq.html">Frequently Asked Questions</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="../careers/index.html">Careers</a></li>
                     </ul>
                 </div>
             </nav>
-            <div class="container p-5">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 mb-5">
-                        <img class="img-fluid" src="../static/img/moremounins.jpg">
-                    </div>
+                    <div class="parallax service-hero"></div>
                 </div>
-                <div class="row">
+            </div>
+            <div class="container">
+                <div class="row pt-5">
                     <div class="col-md-12">
                         <h3>Comprehensive Eye Exams</h3>
                         <p>More details than what was on the front page. Or exactly the same, its really up to you. Here you can talk about the service procedure or give a blurb about it</p>
@@ -79,9 +88,12 @@
                 <div class="row col-md-12">
                     <div class="col-md-4 mb-2">
                         <h3 class="font-weight-bold">DMC Optometry</h3>
-                        <p>%%PLACEHOLDER_TEXT_FOOTER%%</p>
+                        <p>%%PLACEHOLDER TEXT FOOTER%%</p>
+                        <a class="social-icon text-center facebook-bottom" href="https://www.facebook.com/dmcoptometry">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
-                    <div class="col-md-4 mb-3 mx-auto">
+                    <div class="col-md-4 mx-auto mb-3">
                         <h5 class="font-weight-bold">CONTACT INFORMATION</h5>
                         <div id="contactBlock" class="mb-2">
                             <p><i class="fas fa-globe"></i> #1, 405 Highlands Blvd West</p>
@@ -89,11 +101,12 @@
                             <p class="pl-4">(Inside Optiks International)</p>
                         </div>
                         <div>
-                            <p><i class="fas fa-phone"></i> 403-381-1198</p>
+                            <p>
+                                <a class="phone-us" href="tel:403-381-1198"><i class="fas fa-phone"></i> 403-381-1198</a>
+                            </p>
                         </div>
                         <div>
                             <p>Call and schedule an appointment today!</p>
-                            <p>Walk Ins Welcome!</p>
                         </div>
                     </div>
                     <div class="col-md-4">

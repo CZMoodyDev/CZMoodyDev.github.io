@@ -1,5 +1,7 @@
 $('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
+    if (!$(this).hasClass('dropdown-toggle')) {
+        $('.navbar-collapse').collapse('hide');
+    }
 });
 
 function turnOnLethbridge() {
@@ -39,12 +41,11 @@ var socialFloat = document.querySelector('#scheduleMobileBlock');
 var footer = document.querySelector('#footer');
 
 function checkOffset() {
-
     if((getRectTop(socialFloat) + document.body.scrollTop) + socialFloat.offsetHeight >= (getRectTop(footer) + document.body.scrollTop) - 10)
         socialFloat.style.position = 'absolute';
     if(document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop))
         socialFloat.style.position = 'fixed'; // restore when you scroll up
-}
+    }
 
 function getRectTop(el){
     var rect = el.getBoundingClientRect();
@@ -54,3 +55,5 @@ function getRectTop(el){
 document.addEventListener("scroll", function(){
     checkOffset();
 });
+
+$(document).ready(checkOffset);

@@ -13,15 +13,24 @@
         </head>
         <body>
             <nav class="navbar navbar-default navbar-expand-lg navbar-custom navbar-light">
-                <a class="navbar-brand" href="#">DMC Optometry</a>
+                <a class="navbar-brand" href="./index.html">DMC Optometry</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="../index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./about/index.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="./our-practice/index.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contact/index.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#info">Patient Information</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="patientInfoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Patient Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="patientInfoDropdown">
+                                <a class="dropdown-item" href="./patient-information/guarantee.html">Guarantee</a>
+                                <a class="dropdown-item" href="./patient-information/contact-lens-fitting.html">Contact Lens Fitting</a>
+                                <a class="dropdown-item" href="./patient-information/faq.html">Frequently Asked Questions</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="./careers/index.html">Careers</a></li>
                     </ul>
                 </div>
@@ -179,7 +188,10 @@
                 <div class="row col-md-12">
                     <div class="col-md-4 mb-2">
                         <h3 class="font-weight-bold">DMC Optometry</h3>
-                        <p>%%PLACEHOLDER_TEXT_FOOTER%%</p>
+                        <p>%%PLACEHOLDER TEXT FOOTER%%</p>
+                        <a class="social-icon text-center facebook-bottom" href="https://www.facebook.com/dmcoptometry">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                     <div class="col-md-4 mx-auto mb-3">
                         <h5 class="font-weight-bold">CONTACT INFORMATION</h5>
@@ -189,7 +201,9 @@
                             <p class="pl-4">(Inside Optiks International)</p>
                         </div>
                         <div>
-                            <p><i class="fas fa-phone"></i> 403-381-1198</p>
+                            <p>
+                                <a class="phone-us" href="tel:403-381-1198"><i class="fas fa-phone"></i> 403-381-1198</a>
+                            </p>
                         </div>
                         <div>
                             <p>Call and schedule an appointment today!</p>
