@@ -23,24 +23,46 @@ section {
     scroll-behavior: smooth;
 }
 
+.zag {
+    font-family: 'ZAG';
+}
+
+.border-blue {
+    color: #00B4DB;
+}
+
 /*  Nav */
 .navbar-custom {
     background-color: #EFEFEF;
 }
-/* change the brand and text color */
+
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
     color: #00B4DB;
 }
 
-/* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: #00B4DB;
 }
-/* change the color of active or hovered links */
+
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #25428e;
+}
+div .dropdown-item.active {
+    color: #FFF !important;
+}
+
+div .dropdown-item {
+    color: #00B4DB !important;
+}
+
+div .dropdown-item:hover {
+    color: #25428e !important;
+}
+
+#patientInfoDropdown {
+    cursor: pointer;
 }
 
 /* Home */
@@ -120,7 +142,7 @@ section {
     margin-bottom: 0.8rem;
 }
 
-#serviceCards .card-href {
+.card-href {
     color: #25428e;
     text-decoration: none !important;
     cursor: pointer;
@@ -173,7 +195,6 @@ section {
     text-decoration: none;
     color: #1C2021;
 }
-
 
 .pbg-border-gray {
     background-color: #50616B;
@@ -231,9 +252,36 @@ section {
     color: #c7c7c7;
 }
 
+.phone-us {
+    color: #FFF;
+}
+a.social-icon {
+    text-decoration: none;
+    outline:none;
+    color: #FFF;
+}
+a.social-icon:hover {
+    color: #d9d9d9;
+}
+a.facebook-bottom {
+    display: block;
+    background-color: #3c5a99;
+    width: 25px;
+}
+.facebook-bottom:hover {
+    background-color: #38388b;
+}
+
 /* About */
-.border-blue {
-    color: #00B4DB;
+.caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+}
+
+.caption-text {
+    background-color: white;
 }
 
 /* Contact Us */
@@ -257,9 +305,6 @@ section {
     }
 }
 
-#lethbridgeMap {
-    display: none;
-}
 #lethbridgeMap h1 {
     color:#00B4DB;
 }
@@ -283,4 +328,44 @@ section {
 
 .active-control {
     background-color: #25428e !important;
+}
+
+/* Services */
+
+.parallax.service-hero {
+    background-image: url("../img/moremounins.jpg");
+}
+.parallax.service-hero2 {
+    background-image: url("../img/mounins.jpg");
+}
+
+.parallax{
+    min-height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 770px) {
+    #optometrists {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/* FAQ */
+#accordion .btn {
+    color: #25428e;
+}
+
+#accordion .card-header .btn{
+    white-space:normal !important;
 }

@@ -21,20 +21,67 @@
                         <li class="nav-item active"><a class="nav-link" href="../about/index.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="../our-practice/index.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#info">Patient Information</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="patientInfoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Patient Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="patientInfoDropdown">
+                                <a class="dropdown-item" href="../patient-information/guarantee.html">Guarantee</a>
+                                <a class="dropdown-item" href="../patient-information/contact-lens-fitting.html">Contact Lens Fitting</a>
+                                <a class="dropdown-item" href="../patient-information/faq.html">Frequently Asked Questions</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="../careers/index.html">Careers</a></li>
                     </ul>
                 </div>
             </nav>
+            <div class="container-fluid parallax-container">
+                <div class="row">
+                    <div id="optometrists" class="parallax service-hero">
+                        <div class="caption pb-5 pt-5">
+                            <h1>What are Optometrists?</h1>
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 caption-text pt-3">
+                                    <p>Optometrists are health care providers who examine, assess, and manage conditions and disorders of the human visual system (the eye). They prescribe treatments for corrective errors including glasses and contact lenses.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-5">
+                <div class="row">
+                    <h1 class="border-blue">Why are visits important?</h1>
+                    <p>While most people know about Optometrists and the diagnosis prescribing correction for visual errors using glasses and contact lenses, few know of the wide scope of diseases and conditions both ocular and systemic (body wide) an Optometrist looks for during an eye exam. From amblyopia, glaucoma, and macular degeneration to diabetes, hypertension, and many more. The unique view into the body through the eye makes the Optometrist a vital link in your health.</p>
+                    <p>So if you are due (or past due) for an annual eye exam, contact us today for an annual eye exam.</p>
+                </div>
+            </div>
+            <div class="container-fluid parallax-container">
+                <div class="row">
+                    <div class="parallax service-hero2 h-75">
+                        <div class="caption p-5">
+                            <h1>Your first visit</h1>
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 caption-text pt-3">
+                                    <p>After checking in with our friendly staff, you will be given a short questionnaire to collect information and past medical and ocular history to help focus and tailor your exam to you.</p>
+                                    <p>When you are finished with your questionnaire, the staff or doctor will begin pretesting with our automated instruments and, if necessary, further advanced screening tests.</p>
+                                    <p>Your doctor will then call you into the exam room where he will review the questionnaire, pre-test information and proceed with the eye exam.</p>
+                                    <p>At the conclusion of the exam you should expect a prescription, a follow-up schedule, and a smile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container p-5">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="border-blue">Meet Our Optometrist</h1>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6 mb-3">
                         <img src="../static/img/denmark.png" />
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <p>Dr. Dan Mark Cuevas graduated from Harry Ainlay Composite High School in Edmonton, AB in 2005. He began university in the fall of that same year at the University of Alberta. After 2 years at the U of A, Dr. Cuevas trasferred to  the University of Waterloo in Waterloo, Ontario where he graduated with a B.Sc in Honours Biomedical Sciences in 2010.</p>
                         <p>Dr. Cuevas began his formal optometric education in August 2010 at the Arizona College of Optometry at Midwestern University in Glendale, Arizona and graduated May of 2014. While there he served as the class historian, and treasurer for the Lions Club at the University. He was also involved in academic research involving the measurement of dynamic visual acuity and has presented 2 academic posters at the American Academy of Optometry.</p>
                         <p>During his free time he enjoys playing the piano and guitar, hiking, snowboarding, and taking photographs of the adventures in between.</p>
@@ -56,11 +103,11 @@
                 <div id="scheduleMobileBlock" class="sticky-bottom container-fluid">
                     <div class="row">
                         <div class="col-md-8 text-center">
-                            <h3>Schedule&nbsp;An&nbsp;Appointment</h3>
+                            <h5>Schedule an Appointment</h5>
                             <p class="small">Using our external booking site with Optiks International</p>
                         </div>
                         <div class="col-md-4 my-auto text-center">
-                            <a target="_blank" href="http://factoryoptical.ca/homepage/book-an-eye-exam-2/" class="btn">Book Now</a>
+                            <button class="btn">Book Now</button>
                         </div>
                     </div>
                 </div>
@@ -69,9 +116,12 @@
                 <div class="row col-md-12">
                     <div class="col-md-4 mb-2">
                         <h3 class="font-weight-bold">DMC Optometry</h3>
-                        <p>%%PLACEHOLDER_TEXT_FOOTER%%</p>
+                        <p>%%PLACEHOLDER TEXT FOOTER%%</p>
+                        <a class="social-icon text-center facebook-bottom" href="https://www.facebook.com/dmcoptometry">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
-                    <div class="col-md-4 mb-3 mx-auto">
+                    <div class="col-md-4 mx-auto mb-3">
                         <h5 class="font-weight-bold">CONTACT INFORMATION</h5>
                         <div id="contactBlock" class="mb-2">
                             <p><i class="fas fa-globe"></i> #1, 405 Highlands Blvd West</p>
@@ -79,11 +129,12 @@
                             <p class="pl-4">(Inside Optiks International)</p>
                         </div>
                         <div>
-                            <p><i class="fas fa-phone"></i> 403-381-1198</p>
+                            <p>
+                                <a class="phone-us" href="tel:403-381-1198"><i class="fas fa-phone"></i> 403-381-1198</a>
+                            </p>
                         </div>
                         <div>
                             <p>Call and schedule an appointment today!</p>
-                            <p>Walk Ins Welcome!</p>
                         </div>
                     </div>
                     <div class="col-md-4">
