@@ -45,7 +45,7 @@ function checkOffset() {
         socialFloat.style.position = 'absolute';
     if(document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop))
         socialFloat.style.position = 'fixed'; // restore when you scroll up
-    }
+}
 
 function getRectTop(el){
     var rect = el.getBoundingClientRect();
