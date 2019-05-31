@@ -76,8 +76,11 @@ div .dropdown-item:hover {
     }
 }
 
-#overviewCarousel .btn {
+#overviewCarousel .btn-outline-light {
     border: 2px solid white !important;
+}
+#overviewCarousel .btn-outline-dark {
+    border: 2px solid black !important;
 }
 #overviewCarousel .btn:hover {
     background-color: #FFF !important;
@@ -332,11 +335,18 @@ a.facebook-bottom {
 
 /* Services */
 
-.parallax.service-hero {
-    background-image: url("../img/moremounins.jpg");
+.service-parallax {
+    background-image: url("../img/services.jpg");
 }
-.parallax.service-hero2 {
-    background-image: url("../img/mounins.jpg");
+.parallax.about-parallax-1 {
+    background-image: url("../img/about-1.jpg");
+}
+.parallax.about-parallax-2 {
+    background-image: url("../img/about-2.jpg");
+}
+
+.text-on-image {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .parallax{
