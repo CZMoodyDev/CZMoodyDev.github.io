@@ -67,7 +67,7 @@ div .dropdown-item:hover {
 
 /* Home */
 #overviewCarousel img {
-    height: 550px;
+    max-height: 850px;
 }
 
 @media screen and (max-width: 600px) {
