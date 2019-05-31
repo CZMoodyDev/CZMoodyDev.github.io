@@ -379,3 +379,8 @@ a.facebook-bottom {
 #accordion .card-header .btn{
     white-space:normal !important;
 }
+
+/* Fitting */
+#fitting {
+    padding-top: 5rem !important;
+}
