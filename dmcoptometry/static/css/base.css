@@ -76,15 +76,13 @@ div .dropdown-item:hover {
     }
 }
 
-#overviewCarousel .btn-outline-light {
-    border: 2px solid white !important;
-}
-#overviewCarousel .btn-outline-dark {
-    border: 2px solid black !important;
-}
-#overviewCarousel .btn:hover {
+#overviewCarousel .btn {
     background-color: #FFF !important;
     color: #1C2021 !important;
+}
+#overviewCarousel .btn:hover {
+    background-color: #25428e !important;
+    color: #FFF !important;
 }
 
 /* Schedule Block */
