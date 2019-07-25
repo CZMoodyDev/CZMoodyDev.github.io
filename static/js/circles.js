@@ -106,7 +106,7 @@ let circleArray = []
 for (let i = 0; i < 2000; i++) {
     const randomXCoordinate = Math.random() * canvasWidth
     const randomYCoordinate = Math.random() * canvasHeight
-    const randomRadius = Math.floor(Math.random()*(25-15+1)+15)
+    const randomRadius = Math.floor((Math.random()*11)+15)
     circleArray.push(
         new Circle(randomXCoordinate, randomYCoordinate, randomRadius)
     )
