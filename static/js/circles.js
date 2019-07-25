@@ -4,8 +4,8 @@ const c = canvas.getContext('2d')
 let mouseX
 let mouseY
 
-canvas.height = canvas.innerHeight
-canvas.width = canvas.innerWidth
+canvas.height = window.innerHeight
+canvas.width = window.innerWidth
 
 const canvasWidth = canvas.width
 const canvasHeight = canvas.height
