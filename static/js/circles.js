@@ -103,10 +103,10 @@ const colorArray = ['#59ABE3', '#ad7a99', '#50514F', '#d9f0ff']
 const myCircle = new Circle(30, 80, 10)
 let circleArray = []
 
-for (let i = 0; i < 2000; i++) {
+for (let i = 0; i < 1400; i++) {
     const randomXCoordinate = Math.random() * canvasWidth
     const randomYCoordinate = Math.random() * canvasHeight
-    const randomRadius = Math.floor(Math.random() * 11) + 15
+    const randomRadius = Math.floor(Math.random() * 13) + 8
     circleArray.push(
         new Circle(randomXCoordinate, randomYCoordinate, randomRadius)
     )
