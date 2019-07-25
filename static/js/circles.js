@@ -10,7 +10,7 @@ canvas.width = (window.innerHeight || document.documentElement.clientHeight || d
 const canvasWidth = canvas.width
 const canvasHeight = canvas.height
 
-const maxRadius = 35
+const maxRadius = 45
 
 canvas.onmousemove = function(e) {
     mouseX = e.clientX
@@ -103,7 +103,7 @@ const colorArray = ['#59ABE3', '#ad7a99', '#50514F', '#d9f0ff']
 const myCircle = new Circle(30, 80, 10)
 let circleArray = []
 
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 2000; i++) {
     const randomXCoordinate = Math.random() * canvasWidth
     const randomYCoordinate = Math.random() * canvasHeight
     const randomRadius = Math.random() * 5
