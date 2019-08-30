@@ -1,0 +1,208 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #666;
+    overflow-x:hidden;
+    min-width: 300px;
+    padding-top: 50px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.anchor-darkblue-white {
+    color: #02172c;
+}
+.anchor-darkblue-white:hover {
+    color: #FFF;
+}
+
+.anchor-darkblue-gray {
+    color: #02172c;
+}
+.anchor-darkblue-gray:hover {
+    color: #666;
+}
+
+.bb-navy {
+    color: #34495e;
+}
+
+.bb-darkblue {
+    color: #02172c;
+}
+
+/* Home */
+#overviewCarousel img {
+    width: 100%;
+    max-height: 650px;
+}
+
+#overviewCarousel {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.carousel-control-prev {
+    margin-left: -120px;
+}
+
+.carousel-control-next {
+    margin-right: -120px;
+}
+
+.box {
+    width: 300px;
+    margin: 50px auto;
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    position:relative;
+}
+
+.sb4:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #f5f5f5;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f5f5f5;
+    border-bottom: 10px solid transparent;
+    right: 55px;
+    top: 160px;
+}
+
+@media screen and (max-width: 600px) {
+    #overviewCarousel img {
+        height: 300px;
+    }
+}
+
+.caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+}
+
+.home-hero {
+    background-image: url("../img/tornado_mountain.png");
+    background-size: 100% 100%;
+    height: 600px;
+}
+
+.caption-text {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text-on-image {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/*  Nav */
+.navbar-custom {
+    background-color: #FFF;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.btn-white-navy:hover {
+    background-color: #34495e;
+}
+
+.nav-dropdown {
+    cursor: pointer;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+
+    /* the rest of your styling */
+}
+
+/*
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #00B4DB;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #00B4DB;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #25428e;
+}
+
+
+
+div .dropdown-item.active {
+    color: #FFF !important;
+}
+
+div .dropdown-item {
+    color: #00B4DB !important;
+}
+
+div .dropdown-item:hover {
+    color: #25428e !important;
+}
+*/
+
+/* Footer */
+#footer {
+    width: 100%;
+    background-color: #34495e;
+    padding-top: 1rem;
+    color: #FFF;
+}
+
+#footer h5, #footer h3{
+    color: #02172c;
+}
+
+#footer td {
+    padding: 0.25rem;
+}
+
+#footer li {
+    list-style-type: none;
+}
+
+#footer .footer-copyright a {
+    text-decoration: none;
+    color: #c7c7c7;
+}
+
+.contact-text {
+    color: #FFF;
+}
+
+.contact-text:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,.5);
+}
+
+.media-icon {
+    text-decoration: none;
+}
+
+.media-icon:hover {
+    color: #FFF;
+    text-decoration: none;
+}
