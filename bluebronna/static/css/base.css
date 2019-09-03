@@ -32,6 +32,10 @@ body {
     color: #666;
 }
 
+.bb-gray {
+    color: #666;
+}
+
 .bb-navy {
     color: #34495e;
 }
@@ -107,6 +111,208 @@ body {
 
 .text-on-image {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* About - History */
+.history-hero {
+    background-image: url("../img/7.jpg");
+    background-size: 100% 100%;
+    height: 400px;
+}
+
+.history-hero .caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+    width: 100%;
+}
+
+/* About - Locations */
+ul {
+    list-style-type: none;
+}
+
+.location-img {
+    width: 342px;
+    height: 227px;
+    margin-bottom: 10px;
+}
+
+/* About - Contact Us */
+.media-icon-dark-hover {
+    text-decoration: none;
+}
+
+.media-icon-dark-hover:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+/* About - FAQ */
+.faq-hero {
+    background-image: url("../img/18.jpg");
+    background-size: 100% 100%;
+    height: 400px;
+}
+.faq-hero .caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+    width: 100%;
+}
+
+/* About - Events */
+.event-hero {
+    background-image: url("../img/20.jpg");
+}
+.event-hero .caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+    width: 100%;
+}
+
+.upper-caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+    width: 100%;
+}
+.lower-caption {
+    position: relative;
+    left: 0;
+    top: 65%;
+    text-align: center;
+    width: 100%;
+}
+
+#imageGallery img {
+    height: 80%;
+    width: 80%;
+}
+
+.hero {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
+.blue-rendezvous-hero {
+    background-image: url("../img/blue-rendezvous/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
+.willow-creek-hero {
+    background-image: url("../img/willow-creek/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
+.coat-creek-hero {
+    background-image: url("../img/coat-creek/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
+.ride-a-thon-hero {
+    background-image: url("../img/ride-a-thon/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
+.josh-nichol-hero {
+    background-image: url("../img/josh-nichol/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
+.youth-8-9-hero {
+    background-image: url("../img/schedule/youth/hero.jpg");
+}
+
+.youth-10-12-hero {
+    background-image: url("../img/schedule/youth-up/hero.jpg");
+}
+
+.horse-camp-hero {
+    background-image: url("../img/schedule/horse/hero.jpg");
+}
+
+.teen-base-hero {
+    background-image: url("../img/schedule/teen-base-camp/hero.jpg");
+}
+
+.teen-pack-trip-hero {
+    background-image: url("../img/schedule/teen-pack-trip/hero.jpg");
+}
+
+.winter-family-days-hero {
+    background-image: url("../img/schedule/winter-family/hero.jpg");
+}
+
+.family-camp-hero {
+     background-image: url("../img/schedule/family-camp/hero.jpg");
+}
+
+.special-needs-family-camp-hero {
+    background-image: url("../img/schedule/family-camp/hero.jpg");
+}
+
+.quad-camp-hero {
+    background-image: url("../img/schedule/quad/hero.jpg");
+    background-size: 100% 400px;
+}
+
+.fishing-camp-hero {
+    background-image: url("../img/schedule/fishing/hero.jpg");
+}
+
+.men-in-ministry-hero {
+    background-image: url("../img/schedule/men-in-ministry/hero.jpg");
+}
+
+.ladies-pack-trip-hero {
+    background-image: url("../img/schedule/ladies-pack-trip/hero.jpg");
+}
+
+.couples-pack-trip-hero {
+    background-image: url("../img/schedule/couples-pack-trip/hero.jpg");
+}
+
+.mens-pack-trip-hero {
+    background-image: url("../img/schedule/mens-pack-trip/hero.jpg");
+}
+
+/* About - Schedule */
+.schedule-hero {
+    background-image: url("../img/19.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+.schedule-hero .caption {
+    position: relative;
+    left: 0;
+    top: 25%;
+    text-align: center;
+    width: 100%;
 }
 
 /*  Nav */
