@@ -9,6 +9,82 @@ body {
     padding-top: 50px;
 }
 
+nav {
+    background: #34495e !important;
+    color: #FFF !important;
+}
+
+/* Landing Hero */
+.parallax {
+    min-height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.parallax-landing {
+    background-image: url("../img/2_t.jpg");
+}
+
+.parallax-landing2 {
+    background-image: url("../img/4.jpg");
+}
+
+.vertical-center {
+    min-height: 80%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 90vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .landing-hr {
+        width: 75%;
+        margin-left: 12.5% !important;
+    }
+
+    .landing-tag {
+        font-size: 14px !important;
+    }
+
+    .landing-header {
+        font-size: 36px !important;
+    }
+}
+
+.landing-tag {
+    font-size: 24px;
+    color: #FFF;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.landing-hr {
+    height: 5px;
+    border: none;
+    background: #FFF;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.landing-header {
+    color: #FFF;
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #FFF !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #02172c;
+}
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -45,6 +121,7 @@ body {
 }
 
 /* Home */
+
 #overviewCarousel img {
     width: 100%;
     max-height: 850px;
@@ -262,6 +339,14 @@ body {
     background-image: url("../img/schedule/teen-pack-trip/hero.jpg");
 }
 
+.father-son-hero {
+    background-image: url("../img/schedule/father-son/temp_fs.JPG");
+}
+
+.father-daughter-hero {
+    background-image: url("../img/schedule/father-daughter-horse-camp/hero.jpg");
+}
+
 .winter-family-days-hero {
     background-image: url("../img/schedule/winter-family/hero.jpg");
 }
@@ -338,47 +423,25 @@ body {
     background-color: #34495e;
 }
 
+.btn-white-navy-outline {
+    color: white;
+    border-color: white;
+    border-width: medium;
+}
+
+.btn-white-navy-outline:hover {
+    color: #34495e;
+    background-color: white;
+    border-color: white;
+}
+
 .nav-dropdown {
     cursor: pointer;
 }
 
-.navbar {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-
-    /* the rest of your styling */
+.nav-item:hover {
+    text-decoration: underline;
 }
-
-/*
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: #00B4DB;
-}
-
-.navbar-custom .navbar-nav .nav-link {
-    color: #00B4DB;
-}
-
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #25428e;
-}
-
-
-
-div .dropdown-item.active {
-    color: #FFF !important;
-}
-
-div .dropdown-item {
-    color: #00B4DB !important;
-}
-
-div .dropdown-item:hover {
-    color: #25428e !important;
-}
-*/
 
 /* Footer */
 #footer {
@@ -421,4 +484,32 @@ div .dropdown-item:hover {
 .media-icon:hover {
     color: #FFF;
     text-decoration: none;
+}
+
+.reasonable-size-img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-menu {
+    top: 35px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card-link {
+    margin-top: auto;
+}
+
+/** Credit to https://codepen.io/jesuarva/pen/qowdxR for shadow **/
+.shadow {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow:hover {
+     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 }

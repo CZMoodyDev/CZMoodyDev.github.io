@@ -12,21 +12,20 @@
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         </head>
         <body>
-            <nav class="navbar fixed-top navbar-default navbar-expand-lg navbar-custom navbar-light noselect">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./static/img/bbwc_logo.png" width="120" height="42" class="d-inline-block align-top" alt="">
-                </a>
+            <nav class="navbar fixed-top navbar-default navbar-expand-lg navbar-custom navbar-dark noselect">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./static/img/bbwc_logo.png" width="120" height="42" class="align-top" alt="">
+                </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="./index.html">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-dropdown" id="adventureDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Upcoming Adventures
                             </a>
                             <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
                                 <a class="dropdown-item" href="./upcoming-adventures/schedule.html">Schedule</a>
-                                <a class="dropdown-item" href="./upcoming-adventures/events.html">Events</a>
+                                <a class="dropdown-item" href="./events/">Events</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -36,300 +35,246 @@
                             <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
                                 <a class="dropdown-item" href="./about/history.html">History</a>
                                 <a class="dropdown-item" href="./about/locations.html">Locations</a>
-                                <a class="dropdown-item" href="./about/stories.html">Stories</a>
+                                <a class="dropdown-item" href="./about/bio.html">About the Director</a>
                                 <a class="dropdown-item" href="./about/faq.html">Frequently Asked Questions</a>
                                 <a class="dropdown-item" href="./about/contact-us.html">Contact Us</a>
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="./volunteer/index.html">Volunteer</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./volunteer/needs.html">Needs</a></li>
-                        <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-white-navy" target="_blank" href="https://atbcares.benevity.org/community/cause/124-100549989RR0001">Donate</a></li>
-                        <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-white-navy" target="_blank" href="https://bluebronna.wufoo.com/forms/2019-summer-camp-registration-blue-bronna/">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./volunteer/index.html">Staff Opportunities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./needs/">Needs</a></li>
+                        <!--
+                        <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-white-navy" href="./donate/">Donate</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-white-navy" href="./register/">Register</a></li>
+                        -->
                     </ul>
                 </div>
             </nav>
+            <div class="container-fluid jumbotron parallax parallax-landing vertical-center">
+                <div class="mx-auto noselect">
+                    <p class="landing-tag">Celebrating over 30 years of sharing Christ through wilderness adventures!</p>
+                    <hr class="landing-hr">
+                    <h1 class="landing-header">Adventure Awaits</h1>
+                    <hr class="landing-hr">
+                    <div class="row justify-content-center">
+                        <a class="btn btn-outline-secondary btn-white-navy-outline mr-5" href="./donate/">Donate</a>
+                        <a class="btn btn-outline-secondary btn-white-navy-outline" href="./register/">Register</a>
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <div class="container-fluid home-hero mb-5">
-                    <div class="row">
-                        <div class="caption pb-5 pt-5">
-                            <h1 class="text-white text-on-image">Adventure Awaits...</h1>
-                            <div class="row">
-                                <div class="col-md-6 offset-md-3 caption-text pt-3">
-                                    <p class="text-white font-weight-bold">So you've been dreaming of an adventure in the mountains but don't know where to start?  What if all you had to worry about was getting here?</p>
+                <div id="locales" class="container mb-5">
+                    <h1 class="font-weight-bold text-center">Blue Bronna Wilderness Camp</h1>
+                    <p class="text-center">This is a description blurb for a quick overview of the camp's mission and location.</p>
+                    <div class="row d-flex mb-4">
+                        <div class="col-sm-4 d-flex align-items-stretch">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img class="card-img-top" src="./static/img/9.jpg" alt="Willow Creek Site">
+                                <div class="card-body">
+                                    <h5 class="card-title">Willow Creek Site</h5>
+                                    <p class="card-text">If you enjoy camping but are looking for a few more amenities, our Willow Creek site is for you! This site enables you to enjoy the adventure of wilderness camping with a few more comforts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 d-flex align-items-stretch">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img class="card-img-top" src="./static/img/10.jpg" alt="Coat Creek Site">
+                                <div class="card-body">
+                                    <h5 class="card-title">Coat Creek Site</h5>
+                                    <p class="card-text">Wilderness camping truly at its best! Want to experience the adventure of a lifetime? Come out to our wilderness site! You will sleep in cozy wall tents, complete with bunks and a wood stove.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 d-flex align-items-stretch">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img class="card-img-top" src="./static/img/11.jpg" alt="Pack Trips">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pack Trips</h5>
+                                    <p class="card-text">Our packing program is one of the most unique aspects we offer. These trips allow you to experience some remote and amazing parts of God's creation.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark btn-white-navy" href="./about/contact-us.html">Get Directions</a>
+                    </div>
                 </div>
-                <div class="container mb-5">
-                    <h1 class="font-weight-bold text-center">Are You Ready For An Adventure?</h1>
-                    <p class="text-center">Whether you're looking for relaxation and peace or an adventure you won't soon forget, we have a camp for you.</p>
-                    <div id="overviewCarousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#overviewCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#overviewCarousel" data-slide-to="1"></li>
-                            <li data-target="#overviewCarousel" data-slide-to="2"></li>
-                            <li data-target="#overviewCarousel" data-slide-to="3"></li>
-                            <li data-target="#overviewCarousel" data-slide-to="4"></li>
-                            <li data-target="#overviewCarousel" data-slide-to="5"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="./static/img/1.jpg" alt="First slide">
+                <div id="offerings" class="container-fluid jumbotron parallax parallax-landing2 vertical-center">
+                    <div class="mx-auto noselect">
+                        <h1 class="landing-header font-weight-bold text-center">Camp Offerings</h1>
+                        <div class="row mb-3">
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="./static/img/schedule/youth-up/1.jpg" alt="Youth/Teen  Camps">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Youth/Teen Camps</h5>
+                                        <p class="card-text">A blurb about youth adventure camps including some ideas about what youth will do in these camps or how it will challenge them etc.</p>
+                                        <a class="btn btn-outline-dark btn-white-navy card-link" href="./upcoming-adventures/schedule.html#yac">Check it out</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./static/img/2.jpg" alt="Second slide">
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="./static/img/schedule/father-daughter-horse-camp/1.jpg" alt="Family Camps">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Family Camps</h5>
+                                        <p class="card-text">A blurb about family camps including some ideas about what youth will do in these camps etc.</p>
+                                        <a class="btn btn-outline-dark btn-white-navy card-link" href="./upcoming-adventures/schedule.html#fc">Check it out</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./static/img/3.jpg" alt="Third slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./static/img/Staff%20Recruitment%20Poster.jpg" alt="Fourth slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./static/img/5.jpg" alt="Fifth slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./static/img/6.jpg" alt="Sixth slide">
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="./static/img/schedule/adult.jpg" alt="Adult Camps">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Adult Camps</h5>
+                                        <p class="card-text">General overview of adult camps.</p>
+                                        <a class="btn btn-outline-dark btn-white-navy card-link" href="./upcoming-adventures/schedule.html#ac">Check it out</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#overviewCarousel" role="button" data-slide="prev">
-                            <i style="font-size: 48px" class="fas fa-arrow-alt-circle-left bb-darkblue"></i>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#overviewCarousel" role="button" data-slide="next">
-                            <i style="font-size: 48px" class="fas fa-arrow-alt-circle-right bb-darkblue"></i>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
             </div>
             <div class="container mb-5">
-                <div class="row">
-                    <div class="col-lg-2 text-center my-auto">
-                        <i class="fas fa-star fa-3x"></i>
-                    </div>
-                    <div class="col-lg-6 text-center my-auto">
-                        <h3 class="bb-darkblue font-weight-bold">Celebrating 30 years of sharing Christ through wilderness adventures in 2019!</h3>
-                        <p>December 7, 2017 marks 30 years that Blue Bronna Wilderness Camp has been providing adventures in the beautiful Rocky Mountains of Alberta. We are so thankful for where we are at and even more excited for the future! Celebrate with us this year!</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <div class="box sb4">"Each and every staff member was awesome! They made us feel welcome and truly made our camp experience enjoyable and awesome. Thank you!"</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2 text-center my-auto">
-                        <i class="fas fa-home fa-3x"></i>
-                    </div>
-                    <div class="col-lg-6 text-center my-auto">
-                        <h3 class="bb-darkblue font-weight-bold">Two Site Locations</h3>
-                        <p>Two site locations allows us to provide exceptional adventures every time. From extreme hiking to mountainous equine pack trips, you will have a different adventure each and every time you visit us. No two days are the same! Learn more about what our sites have to offer here.</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2 text-center my-auto">
-                        <i class="fas fa-key fa-3x"></i>
-                    </div>
-                    <div class="col-lg-6 text-center my-auto">
-                        <h3 class="bb-darkblue font-weight-bold">A little about us...</h3>
-                        <p>Blue Bronna Wilderness Camp is a not-for-profit organization that runs two sites south west of Calgary.  One is on the Willow Creek west of the Chain Lakes, the other is located at Coat Creek.  The focus of Blue Bronna has always been sharing the power and majesty of God through a wilderness camping experience.  Join us for the adventure of your choice to get away from the busyness and distractions of life so that you can experience the beautiful mountains and nature around you while enjoying peace and serenity of a wilderness adventure.</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <div class="box sb4">"Thanks so much for an awesome camp time! I appreciated all the love you showed to my kids! They will never forget the past few days...we will be back!"</div>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-5">
                 <h1 class="text-center font-weight-bold">Frequently Asked Questions</h1>
-                <div class="row mb-2 justify-content-around">
-                    <div class="col-lg-5">
-                        <div id="acc1">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse1">
-                                        <i class="fa fa-plus-square"></i> What Do I Pack?
-                                    </a>
-                                </div>
-                                <div id="collapse1" class="collapse" data-parent="#acc1">
-                                    <div class="card-body">
-                                        <p>Based on a five day camp.</p>
-                                        <ul>
-                                            <li>Bible</li>
-                                            <li>Rain gear & gloves</li>
-                                            <li>Water bottle</li>
-                                            <li>Flashlight or headlamp</li>
-                                            <li>Boots with a heel</li>
-                                            <li>Sturdy runners or hikers-Jeans or sturdy pants</li>
-                                            <li>2 Warm long-sleeved shirts</li>
-                                            <li>2 T-shirts</li>
-                                            <li>4 Hooded sweatshirt</li>
-                                            <li>Waterproof soft shell jacket</li>
-                                            <li>Warm hat</li>
-                                            <li>Swim wear</li>
-                                            <li>6 Socks(wool blend)</li>
-                                            <li>Personal hygiene (towel, soap, etc.)</li>
-                                            <li>Warm sleeping bag (-10 rating at least)</li>
-                                            <li>Self inflating sleeping pad or thin foam</li>
-                                            <li>Camera</li>
-                                        </ul>
-                                        <p>Please <em>do not</em> bring things like phones, iPods, or expensive/cherished items that may be lost or broken(i.e. journals, jewelry, etc.). We would like our campers not to be worried about items being in danger of damage while at camp.</p>
-                                    </div>
-                                </div>
+                <div id="accordion" class="mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse1">
+                                <i class="fa fa-plus-square"></i> What Do I Pack?
+                            </a>
+                        </div>
+                        <div id="collapse1" class="collapse" data-parent="#acc1">
+                            <div class="card-body">
+                                <p>Based on a five day camp.</p>
+                                <ul>
+                                    <li>Bible</li>
+                                    <li>Rain gear & gloves</li>
+                                    <li>Water bottle</li>
+                                    <li>Flashlight or headlamp</li>
+                                    <li>Boots with a heel</li>
+                                    <li>Sturdy runners or hikers-Jeans or sturdy pants</li>
+                                    <li>2 Warm long-sleeved shirts</li>
+                                    <li>2 T-shirts</li>
+                                    <li>4 Hooded sweatshirt</li>
+                                    <li>Waterproof soft shell jacket</li>
+                                    <li>Warm hat</li>
+                                    <li>Swim wear</li>
+                                    <li>6 Socks(wool blend)</li>
+                                    <li>Personal hygiene (towel, soap, etc.)</li>
+                                    <li>Warm sleeping bag (-10 rating at least)</li>
+                                    <li>Self inflating sleeping pad or thin foam</li>
+                                    <li>Camera</li>
+                                </ul>
+                                <p>Please <em>do not</em> bring things like phones, iPods, or expensive/cherished items that may be lost or broken(i.e. journals, jewelry, etc.). We would like our campers not to be worried about items being in danger of damage while at camp.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div id="acc2">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse2">
-                                        <i class="fa fa-plus-square"></i> How Do We Get There?
-                                    </a>
-                                </div>
-                                <div id="collapse2" class="collapse" data-parent="#acc2">
-                                    <div class="card-body">
-                                        Directions:
-                                        <a class="anchor-darkblue-gray" href="https://www.google.ca/maps/place/Blue+Bronna+Wilderness+Camp/@50.2468338,-114.339462,13z/data=!4m5!3m4!1s0x0:0xbd39f7a57397709!8m2!3d50.2411121!4d-114.3494797">Download The Map!</a>
-                                    </div>
-                                </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse2">
+                                <i class="fa fa-plus-square"></i> How Do We Get There?
+                            </a>
+                        </div>
+                        <div id="collapse2" class="collapse" data-parent="#acc2">
+                            <div class="card-body">
+                                Directions:
+                                <a class="anchor-darkblue-gray" href="https://www.google.ca/maps/place/Blue+Bronna+Wilderness+Camp/@50.2468338,-114.339462,13z/data=!4m5!3m4!1s0x0:0xbd39f7a57397709!8m2!3d50.2411121!4d-114.3494797">Download The Map!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse3">
+                                <i class="fa fa-plus-square"></i> Do I Need To Know How to Ride?
+                            </a>
+                        </div>
+                        <div id="collapse3" class="collapse" data-parent="#acc3">
+                            <div class="card-body">
+                                <p>How much riding experience do I need to be on a pack trip?</p>
+                                <p>At Willow Creek - no experience is needed but you will be expected to learn how to catch, brush and saddle their own horses and be comfortable riding for up to 1-2 hours. The day rides we do include going up and down steep terrain.</p>
+                                <p>At Coat Creek - some experience is needed and you need to be prepared to ride for up to 8 hours.</p>
+                                <p>Campers will need to be ready to live in the wilderness which includes going to the bathroom outside, helping with chores like harvesting firewood and setting up camp.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse4">
+                                <i class="fa fa-plus-square"></i> Do you provide subsidies or sponsorships?
+                            </a>
+                        </div>
+                        <div id="collapse4" class="collapse" data-parent="#acc4">
+                            <div class="card-body">
+                                <p>Do you provide subsidies and/or sponsorships for campers who can't afford to come?</p>
+
+                                <p>We do not want camp fees to keep someone from attending our camps.  We only have a certain number of sponsorships available each summer.  If you are in need of financial assistance to come to camp or send your child please email us at office@bluebronna.org</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse5">
+                                <i class="fa fa-plus-square"></i> Is there internet access?
+                            </a>
+                        </div>
+                        <div id="collapse5" class="collapse" data-parent="#acc5">
+                            <div class="card-body">
+                                No. There is no internet access for campers at any of our locations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse6">
+                                <i class="fa fa-plus-square"></i> We don't attend church: awkward?
+                            </a>
+                        </div>
+                        <div id="collapse6" class="collapse" data-parent="#acc6">
+                            <div class="card-body">
+                                <p>We don't attend church; will we feel out of place? Will my child feel pressured to believe in your faith?</p>
+                                <p>Many of our campers do not attend church, a fact which we take into consideration when we plan our programs and camps. No camper will forced or coerced into making any decision at camp. We do our best to include each camper and strive for an inclusive, loving environment in which each person feels accepted and appreciated.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-2 justify-content-around">
-                    <div class="col-lg-5">
-                        <div id="acc3">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse3">
-                                        <i class="fa fa-plus-square"></i> Do I Need To Know How to Ride?
-                                    </a>
-                                </div>
-                                <div id="collapse3" class="collapse" data-parent="#acc3">
-                                    <div class="card-body">
-                                        <p>How much riding experience do I need to be on a pack trip?</p>
-                                        <p>At Willow Creek - no experience is needed but you will be expected to learn how to catch, brush and saddle their own horses and be comfortable riding for up to 1-2 hours. The day rides we do include going up and down steep terrain.</p>
-                                        <p>At Coat Creek - some experience is needed and you need to be prepared to ride for up to 8 hours.</p>
-                                        <p>Campers will need to be ready to live in the wilderness which includes going to the bathroom outside, helping with chores like harvesting firewood and setting up camp.</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div id="acc4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse4">
-                                        <i class="fa fa-plus-square"></i> Do you provide subsidies or sponsorships?
-                                    </a>
-                                </div>
-                                <div id="collapse4" class="collapse" data-parent="#acc4">
-                                    <div class="card-body">
-                                        <p>Do you provide subsidies and/or sponsorships for campers who can't afford to come?</p>
-
-                                        <p>We do not want camp fees to keep someone from attending our camps.  We only have a certain number of sponsorships available each summer.  If you are in need of financial assistance to come to camp or send your child please email us at office@bluebronna.org</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-white-navy" href="./about/faq.html">More FAQs</a>
                 </div>
-                <div class="row mb-2 justify-content-around">
-                    <div class="col-lg-5">
-                        <div id="acc5">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse5">
-                                        <i class="fa fa-plus-square"></i> Is there internet access?
-                                    </a>
-                                </div>
-                                <div id="collapse5" class="collapse" data-parent="#acc5">
-                                    <div class="card-body">
-                                        No. There is no internet access for campers at any of our locations.
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="container-fluid jumbotron parallax parallax-landing vertical-center">
+                <div class="container-fluid">
+                    <h1 class="landing-header">Get Involved</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-xs-4">
+                            <h3 class="text-white">Donate</h3>
+                            <hr>
+                            <p>Support us financially through donations</p>
+                            <a class="btn btn-outline-dark btn-white-navy" href="./donate/">Donate</a>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div id="acc6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a class="card-link bb-darkblue" data-toggle="collapse" href="#collapse6">
-                                        <i class="fa fa-plus-square"></i> We don't attend church: awkward?
-                                    </a>
-                                </div>
-                                <div id="collapse6" class="collapse" data-parent="#acc6">
-                                    <div class="card-body">
-                                        <p>We don't attend church; will we feel out of place? Will my child feel pressured to believe in your faith?</p>
-                                        <p>Many of our campers do not attend church, a fact which we take into consideration when we plan our programs and camps. No camper will forced or coerced into making any decision at camp. We do our best to include each camper and strive for an inclusive, loving environment in which each person feels accepted and appreciated.</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-xs-4">
+                            <h3 class="text-white">Donate</h3>
+                            <hr>
+                            <p>Support us financially through donations</p>
+                            <a class="btn btn-outline-dark btn-white-navy" href="./donate/">Donate</a>
+                        </div>
+                        <div class="col-xs-4">
+                            <h3 class="text-white">Donate</h3>
+                            <hr>
+                            <p>Support us financially through donations</p>
+                            <a class="btn btn-outline-dark btn-white-navy" href="./donate/">Donate</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="footer" class="container-fluid">
-                <div class="row col-md-12">
-                    <div class="col-md-4 mb-2">
-                        <h3 class="font-weight-bold">About Us</h3>
-                        <p>At Blue Bronna Wilderness Camp, we are passionate about providing campers the opportunity to get to know God by experiencing nature through wilderness adventures in the Alberta Rockies.&nbsp;<a class="anchor-darkblue-white" href="../about/history.html" target="_blank">Learn more...</a></p>
-                        <p><a class="font-weight-bold anchor-darkblue-white" href="https://atbcares.benevity.org/community/cause/124-100549989RR0001">Donate Today <i class="fas fa-arrow-right"></i></a></p>
-                        <p><img src="./static/img/member_logo.png"/></p>
-                    </div>
-                    <div class="col-md-4 mx-auto mb-3">
-                        <h3 class="font-weight-bold">Other Links</h3>
-                        <ul>
-                            <li><a class="contact-text" href="./index.html" target="_self"><i class="fas fa-caret-right"></i> Home</a></li>
-                            <li><a class="contact-text" href="./volunteer/needs.html" target="_self"><i class="fas fa-caret-right"></i> Needs</a></li>
-                            <li><a class="contact-text" href="./volunteer/index.html" target="_self"><i class="fas fa-caret-right"></i> Volunteer</a></li>
-                            <li><a class="contact-text" href="./about/contact-us.html" target="_self"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                            <li><a class="contact-text" href="./privacy-policy/index.html" target="_self"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                            <li><a class="contact-text" href="https://bluebronna.wufoo.com/forms/2019-summer-camp-registration-blue-bronna/" target="_self"><i class="fas fa-caret-right"></i> Register</a></li>
-
-
-                        </ul>
-                    </div>
-                    <div class="col-md-4 mb-2">
-                        <h5 class="font-weight-bold">Contact Us</h5>
-                        <div>
-                            <p>
-                                <i class="fas fa-phone bb-darkblue"></i><a class="contact-text" href="tel:403-803-4776"> (403)803-4776</a>
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                <i class="fas fa-envelope bb-darkblue"></i><a class="contact-text" href="mailto:Office@BlueBronna.org" target="_blank"> office@bluebronna.org</a>
-                            </p>
-                        </div>
-                        <div class="mb-2">
-                            <p><i class="fas fa-home bb-darkblue"></i> Box 65, Longview, AB T0L 1H0</p>
-                        </div>
-                        <div>
-                            <a class="bb-darkblue media-icon" href="https://www.facebook.com/bluebronna" target="_blank">
-                                <i class="fab fa-facebook-square fa-2x"></i>
-                            </a>
-                            <a class="bb-darkblue media-icon" href="https://www.instagram.com/bluebronnawildernesscamp/" target="_blank">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                            <a class="bb-darkblue media-icon" href="https://twitter.com/BlueBronna" target="_blank">
-                                <i class="fab fa-twitter-square fa-2x"></i>
-                            </a>
-                            <a class="bb-darkblue media-icon" href="https://www.linkedin.com/company/blue-bronna-wilderness-camp" target="_blank">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright text-center py-3 small">
-                    Copyright 2019 Created by <a target="_blank" href="http://www.czmoody.com">Curtis Zim Moody</a>.
-                </div>
-            </div>
+            <div id="footer" class="container-fluid"></div>
+            <script>
+                var THIS_NAV = "home";
+                var ROOT_PATH = ".";
+                var STATIC_PATH = "./static/";
+            </script>
             <script src="./static/js/base.js"></script>
         </body>
     </html>

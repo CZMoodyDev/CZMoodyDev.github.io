@@ -12,42 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar fixed-top navbar-default navbar-expand-lg navbar-custom navbar-light noselect">
-    <a class="navbar-brand" href="../index.html">
-        <img src="../static/img/bbwc_logo.png" width="120" height="42" class="d-inline-block align-top" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-dropdown" id="adventureDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Upcoming Adventures
-                </a>
-                <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
-                    <a class="dropdown-item active" href="../upcoming-adventures/schedule.html">Schedule</a>
-                    <a class="dropdown-item" href="../upcoming-adventures/events.html">Events</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-dropdown" id="aboutUsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About Us
-                </a>
-                <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
-                    <a class="dropdown-item" href="../about/history.html">History</a>
-                    <a class="dropdown-item" href="../about/locations.html">Locations</a>
-                    <!-- <a class="dropdown-item" href="../about/stories.html">Stories</a> -->
-                    <a class="dropdown-item" href="../about/faq.html">Frequently Asked Questions</a>
-                    <a class="dropdown-item" href="../about/contact-us.html">Contact Us</a>
-                </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="../volunteer/index.html">Volunteer</a></li>
-            <li class="nav-item"><a class="nav-link" href="../volunteer/needs.html">Needs</a></li>
-            <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-white-navy" target="_blank" href="https://atbcares.benevity.org/community/cause/124-100549989RR0001">Donate</a></li>
-            <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-white-navy" target="_blank" href="https://bluebronna.wufoo.com/forms/2019-summer-camp-registration-blue-bronna/">Register</a></li>
-        </ul>
-    </div>
-</nav>
+<nav id="navigation"></nav>
 <div class="container-fluid schedule-hero mb-5">
     <div class="row">
         <div class="upper-caption pb-5 pt-5">
@@ -60,31 +25,33 @@
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">2019 Camp Schedule!</p>
+                    <p class="text-white font-weight-bold">2020 Camp Schedule!</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="container-fluid">
-    <h1 class="font-weight-bold text-center">Adventure Awaits...</h1>
+    <h1  id="yac" class="font-weight-bold text-center">Adventure Awaits...</h1>
     <div class="row pb-5">
         <div class="col-lg-6">
             <h3 class="font-weight-bold text-center">Youth/Teen Camps:</h3>
-            <p>Whether you are looking for a summer camp to build your outdoor skills, do some climbing, or spend your time with the horses we have lots of options for an exciting camp experience! From age 8 through 18 we have many options available.</p>
+            <p>Whether you are looking for a summer camp to build your outdoor skills, do some climbing, or spend your time with the horses we have lots of options for an exciting camp experience! From age 8 through 17 we have many options available.</p>
             <p><em>Click on each title to learn more and register.</em></p>
-            <p><a class="anchor-darkblue-gray" href="./youth-8-9.html">Adventure Youth Camp - Ages 8 to 9</a></p>
-            <p><a class="anchor-darkblue-gray" href="./youth-10-12.html">Horse Camp - Ages 10 to 12</a></p>
-            <p><a class="anchor-darkblue-gray" href="./horse-camp.html">Horse Camp - Ages 12 to 16</a></p>
-            <p><a class="anchor-darkblue-gray" href="./teen-base-camp.html">Teen Base Camp</a></p>
-            <p><a class="anchor-darkblue-gray" href="./teen-pack-trip.html">Teen Pack Trip</a></p>
+            <p><a class="anchor-darkblue-gray" href="./youth-8-9.html">Youth Adventure Camp - Ages 8 to 10</a></p>
+            <p><a class="anchor-darkblue-gray" href="./youth-10-12.html">Youth Adventure Camp - Ages 10 to 12</a></p>
+            <p><a class="anchor-darkblue-gray" href="./horse-camp.html">Horse Camp - Ages 13 to 17</a></p>
+            <p><a class="anchor-darkblue-gray" href="./teen-base-camp.html">Teen Base Camp - Ages 13 to 17</a></p>
+            <p><a class="anchor-darkblue-gray" href="./teen-pack-trip.html">Teen Pack Trip - Ages 14 to 17</a></p>
+            <p><a class="anchor-darkblue-gray" href="./photography-camp.html">Photography Camp - Ages 15 to 17</a></p>
+            <p><a class="anchor-darkblue-gray" href="./junior-staff-training.html">Junior Staff</a></p>
         </div>
         <div class="col-lg-6">
             <img class="img-fluid" src="../static/img/schedule/youth-teen.jpg">
         </div>
     </div>
 
-    <div class="row pb-5">
+    <div id="fc" class="row pb-5">
         <div class="col-lg-6">
             <img class="img-fluid" src="../static/img/schedule/family.jpg">
         </div>
@@ -96,20 +63,22 @@
             <p><a class="anchor-darkblue-gray" href="./family-camp.html">Family Camp - Willow Creek</a></p>
             <p><a class="anchor-darkblue-gray" href="./special-needs-family-camp.html">Special Needs Family Camp - Willow Creek</a></p>
             <p><a class="anchor-darkblue-gray" href="./father-daughter-horse-camp.html">Father/Daughter Horse Camp</a></p>
+            <p><a class="anchor-darkblue-gray" href="./mother-daughter-horse-camp.html">Mother/Daughter Horse Camp</a></p>
+            <p><a class="anchor-darkblue-gray" href="./father-son-adventure-camp.html">Father/Son Adventure Camp</a></p>
         </div>
     </div>
 
-    <div class="row pb-5">
+    <div id="ac" class="row pb-5">
         <div class="col-lg-6">
             <h3 class="font-weight-bold text-center">Adult Camps:</h3>
             <p>Adventure awaits. Whether you're looking for a challenge with a group of like-minded individuals or a couples retreat check out our unique and exciting options below.</p>
             <p><em>Click on each title to learn more and register.</em></p>
             <p><a class="anchor-darkblue-gray" href="./quad-camp.html">Quad Camp</a></p>
-            <p><a class="anchor-darkblue-gray" href="./fishing-camp.html">Fishing Camp</a></p>
-            <p><a class="anchor-darkblue-gray" href="./men-in-ministry.html">Men in Ministry Retreat</a></p>
+            <p><a class="anchor-darkblue-gray" href="./fishing-camp.html">Fly Fishing Camp</a></p>
+            <p><a class="anchor-darkblue-gray" href="./men-in-ministry.html">Men in Ministry - Pastors, Missionaries, Christian Leaders</a></p>
             <p><a class="anchor-darkblue-gray" href="./ladies-horse-camp.html">Ladies Horse Camp</a></p>
-            <p><a class="anchor-darkblue-gray" href="./couples-pack-trip.html">Couples Pack Trip</a></p>
             <p><a class="anchor-darkblue-gray" href="./mens-pack-trip.html">Men's Pack Trip</a></p>
+            <p><a class="anchor-darkblue-gray" href="./photography-camp.html">Photography Camp</a></p>
         </div>
         <div class="col-lg-6">
             <img class="img-fluid" src="../static/img/schedule/adult.jpg">
@@ -124,70 +93,21 @@
             <h3 class="font-weight-bold text-center">Other Events:</h3>
             <p>Looking for other ways to be involved in Blue Bronna Wilderness Camp?  Visit our Private Adventures page and learn how we can create a custom event just for you!
                 We have lots of other exciting events happening through out the year!</p>
-            <p><a class="anchor-darkblue-gray" href="./blue-rendezvous.html">27th Annual Blue Rendezvous</a></p>
-            <p><a class="anchor-darkblue-gray" href="./willow-creek-work.html">Willow Creek Work Weekend</a></p>
-            <p><a class="anchor-darkblue-gray" href="./coat-creek-work.html">Coat Creek Setup Weekend</a></p>
-            <p><a class="anchor-darkblue-gray" href="./ride-a-thon.html">Ride-A-Thon Fundraiser</a></p>
-            <p><a class="anchor-darkblue-gray" href="./josh-nichol-clinic.html">Josh Nichol Clinic</a></p>
+            <p><a class="anchor-darkblue-gray" href="../events/blue-rendezvous/">Annual Blue Rendezvous</a></p>
+            <p><a class="anchor-darkblue-gray" href="../events/willow-creek-work/">Willow Creek Work Weekend</a></p>
+            <p><a class="anchor-darkblue-gray" href="../events/coat-creek-work/">Coat Creek Setup Weekend</a></p>
+            <p><a class="anchor-darkblue-gray" href="../events/ride-a-thon/">Ride-A-Thon Fundraiser</a></p>
+            <p><a class="anchor-darkblue-gray" href="../events/josh-nichol-clinic/">Josh Nichol Clinic</a></p>
         </div>
     </div>
 </div>
 <div id="footer" class="container-fluid">
-    <div class="row col-md-12">
-        <div class="col-md-4 mb-2">
-            <h3 class="font-weight-bold">About Us</h3>
-            <p>At Blue Bronna Wilderness Camp, we are passionate about providing campers the opportunity to get to know God by experiencing nature through wilderness adventures in the Alberta Rockies.&nbsp;<a class="anchor-darkblue-white" href="../about/history.html" target="_blank">Learn more...</a></p>
-            <p><a class="font-weight-bold anchor-darkblue-white" href="https://atbcares.benevity.org/community/cause/124-100549989RR0001">Donate Today <i class="fas fa-arrow-right"></i></a></p>
-            <p><img src="../static/img/member_logo.png"/></p>
-        </div>
-        <div class="col-md-4 mx-auto mb-3">
-            <h3 class="font-weight-bold">Other Links</h3>
-            <ul>
-                <li><a class="contact-text" href="../index.html" target="_self"><i class="fas fa-caret-right"></i> Home</a></li>
-                <li><a class="contact-text" href="../volunteer/needs.html" target="_self"><i class="fas fa-caret-right"></i> Needs</a></li>
-                <li><a class="contact-text" href="../volunteer/index.html" target="_self"><i class="fas fa-caret-right"></i> Volunteer</a></li>
-                <li><a class="contact-text" href="../about/contact-us.html" target="_self"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                <li><a class="contact-text" href="../privacy-policy/index.html" target="_self"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                <li><a class="contact-text" href="https://bluebronna.wufoo.com/forms/2019-summer-camp-registration-blue-bronna/" target="_self"><i class="fas fa-caret-right"></i> Register</a></li>
-
-
-            </ul>
-        </div>
-        <div class="col-md-4 mb-2">
-            <h5 class="font-weight-bold">Contact Us</h5>
-            <div>
-                <p>
-                    <i class="fas fa-phone bb-darkblue"></i><a class="contact-text" href="tel:403-803-4776"> (403)803-4776</a>
-                </p>
-            </div>
-            <div>
-                <p>
-                    <i class="fas fa-envelope bb-darkblue"></i><a class="contact-text" href="mailto:Office@BlueBronna.org" target="_blank"> office@bluebronna.org</a>
-                </p>
-            </div>
-            <div class="mb-2">
-                <p><i class="fas fa-home bb-darkblue"></i> Box 65, Longview, AB T0L 1H0</p>
-            </div>
-            <div>
-                <a class="bb-darkblue media-icon" href="https://www.facebook.com/bluebronna" target="_blank">
-                    <i class="fab fa-facebook-square fa-2x"></i>
-                </a>
-                <a class="bb-darkblue media-icon" href="https://www.instagram.com/bluebronnawildernesscamp/" target="_blank">
-                    <i class="fab fa-instagram fa-2x"></i>
-                </a>
-                <a class="bb-darkblue media-icon" href="https://twitter.com/BlueBronna" target="_blank">
-                    <i class="fab fa-twitter-square fa-2x"></i>
-                </a>
-                <a class="bb-darkblue media-icon" href="https://www.linkedin.com/company/blue-bronna-wilderness-camp" target="_blank">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright text-center py-3 small">
-        Copyright 2019 Created by <a target="_blank" href="http://www.czmoody.com">Curtis Zim Moody</a>.
-    </div>
 </div>
+<script>
+    var THIS_NAV = "schedule";
+    var ROOT_PATH = "..";
+    var STATIC_PATH = ROOT_PATH + "/static/";
+</script>
 <script src="../static/js/base.js"></script>
 </body>
 </html>
