@@ -1,3 +1,5 @@
+var ADDRESS = "Box 65, Longview, AB T0L 1H0";
+var OFFICE_EMAIL = "office@bluebronna.org";
 
 $(document).ready(function(){
     createNavBar();
@@ -41,8 +43,8 @@ function createNavBar() {
         '            </li>\n' +
         '            <li class="nav-item"><a id="nav-volunteer" class="nav-link" href="' + ROOT_PATH + '/volunteer/">Staff Opportunities</a></li>\n' +
         '            <li class="nav-item"><a id="nav-needs" class="nav-link" href="' + ROOT_PATH + '/needs/">Needs</a></li>\n' +
-        '            <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-outline-light" href="' + ROOT_PATH + '/donate/">Donate</a></li>\n' +
-        '            <li class="nav-item"><a class="btn btn-outline-secondary mr-2 btn-outline-light" href="' + ROOT_PATH + '/register/">Register</a></li>\n' +
+        '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/donate/">Donate</a></li>\n' +
+        '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/register/">Register</a></li>\n' +
         '        </ul>\n' +
         '    </div>\n' +
         '</nav>';
@@ -99,11 +101,11 @@ function createFooter() {
         '            </div>\n' +
         '            <div>\n' +
         '                <p>\n' +
-        '                    <i class="fas fa-envelope bb-darkblue"></i><a class="contact-text" href="mailto:Office@BlueBronna.org" target="_blank"> office@bluebronna.org</a>\n' +
+        '                    <i class="fas fa-envelope bb-darkblue"></i><a class="contact-text" href="mailto:Office@BlueBronna.org" target="_blank"> ' + OFFICE_EMAIL + '</a>\n' +
         '                </p>\n' +
         '            </div>\n' +
         '            <div class="mb-2">\n' +
-        '                <p><i class="fas fa-home bb-darkblue"></i> Box 65, Longview, AB T0L 1H0</p>\n' +
+        '                <p><i class="fas fa-home bb-darkblue"></i> ' + ADDRESS + '</p>\n' +
         '            </div>\n' +
         '            <div>\n' +
         '                <a class="bb-darkblue media-icon" href="https://www.facebook.com/bluebronna" target="_blank">\n' +

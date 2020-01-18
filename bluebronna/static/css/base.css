@@ -20,6 +20,9 @@ nav {
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
 
 .parallax-landing {
@@ -28,6 +31,10 @@ nav {
 
 .parallax-landing2 {
     background-image: url("../img/4.jpg");
+}
+
+.parallax-landing3 {
+    background-image: url("../img/1.jpg");
 }
 
 .vertical-center {
@@ -75,6 +82,14 @@ nav {
     text-align: center;
     line-height: 100px;
     font-weight: bold;
+}
+
+.involved-hr {
+    height: 3px;
+    border: none;
+    background: #FFF;
+    width: 50%;
+    margin: auto;
 }
 
 .nav-link {
