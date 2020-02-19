@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Winter Family Days</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">February 14th - 17th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,18 +34,17 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Winter Family Days</h1>
-            <h5 class="font-weight-bold bb-gray">February 14th - 17th, 2020</h5>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Looking for a quick get away with the family that's affordable and stress free?
                 Join us Family Day Long Weekend in Alberta, for a relaxing, and fun few days with the whole family at the willow creek site! Winter is a beautiful time to enjoy the mountains but usually comes with steep price tag, at Blue Bronna Wilderness Camp, we love bringing families together to enjoy the wilderness in a family friendly, Christian based environment. With cozy cabins for you to enjoy, we plan to have bonfires, skating, ice fishing, hiking, and maybe even sleigh rides! We looking forward to seeing you there!</p>
             <p>Space is limited due to available cabin space.</p>
             <p>Please bring your own skates and any ice fishing equipment you have as well as lots of warm layers!</p>
             <p>Activities are based on weather and availability and are subject to change without notice.</p>
 
-            <p><strong>Arrival: </strong> 7pm Friday</p>
-            <p><strong>Departure: </strong> 11am Monday</p>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
 
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-family-day-weekend-family-camp" target="_blank">Register</a>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -73,5 +72,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('winterfamilydays');
+</script>
 </body>
 </html>

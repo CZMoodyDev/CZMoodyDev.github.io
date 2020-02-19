@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Teen Base Camp:</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">August 11th to 16th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Teen Adventure Camp: Teen Base Camp</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Teen Base Camp will push you in your spiritual walk, your outdoor skills and your leadership ability. Our engaging and challenging week will drive you to realize your potential. We will guide you in a week of thrilling adventure, challenging conversation and incredible victory. Led by program facilitators that are certified in wilderness first aid, you will be supported in growing your leadership ability and refining your wilderness savvy.</p>
             <p>You can expect to build relationships, to gain confidence in wilderness settings and develop leadership through activities such as:</p>
             <ul>
@@ -50,10 +50,10 @@
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Campfires</li>
             </ul>
             <p>This camp is located at our coat creek site on the edge of the Livingstone river. This remote site has enough amenities to be comfortable, however, we leave the luxuries behind. Campers sleep in canvas tents with a wood stove for heat and most of the food is cooked over the fire.  You will learn age relevant teaching from the bible and be challenged in God's Creation. With staff to camper ratios of 6:1 our staff will guide you through a challenging and thrilling journey.</p>
-            <p><strong>Start Time: </strong> 2pm Tuesday</p>
-            <p><strong>End Time: </strong> 2pm Sunday</p>
-            <p><strong>Cost: </strong> $400 with $75 if you bring a first time friend</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration" target="_blank">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -81,5 +81,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('teenbasecamp')
+</script>
 </body>
 </html>

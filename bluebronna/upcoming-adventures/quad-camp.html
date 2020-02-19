@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Quad Camp</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">August 20th to August 23rd, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Quad Camp</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Looking for an adventure but not a horse person? How about some horsepower instead? Join us with your ATV (side-by-side/dirt bike/quad/etc) as we do some exploring of the backcountry for a few days! We supply all the food (which is super delicious), and sleeping accomodations, simply bring your own clothes/ATV/gear/personal affects and join us for an adventure!</p>
             <p>Once you arrive at the scenic destination you will grow in your teamwork together as you help set up and keep camp running.</p>
             <p>Expect to participate in:</p>
@@ -49,10 +49,10 @@
             </ul>
             <p>Each day (weather permitting) you will explore the mountains and enjoy stunning views together. You will sing and enjoy evening campfire sessions encountering God. Did we mention how good food tastes cooked in cast iron over an open fire? This will be a trip you won’t forget.</p>
             <p>****Must bring your own ATV or rent one and bring your own fuel/insurance/helmet/riding gear</p>
-            <p><strong>Start Time:</strong> Noon Thursday</p>
-            <p><strong>End Time:</strong> Noon Sunday</p>
-            <p><strong>Cost: </strong> $275 per adult, $140 for youth attending with adult.</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration" target="_blank">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-4 text-center">
@@ -78,5 +78,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('quadcamp');
+</script>
 </body>
 </html>

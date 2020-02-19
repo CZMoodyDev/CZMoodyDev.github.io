@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Mother/Daughter Horse Camp</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">August 13th to August 16th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -48,13 +48,14 @@
     <p>Accommodations include sleeping in heated cabins, eating under big tarps and having chapels around a campfire. A washhouse with hot showers, toilets and sinks add to your comfort.</p>
     <p>This will be a trip you and your daughters won’t forget.</p>
     <p>Open to ages 14 to 88!</p>
-    <p><strong>Start Time: </strong> 2pm Thursday</p>
-    <p><strong>End Time: </strong> 2pm Sunday</p>
-    <p><strong>Cost: </strong> $250 for the adult, $200 for each daughter, Family max is $600.</p>
-    <p class="font-weight-bold">Family Discount for second person in the family coming to the Father Son does not apply. It does apply to others in your family who attend a different program that we offer.</p>
-    <p class="font-weight-bold">$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply. This discount applies to them coming to any camp that we run.</p>
-    <p class="font-weight-bold">If this week does not work for you and an adult daughter, check out our Ladies Horse Camp July 16-19.</p>
-    <a class="btn btn-outline-secondary mr-2 btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration">Register</a>
+    <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+    <p><strong>End Time: </strong> <span class="end-time"></span></p>
+    <p><strong>Cost: </strong> <span class="cost"></span></p>
+
+    <div class="additional-conditions">
+    </div>
+
+    <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
 </div>
 <div id="footer" class="container-fluid">
 </div>
@@ -64,5 +65,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('motherdaughterhorsecamp');
+</script>
 </body>
 </html>

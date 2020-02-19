@@ -15,7 +15,7 @@
 <nav id="navigation"></nav>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="text-center display-5 bb-gray font-weight-bold">Junior Staff</h1>
+        <h1 class="text-center display-5 bb-gray font-weight-bold"><span class="name"></span></h1>
     </div>
 </div>
 <div id="jrStaffContent" class="container pb-5">
@@ -45,22 +45,18 @@
     <p>You will be able to pick which programs at which sites you want to be a part of.</p>
     <p>No one will be able to stay the whole summer because we will not need them all at all times.</p>
     <p>Ages 15 and Up</p>
-    <p><span class="font-weight-bold">Arrival:</span> 2pm Tuesday Jun 30th</p>
-    <p><span class="font-weight-bold">Departure:</span> Open depending on availability</p>
+    <p><span class="font-weight-bold">Arrival:</span> <span class="arrival"></span></p>
+    <p><span class="font-weight-bold">Departure:</span> <span class="departure"></span></p>
     <p><span class="font-weight-bold">Required Dates</span></p>
-    <ul>
-        <li>June 30th to July 4th</li>
-        <li>One of July 8th to 11th Or July 14th to 18th</li>
-        <li>July 20th to July 23rd</li>
+    <ul class="required-dates">
     </ul>
     <p><span class="font-weight-bold">Optional Dates</span>(will work with the Junior Staff Leader based on their availability and our need)</p>
-    <ul>
-        <li>July 23rd to August 24th</li>
+    <ul class="optional-dates">
     </ul>
     <p>If a youth can only make one or two weeks in the summer, please contact the office and we will see how we can make this happen.</p>
-    <p><span class="font-weight-bold">Cost:</span> $0.00</p>
+    <p><span class="font-weight-bold">Cost:</span> <span class="cost"></span></p>
     <div class="container text-center">
-        <a href="https://bluebronna.wufoo.com/forms/blue-bronna-wilderness-camp-jr-staff-application" class="btn btn-outline-secondary btn-white-navy">Apply</a>
+        <a href="#" class="btn btn-outline-secondary btn-white-navy registration-link">Apply</a>
     </div>
     <p class="text-center">If you need any information or have questions - please email <a href="mailto:Office@BlueBronna.org" target="_blank">office@bluebronna.org</a></p>
     <h3>Recruitment Poster</h3>
@@ -74,5 +70,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getJuniorStaffDetails();
+</script>
 </body>
 </html>

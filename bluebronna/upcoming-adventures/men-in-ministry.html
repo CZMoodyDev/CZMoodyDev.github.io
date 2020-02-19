@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Men in Ministry Retreat</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">June 16th to 18th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Men in Ministry</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Need a break from your cell phone, the emails and the city? Want to experience for yourself what it’s like to camp at Blue Bronna before you tell your congregation about us? Come let us guide you in three days of fun activities in God’s creation where you can find rest and be refreshed. Led by program facilitators that are certified in wilderness first aid, you will participate in the following activities:</p>
             <ul>
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Hiking</li>
@@ -46,9 +46,9 @@
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Campfires</li>
             </ul>
             <p>Enjoy the company of others who walk through similar joys and trials of ministry. This Camp is located at our Coat Creek site on the edge of the Livingstone river. This remote site has enough amenities to be comfortable, however, we leave the luxuries behind. Accommodations include hunter style wall-tents with wood stoves and the good ol’ outhouse. Register today to get away from the noise and enjoy God’s beautiful creation.</p>
-            <p><strong>Start Time:</strong> Noon Tuesday</p>
-            <p><strong>End Time:</strong> 2pm Thursday</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-men-in-ministry-camp" target="_blank">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-4 text-center">
@@ -74,5 +74,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('meninministry');
+</script>
 </body>
 </html>

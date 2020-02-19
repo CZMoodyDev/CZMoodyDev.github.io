@@ -14,6 +14,17 @@ nav {
     color: #FFF !important;
 }
 
+a.disabled {
+    /* Make the disabled links grayish*/
+    color: gray;
+    /* And disable the pointer events */
+    pointer-events: none;
+}
+
+.red {
+    color: red;
+}
+
 /* Landing Hero */
 .parallax {
     min-height: 600px;

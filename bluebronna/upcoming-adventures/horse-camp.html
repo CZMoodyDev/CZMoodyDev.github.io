@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Teen Horse Camp:</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Horse Camp - June 30th to July 4th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Teen Horse Camp</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Your son or daughter can come to camp and sharpen your horsemanship skills! Open to ages 13-17 our three instructors will match their teaching with you child’s level of expertise. They will explore different areas of horsemanship including:</p>
             <ul>
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Western</li>
@@ -43,10 +43,10 @@
             </ul>
             <p>Bring your own horse or use ours. This clinic style is camp is great if your child wants to do nothing but horse related activities. This camp is focused both on arena riding and trail rides through the foothills. Let us show your child how his/her relationship with their horse reflects a relationship with Jesus. They will enjoy great food, great company, great teaching and fun evening campfire singing/worship and biblical teaching times. </p>
             <p>This camp is located at our Willow Creek site where your child will stay in a cabin or a wall tent. This site has all the amenities that they could need including indoor plumbing at our washhouse, showers and covered eating and campfire areas.</p>
-            <p><strong>Arrival: </strong> 2pm Tuesday</p>
-            <p><strong>Departure: </strong> 2pm Saturday</p>
-            <p><strong>Cost: </strong> $400 - with $75 off if you bring a first time friend</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration" target="_blank">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -74,5 +74,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails("horsecamp");
+</script>
 </body>
 </html>

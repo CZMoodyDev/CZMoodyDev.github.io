@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Youth Adventure Camp:</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Ages 8 to 10 - July 8th to July 11th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Youth Adventure Camp: Ages 8 to 10</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Our 8 to 10 year old camp is a great way to introduce your young children to the outdoors and God's Creation. With activities planned for a younger age group, your children will experience the wilderness in a safe yet engaging environment. Led by program facilitators that are certified in wilderness first aid, your child is bound to be challenged and engaged for their adventure.</p>
             <p>You can expect your children to gain confidence in the outdoors and build relationships through guided activities such as:</p>
             <ul>
@@ -47,10 +47,10 @@
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Bible Devotions</li>
             </ul>
             <p>This camp is located at our Willow Creek site in the foothills of the beautiful Livingstone Range. The group will experience exciting adventure in the front country around the site. They will learn age relevant teaching from the bible around the campfire in the evenings and be challenged in God's Creation during the day. With staff to camper ratios of 6:1 and a warm place to come home to at night, they can experience the thrill of the land with comfort and confidence.</p>
-            <p><strong>Start Time: </strong> 2pm Tuesday</p>
-            <p><strong>End Time: </strong> 2pm Friday</p>
-            <p><strong>Cost: </strong> $225 - $25 off if you bring a first time friend</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration" target="_blank">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -78,5 +78,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails("youth89");
+</script>
 </body>
 </html>

@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Teen Pack Trip:</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">August 4th to 9th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Teen Pack Trip</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Challenge and adventure await you! A pack trip is a camping trip where you pack all your camping gear including food, clothes, cooking tools and sleeping gear into boxes that get saddled or packed onto a horse. Horses that are packed are led by you and other campers. For every two campers, there is one pack horse. Once all the horses are packed, campers ride into the wilderness for 5 nights. Our pack trips will take you either along the Livingstone Range or the Continental Divide.</p>
             <p>Once you arrive at the scenic destination you will grow in your teamwork together as you help set up and keep camp running.</p>
             <p>Expect to participate in:</p>
@@ -49,10 +49,10 @@
             </ul>
             <p>Each day (weather permitting) you will ride through the mountains and enjoy stunning views together. If you are eager you may also get a hike in! If the group is up for trying out another camp site you will pack everything up and do it all again! On top of all that you will sing and enjoy evening campfire sessions encountering God and His Word through the Bible. Did we mention how good food tastes cooked in cast iron over an open fire? Grow in your relationship with God, build new friendships and create memories of a lifetime, not to mention ride some incredible trails!</p>
             <p class="font-weight-bold">End times are approximate; delays on the return journey can cause campers to get back to camp later than 2pm</p>
-            <p><strong>Start Time: </strong> 10am Tuesday</p>
-            <p><strong>End Time: </strong> 2pm Sunday</p>
-            <p><strong>Cost: </strong> $450 - $75 off if you bring a first time friend</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration" target="_blank">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -80,5 +80,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails("teenpacktrip");
+</script>
 </body>
 </html>

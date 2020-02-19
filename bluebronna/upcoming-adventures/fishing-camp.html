@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Fly Fishing Camp</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">July 28th to August 1st, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Fly Fishing Camp</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Join us for four full days of fellowship with God and God's Creation in Alberta's Rocky Mountains. Fish, pray, sing, and fellowship with men and young men that are seeking to become closer to Him.  Experienced fishermen will be available to help all experience levels of fly fishermen.</p>
             <p>World class fishing on the Old Man and Livingstone Rivers. Come by yourself or bring your teenage son along as well. Airport pickup is available. </p>
             <iframe xml="lang" src="//www.youtube.com/embed/gb28CtXZOZs" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
@@ -51,13 +51,14 @@
             <p>Each day (weather permitting) you will explore the mountains and enjoy stunning views together. You will sing and enjoy evening campfire sessions encountering God. Did we mention how good food tastes cooked in cast iron over an open fire? This will be a trip you won’t forget.</p>
             <p>****Must bring your own fishing gear and have an Alberta fishing license</p>
             <p>**** Minimum age is 14 years old with a parent or guardian (some exceptions apply)</p>
-            <p><strong>Arrival: </strong> July 28th @2pm (you are welcome to come earlier to start fishing and bring your own lunch)</p>
-            <p><strong>Departure: </strong> August 1st @12pm</p>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
 
-            <p><strong>Cost: </strong> $250 per adult, $150 per youth that attends with an adult, family max of $600.</p>
-            <p class="font-weight-bold">Family discount for a second person in the family coming to the Fly Fishing Camp does not apply.</p>
-            <p class="font-weight-bold">$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply.</p>
-            <a class="btn btn-outline-dark btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration" target="_blank">Register</a>
+            <div class="additional-conditions">
+            </div>
+
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-4 text-center">
@@ -83,5 +84,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('fishingcamp');
+</script>
 </body>
 </html>

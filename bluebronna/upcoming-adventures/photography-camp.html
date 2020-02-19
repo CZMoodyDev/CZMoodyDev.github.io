@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Photography Camp</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">July 2nd to July 5th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -38,10 +38,10 @@
     <p>Prior experience in photography is not needed to enroll in this camp. Participants can bring a camera or a cell phone.</p>
     <p>Ages 15-88 are all welcome providing you can participate in some of the hiking.</p>
     <p>God talks will centre around God’s wonderful creation.</p>
-    <p><strong>Start Time:</strong> 2pm Thursday</p>
-    <p><strong>End Time:</strong> 2pm Sunday</p>
-    <p><strong>Cost: </strong> $300 per person</p>
-    <a class="btn btn-outline-secondary mr-2 btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration">Register</a>
+    <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+    <p><strong>End Time: </strong> <span class="end-time"></span></p>
+    <p><strong>Cost: </strong> <span class="cost"></span></p>
+    <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
 </div>
 <div id="footer" class="container-fluid">
 </div>
@@ -51,5 +51,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('photographycamp')
+</script>
 </body>
 </html>

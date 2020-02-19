@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Family Camp</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">July 31st to August 3rd, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="font-weight-bold bb-gray">Family Camp</h1>
+            <h1 class="font-weight-bold bb-gray"><span class="name"></span></h1>
             <p>Looking for a family friendly vacation? This is it! To help you connect to your family and to other families as you enjoy the wilderness. Our goal is to help you grow in your walk with God and your experience with the wilderness as well as grow your relationship with your family and other families. Let’s not forget that we have so much fun. Led by program facilitators that are certified in wilderness first aid, your family will participate in the following activities:</p>
             <ul>
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Hiking</li>
@@ -50,10 +50,10 @@
                 <li class="bulletless"><i class="fas fa-check-circle"></i> Biblical Teaching Sessions</li>
             </ul>
             <p>Families will participate in activities together. As well, our program facilitators love to take your kids on an adventure away from camp to give the adults in the family quiet time alone. This camp is located at our Willow Creek site where you will stay in cabins or wall tents. This site has all the amenities that a family could need including indoor plumbing at our washhouse, showers and covered eating and campfire areas. Come enjoy the company of your family, build relationships with other families, encounter God through dynamic teaching and worship times and build memories that will last.</p>
-            <p><strong>Start Time: </strong> 7pm Friday</p>
-            <p><strong>End Time: </strong> Noon Monday</p>
-            <p><strong>Cost: </strong> $130 per adult, $80 for youth ages 11-17, $50 for kids ages 6-10, 5 and under free, Family max of $500.</p>
-            <a class="btn btn-outline-secondary mr-2 btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration">Register</a>
+            <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+            <p><strong>End Time: </strong> <span class="end-time"></span></p>
+            <p><strong>Cost: </strong> <span class="cost"></span></p>
+            <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
             <div id="imageGallery" class="pt-5">
                 <div class="row">
                     <div class="col-md-4 text-center">
@@ -79,5 +79,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('familycamp');
+</script>
 </body>
 </html>

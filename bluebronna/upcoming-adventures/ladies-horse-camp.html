@@ -18,14 +18,14 @@
         <div class="upper-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">Ladies Horse Camp</p>
+                    <p class="text-white font-weight-bold"><span class="name"></span></p>
                 </div>
             </div>
         </div>
         <div class="lower-caption pb-5 pt-5">
             <div class="row">
                 <div class="col-md-3 offset-md-3 caption-text pt-3">
-                    <p class="text-white font-weight-bold">July 16th to 19th, 2020</p>
+                    <p class="camp-dates text-white font-weight-bold"><span class="start-date"></span> to <span class="end-date"></span>, <span class="year"></span></p>
                 </div>
             </div>
         </div>
@@ -38,14 +38,15 @@
     <p>Camp out in your trailer or make yourself comfy in one of our cabins. Camping is included in your fees. There are NO hook ups, but quiet generators are welcome.</p>
     <p>Horse accommodations: Reserve a stall <strong>*limited space available*</strong>, use the group turn out pen (individual pens MAY be available), bring panels, tie to your trailer, or use your trailer. You are responsible for bringing hay/feed, bucket for water, tack, etc. for your horse.</p>
     <p>This weekend is geared towards those who are looking for a weekend away from everyday life and need one full of horses and other horse crazy gals. On this laid back weekend, take time to experience God and His creation, moments to hear His voice, make new friends, learn new things, brush up on skills, relax and have a good time.</p>
-    <p><strong>Start Time:</strong>July 16th at 7:00pm</p>
-    <p><strong>End Time:</strong>July 19th at 2:00pm</p>
+    <p><strong>Start Time: </strong> <span class="start-time"></span></p>
+    <p><strong>End Time: </strong> <span class="end-time"></span></p>
     <p>DELICIOUS Meals included.</p>
-    <p><strong>Cost:</strong> $300.00</p>
-    <p><strong>Family Discount for second person in the family coming to the Ladies Horse Camp does apply. If this week does not work for you and an adult daughter, check out our Mother/Daughter Horse Camp August 13-16.</strong></p>
-    <p><strong>$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply. This discount applies to them coming to any camp that we run.</strong></p>
+    <p><strong>Cost: </strong> <span class="cost"></span></p>
+
+    <div class="additional-conditions">
+    </div>
     <p class="text-center">If you need any information or have questions - please email <a href="mailto:Office@BlueBronna.org" target="_blank">office@bluebronna.org</a></p>
-    <a class="btn btn-outline-secondary mr-2 btn-white-navy" href="https://bluebronna.wufoo.com/forms/2020-summer-camp-registration">Register</a>
+    <a class="btn btn-outline-dark btn-white-navy registration-link" href="#" target="_blank">Register</a>
 </div>
 <div id="footer" class="container-fluid">
 </div>
@@ -55,5 +56,8 @@
     var STATIC_PATH = ROOT_PATH + "/static/";
 </script>
 <script src="../static/js/base.js"></script>
+<script>
+    getCampDetails('ladieshorsecamp');
+</script>
 </body>
 </html>
