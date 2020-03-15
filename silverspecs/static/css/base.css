@@ -1,0 +1,167 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 40px;
+}
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
+
+h3, h5 {
+    color: #4B3B40;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-light {
+    background-color: white !important;
+}
+
+.nav-item {
+    font-size: large;
+}
+
+.divider {
+    width: 2rem;
+    color: #87634A;
+}
+
+@media (max-width: 992px) {
+    .divider { display:none; }
+    .controls .btn-standard {
+        margin-bottom: 5px;
+    }
+}
+
+.hero {
+    min-height: 800px;
+    position: relative;
+    background-image: url("../img/hero.jpg");
+    background-position: center top !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.controls {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.btn-standard {
+    width: 100%;
+    color: #6B717E;
+    background-color: white;
+    border-style: solid;
+    border-color: #9ba1ae;
+    border-radius: 0;
+    border-width: 1px;
+}
+.btn-standard:hover {
+    border-color: #87634A;
+    background-color: #f5f6f8;
+    color: #6B717E;
+}
+.btn-standard:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.card {
+    background-color: #F5F6F8;
+    border-radius: 0;
+    border-width: 0;
+}
+.card hr {
+    color: #87634A;
+    border-top: 2px solid #87634A;
+}
+
+.card-title {
+    color: #4B3B40;
+    font-weight: 900;
+}
+
+#faq {
+    display: flex;
+    align-items: center;
+}
+
+/* Landing Hero */
+.parallax {
+    min-height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.parallax-landing {
+    background-image: url("../img/faq.jpg");
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.parallax-about {
+    background-image: url("../img/about.jpg");
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+
+#guarantee-img {
+    background-image: url("../img/guarantee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+@media screen and (max-width: 770px) {
+    .offset-4-unresponsive {
+        margin-left: 0 !important;
+    }
+}
+
+:target {padding-top: 75px;}
+
+#footer {
+    background-color: #F5F6F8;
+}
+
+/** Credit to https://codepen.io/jesuarva/pen/qowdxR for shadow **/
+.shadow {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow:hover {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
