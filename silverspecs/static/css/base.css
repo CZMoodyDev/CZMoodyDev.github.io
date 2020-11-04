@@ -1,135 +1,72 @@
-html {
-    scroll-behavior: smooth;
-}
-
+/* Site Wide */
 body {
-    font-family: 'Raleway', sans-serif;
-    padding-top: 40px;
-}
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
-}
-
-h3, h5 {
-    color: #4B3B40;
-}
-
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.lato {
+    background-color: #ffffff;
     font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 1rem;
 }
 
-.navbar-light {
-    background-color: white !important;
+.no-decorate {
+    text-decoration: none;
+    color: black;
 }
 
-.nav-item {
-    font-size: large;
+.dropdown-item.active {
+    background-color: #f9f9f9;
+    color: black;
 }
 
-.divider {
-    width: 2rem;
-    color: #87634A;
+.large-p {
+    font-size: 1.25rem;
 }
 
-@media (max-width: 992px) {
-    .divider { display:none; }
-    .controls .btn-standard {
-        margin-bottom: 5px;
-    }
+.larger-p {
+    font-size: 1.5rem;
 }
 
-.hero {
-    min-height: 800px;
-    position: relative;
-    background-image: url("../img/hero.jpg");
-    background-position: center top !important;
-    background-repeat: no-repeat;
-    background-size: cover;
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+.nav-link:hover {
+    color: black;
+    background-color: #f9f9f9;
 }
 
-.controls {
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-menu:before {
+    content: " ";
+    display: block;
     position: absolute;
-    bottom: 1rem;
+    height: 25px;
+    top: -25px;
+    left: 0;
+    right: 0;
 }
 
-.btn-standard {
-    width: 100%;
-    color: #6B717E;
-    background-color: white;
-    border-style: solid;
-    border-color: #9ba1ae;
-    border-radius: 0;
+.logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:160px;
+    height:160px;
+}
+
+.site-divider {
+    border-bottom: #0d0d0d;
     border-width: 1px;
-}
-.btn-standard:hover {
-    border-color: #87634A;
-    background-color: #f5f6f8;
-    color: #6B717E;
-}
-.btn-standard:focus {
-    outline: 0;
-    box-shadow: none;
+    border-bottom-style: solid;
 }
 
-.card {
-    background-color: #F5F6F8;
-    border-radius: 0;
-    border-width: 0;
-}
-.card hr {
-    color: #87634A;
-    border-top: 2px solid #87634A;
+.cover {
+    object-fit: cover;
+    width: 100%;
+    height: 575px;
+    object-position: 65% 0%;
 }
 
-.card-title {
-    color: #4B3B40;
-    font-weight: 900;
-}
-
-#faq {
-    display: flex;
-    align-items: center;
-}
-
-/* Landing Hero */
-.parallax {
-    min-height: 600px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-}
-
-.parallax-landing {
-    background-image: url("../img/faq.jpg");
-    padding-bottom: 5rem;
-    padding-top: 5rem;
-}
-
-.parallax-about {
-    background-image: url("../img/about.jpg");
-    padding-bottom: 5rem;
-    padding-top: 5rem;
-}
-
-
-#guarantee-img {
-    background-image: url("../img/guarantee.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;
-}
-
+/* Home */
 .map-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -144,24 +81,190 @@ h3, h5 {
     position:absolute;
 }
 
-@media screen and (max-width: 770px) {
-    .offset-4-unresponsive {
-        margin-left: 0 !important;
-    }
+.font-large {
+    font-size: 72px !important;
+    font-weight: 500;
 }
 
-:target {padding-top: 75px;}
-
-#footer {
-    background-color: #F5F6F8;
+.multi-item-carousel {
+    overflow: hidden;
+}
+.multi-item-carousel img {
+    height: auto;
+    width: 100%;
+}
+.multi-item-carousel .carousel-control.left,
+.multi-item-carousel .carousel-control.right {
+    background: rgba(255, 255, 255, 0.3);
+    width: 25%;
+}
+.multi-item-carousel .carousel-inner {
+    width: 150%;
+    left: -25%;
+}
+.carousel-inner > .carousel-item .next,
+.carousel-inner > .carousel-item .active.right {
+    -webkit-transform: translate3d(33%, 0, 0);
+    transform: translate3d(33%, 0, 0);
+}
+.carousel-inner > .carousel-item .prev,
+.carousel-inner > .carousel-item .active.left {
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0);
+}
+.item__third {
+    float: left;
+    width: 33.33333333%;
 }
 
-/** Credit to https://codepen.io/jesuarva/pen/qowdxR for shadow **/
-.shadow {
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+.contact-form-ele {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-color: black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #f4f4f4;
 }
-.shadow:hover {
-    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+.contact-form-ele:focus, .contact-form-ele:hover  {
+    border-color: black;
+    box-shadow: none;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    background-color: #f4f4f4;
 }
 
+#contactBlock {
+    background-color: #f4f4f4;
+}
+
+#sendBtn {
+    background-color: black;
+    border-color: black;
+    border-radius: 0;
+}
+#sendBtn:hover {
+    background-color: #4b4b4b;
+    border-color: #4b4b4b;
+}
+
+/* Book Online */
+.card {
+    border-radius: 0;
+}
+
+.card-img-top:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.prev-button {
+    text-decoration: none;
+    color: #b4b4b4;
+}
+.prev-button:hover {
+    text-decoration: none;
+    color: #b4b4b4;
+}
+
+.book-now {
+    color: white !important;
+    background-color: #AABCBF;
+    border-radius: 0;
+    border-color: #AABCBF;
+}
+.book-now:hover {
+    background-color: #6b7a7d;
+    border-color: #6b7a7d;
+}
+
+/* Staff */
+#bubble {
+    width: 60px;
+    height: 60px;
+}
+
+.hard-shadow {
+    box-shadow: 10px 10px #000000;
+}
+
+/* FAQ */
+.faq-backed {
+    background-color: #f4f4f4;
+    margin-bottom: 2.5rem;
+}
+
+/* Eye Care */
+.eye-backed {
+    margin-bottom: 2.5rem;
+}
+
+/* Optical */
+#optical {
+    position: relative;
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    height: 660px;
+}
+
+.about-optical {
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+#specs .carousel-item.active,
+#specs .carousel-item-next,
+#specs .carousel-item-prev{
+    display:block;
+}
+
+#specs .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+#specs .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* Services */
+img.services {
+    width: 460px;
+    height: 380px;
+}
+
+/* Policies */
+#policies {
+    position: relative;
+    background-image: url("../img/jumbo-policies.png");
+    background-size: cover;
+    height: 480px;
+}
+
+/* Resources */
+#resources {
+    position: relative;
+    background-image: url("../img/jumbo-resources.png");
+    background-size: cover;
+    height: 480px;
+}
+
+.about-resources {
+    white-space: nowrap;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+#patientForms {
+    background-color: #f4f4f4;
+}
+
+/* Contact Lens Guide */
+.img-round {
+    border-radius: 50%;
+    width: 400px;
+}
