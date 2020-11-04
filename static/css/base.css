@@ -136,6 +136,7 @@ nav {
 
 .card-flip {
     perspective: 1000px;
+    -webkit-transition: -webkit-transform 1s;
 }
   
 .card-flip,
