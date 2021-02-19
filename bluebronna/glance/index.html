@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Bronna Wilderness Camp</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+    <script src="../static/js/jquery-3.4.0.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <link href="../static/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+<nav id="navigation"></nav>
+
+<div class="container-fluid pt-5">
+
+    <h1 class="text-center font-weight-bold">At a Glance</h1>
+    <p>Main Camp Registration Link: <span class="main-camp-link"></span></p>
+    <p>Staff Info Package: <span class="staff-info-package"></span></p>
+    <p>New Staff Application Link: <span class="new-staff-link"></span></p>
+    <p>Returning Staff Application Link: <span class="returning-staff-link"></span></p>
+    <p>Junior Staff Application Link: <span class="junior-staff-link"></span></p>
+
+    <h2 class="text-center font-weight-bold">Camps</h2>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Dropoff</th>
+            <th scope="col">Pickup</th>
+            <th scope="col">Days Until</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Registration</th>
+        </tr>
+        </thead>
+        <tbody id="campGlance" class="table-striped">
+
+        </tbody>
+    </table>
+
+</div>
+
+<div id="footer" class="container-fluid">
+</div>
+<script>
+    var THIS_NAV = "schedule";
+    var ROOT_PATH = "..";
+    var STATIC_PATH = ROOT_PATH + "/static/";
+</script>
+<script src="../static/js/base.js?v=13"></script>
+<script>
+
+    $(document).ready(function(){
+        setGlobals();
+        buildCampTable();
+    });
+
+    function setGlobals() {
+        $('.main-camp-link').text(CAMP_REGISTRATION_LINK);
+        $('.staff-info-package').text(decodeURIComponent(STAFF_INFORMATION_PACKAGE).replace("../static/files/", ""));
+        $('.new-staff-link').text(NEW_STAFF_APPLICATION_LINK);
+        $('.returning-staff-link').text(RETURNING_STAFF_APPLICATION_LINK);
+        $('.junior-staff-link').text(JUNIOR_STAFF_REGISTRATION_LINK);
+    }
+
+    function buildCampTable() {
+
+        var sortedKeys = Object.keys(CAMPS).sort(function (a, b) {
+
+            var aVal = CAMPS[a]['days-till'];
+            var bVal = CAMPS[b]['days-till'];
+            aVal = aVal <= 0 ? Infinity : aVal;
+            bVal = bVal <= 0 ? Infinity : bVal;
+
+            if (CAMPS[a].hasOwnProperty("status")) {
+                aVal = CAMPS[a]['status'] === "cancelled" ? Infinity : aVal;
+            }
+
+            if (CAMPS[b].hasOwnProperty("status")) {
+                bVal = CAMPS[b]['status'] === "cancelled" ? Infinity : bVal;
+            }
+
+            return aVal - bVal;
+        });
+
+        sortedKeys.forEach(function(key){
+
+            var camp = CAMPS[key];
+            var campEndDate = camp["end-date"] + ", " + camp["year"];
+            var finished = isFinished(campEndDate);
+            var cancelled = camp.hasOwnProperty("status") ? camp["status"] === "cancelled" : false;
+
+            camp["days-till"] = camp["days-till"] + " Days";
+
+            var row = '<tr>';
+
+            if (finished) {
+                camp = setOutOfDateData("TBA", camp);
+            } else if (cancelled) {
+                camp = setOutOfDateData("Cancelled", camp);
+            }
+
+            row += '<td>' + camp["name"] + '</td>';
+            row += '<td>' + camp["start-date"] + '</td>';
+            row += '<td>' + camp["end-date"] + '</td>';
+            row += '<td>' + camp["start-time"] + '</td>';
+            row += '<td>' + camp["end-time"] + '</td>';
+            row += '<td>' + camp["days-till"] + '</td>';
+            row += '<td>' + camp["cost"] + '</td>';
+            row += '<td>' + camp["registration-link"] + '</td>';
+
+            row += '</tr>';
+
+            $("#campGlance").append(row);
+
+        });
+    }
+
+    function setOutOfDateData(flag, camp) {
+        camp['start-date'] = '<p class="red">' + flag + ' ' + getUpcomingYear(camp["year"]) + '</p>';
+        camp['end-date'] = '<p class="red">' + flag + ' ' + getUpcomingYear(camp["year"]) + '</p>';
+        camp['start-time'] = '<p class="red">' + flag + ' ' + getUpcomingYear(camp["year"]) + '</p>';
+        camp['end-time'] = '<p class="red">' + flag + ' ' + getUpcomingYear(camp["year"]) + '</p>';
+        camp['registration-link'] = '<p class="red">Out of Date</p>';
+        camp['days-till'] = '';
+
+        return camp;
+    }
+
+</script>
+</body>
+</html>
