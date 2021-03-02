@@ -34,33 +34,14 @@
         </ul>
     </div>
 </nav>
-<div class="container pt-5">
-    <h1 class="text-center">Contact Us</h1>
-    <div class="row row-eq-height pb-5">
-        <div class="col-xs-4 card card-body bg-light text-center mr-3 mb-3">
-            <i class="fas fa-envelope bb-gray fa-4x"></i>
-            <h3 class="font-weight-bold">Email Us:</h3>
-            <p><a href="mailto:ma.pasbaking@outlook.com" target="_blank" class="bb-darkblue">ma.pasbaking@outlook.com</a></p>
-        </div>
-        <div class="col-xs-4 card card-body bg-light text-center mr-3 mb-3">
-            <i class="fas fa-phone bb-gray fa-4x"></i>
-            <h3 class="font-weight-bold">Call Us:</h3>
-            <p>
-                (403) 877-2899
-            </p>
-        </div>
-        <div class="col-xs-4 card card-body bg-light text-center mr-3 mb-3">
-            <i class="fas fa-home bb-gray fa-4x"></i>
-            <h3 class="font-weight-bold">Visit Us:</h3>
-            <p>1220 Windsor Ave. Penhold, AB</p>
+<div class="container pt-5 pb-5">
+
+    <div id="bakery" class="pt-5">
+        <h1 class="text-center">Bakery Menu</h1>
+        <div id="bakery-list" class="row col-md-12">
+
         </div>
     </div>
-</div>
-<div class="container pb-5">
-    <div class="text-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.877264335255!2d-113.87615768420676!3d52.13655407974338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53745ab83745e6f7%3A0x8168fb9395e8f515!2s1220%20Windsor%20Ave%2C%20Penhold%2C%20AB%20T0M%201R0!5e0!3m2!1sen!2sca!4v1611544430633!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-</div>
 
 </div>
 
@@ -127,8 +108,28 @@
 
         fillDates();
         fillStoreHours();
+        fillBakeryMenu();
 
     });
+
+    function fillBakeryMenu() {
+
+        Object.keys(bakery).forEach(function(type){
+
+            var list = "<ul>";
+
+            Object.keys(bakery[type]).forEach(function(item){
+               list += "<li>" + item + " " + bakery[type][item]["price"] + "</li>";
+            });
+
+            list += "</ul>";
+
+            var html = '<div class="col-md-6"><h3>'+type+'</h3>'+list+'</div>';
+            $("#bakery-list").append(html);
+        });
+
+    }
+
 </script>
 </body>
 </html>
