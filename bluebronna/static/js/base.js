@@ -1,48 +1,79 @@
 var ADDRESS = "Box 65, Longview, AB T0L 1H0";
 var OFFICE_EMAIL = "office@bluebronna.org";
 
-var CAMP_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2020-summer-camp-registration";
-var JUNIOR_STAFF_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/blue-bronna-wilderness-camp-jr-staff-application";
-var FAMILY_DAY_WEEKEND_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2020-family-day-weekend-family-camp";
-var MEN_IN_MINISTRY_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2020-men-in-ministry-camp";
+var CAMP_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2023-summer-camp-registration-blue-bronna";
+var JUNIOR_STAFF_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2023-blue-bronna-jr-staff-training-application";
+var FAMILY_DAY_WEEKEND_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2023-family-weekend-camps";
+var MEN_IN_MINISTRY_REGISTRATION_LINK = "https://bluebronna.wufoo.com/forms/2023-men-in-ministry-camp";
 
-var STAFF_INFORMATION_PACKAGE = "../static/files/2020%20BBWC%20Camp%20Staff%20Information.pdf";
-var NEW_STAFF_APPLICATION_LINK = "https://bluebronna.wufoo.com/forms/2021-blue-bronna-wilderness-camp-staff-application/";
-var RETURNING_STAFF_APPLICATION_LINK = "https://bluebronna.wufoo.com/forms/bbwc-returning-staff-application";
+var STAFF_INFORMATION_PACKAGE = "../static/files/2023 BBWC Camp Staff Information.pdf";
+var NEW_STAFF_APPLICATION_LINK = "https://bluebronna.wufoo.com/forms/2023-blue-bronna-wilderness-camp-staff-application";
+var RETURNING_STAFF_APPLICATION_LINK = "https://bluebronna.wufoo.com/forms/2023-bbwc-returning-staff-application";
+
+var REGISTRATION_LOCKED_UNTIL = new Date(2022, 0, 14, 19, 0, 0, 0);
+var TODAY = new Date();
+
+if (TODAY < REGISTRATION_LOCKED_UNTIL) {
+    CAMP_REGISTRATION_LINK = "#";
+}
 
 var CAMPS = {
     "youth89": {
         "name": "Youth Adventure Camp: Ages 8 to 10",
-        "start-date": "July 6",
-        "end-date": "July 9",
-        "year": "2020",
-        "start-time": "2pm",
-        "end-time": "2pm",
-        "cost": "$225 - with $25 off if you bring a first time friend",
+        "start-dates": ["July 3", "July 17"],
+        "end-dates": ["July 8", "July 22"],
+        "year": "2022",
+        "start-time": "Sunday at 4pm",
+        "end-time": "Friday at 2pm",
+        "cost": "$400",
         "registration-link": CAMP_REGISTRATION_LINK,
-        "status": "cancelled"
+        "status": "",
+        "multi": true
     },
     "youth1012": {
         "name": "Youth Adventure Camp: Ages 10 to 12",
-        "start-date": "August 18",
-        "end-date": "August 22",
-        "year": "2020",
-        "start-time": "2pm",
+        "start-dates": ["July 10", "August 2"],
+        "end-dates": ["July 15", "August 7"],
+        "year": "2022",
+        "start-time": "4pm",
         "end-time": "2pm",
-        "cost": "$400 - with $75 off if you bring a first time friend",
+        "cost": "$400",
         "registration-link": CAMP_REGISTRATION_LINK,
-        "status": "cancelled"
+        "status": "",
+        "multi": true
     },
     "horsecamp": {
-        "name": "Horse Camp",
-        "start-date": "August 4",
-        "end-date": "August 8",
-        "year": "2020",
-        "start-time": "2pm",
+        "name": "Girls Horse Camp",
+        "start-date": "July 24",
+        "end-date": "July 29",
+        "year": "2022",
+        "start-time": "4pm",
         "end-time": "2pm",
-        "cost": "$400 - with $75 off if you bring a first time friend",
+        "cost": "$425",
         "registration-link": CAMP_REGISTRATION_LINK,
-        "status": "cancelled"
+        "status": ""
+    },
+    "boyssurvivorcamp" : {
+        "name": "Survivor Camp - Ages 13 to 17",
+        "start-date": "July 24",
+        "end-date": "July 29",
+        "year": "2023",
+        "start-time": "4pm",
+        "end-time": "2pm",
+        "cost": "$490",
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
+    },
+    "hikingbasecamp": {
+        "name": "Hiking Base Camp - Ages 13 to 17",
+        "start-date": "August 1",
+        "end-date": "August 5",
+        "year": "2023",
+        "start-time": "4pm",
+        "end-time": "2pm",
+        "cost": "$490",
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
     },
     "teenbasecamp": {
         "name": "Teen Base Camp",
@@ -67,24 +98,27 @@ var CAMPS = {
         "status": "cancelled"
     },
     "photographycamp": {
-        "name": "Photography Camp",
-        "start-date": "July 2",
-        "end-date": "July 5",
-        "year": "2020",
-        "start-time": "2pm",
+        "name": "Teen Photography Camp",
+        "start-date": "July 7",
+        "end-date": "July 11",
+        "year": "2024",
+        "start-time": "4pm",
         "end-time": "2pm",
-        "cost": "$300 per person",
+        "cost": "$490 per person",
         "registration-link": CAMP_REGISTRATION_LINK,
-        "status": "cancelled"
+        "status": ""
     },
     "winterfamilydays": {
         "name": "Winter Family Days",
-        "start-date": "February 14",
-        "end-date": "February 17",
-        "year": "2020",
-        "start-time": "7pm",
-        "end-time": "11am",
-        "cost": "",
+        "start-dates": ["February 16", "February 17"],
+        "end-dates": ["February 19", "February 20"],
+        "start-date": "February 4",
+        "end-date": "February 21",
+        "year": "2024",
+        "start-time": "7:00pm",
+        "end-time": "2:00pm on Sunday",
+        "cost": "Varied",
+        "multi": true,
         "registration-link": FAMILY_DAY_WEEKEND_REGISTRATION_LINK
     },
     "familycamp": {
@@ -100,56 +134,59 @@ var CAMPS = {
     },
     "specialneedsfamilycamp": {
         "name": "Special-Needs Family Camp",
-        "start-date": "August 6",
-        "end-date": "August 9",
-        "year": "2020",
-        "start-time": "7pm",
-        "end-time": "Noon",
-        "cost": "$130 per adult, $80 for youth ages 11-17, $50 for kids ages 6-10, 5 and under free, Family max of $500",
+        "start-date": "August 11",
+        "end-date": "August 14",
+        "year": "2024",
+        "start-time": "4:00pm",
+        "end-time": "2:00pm",
+        "cost": "$200 per day (24 hour period) maximum per family of 5 includes all accommodations, food and activities. $600.00 for the weekend for 5 people.",
         "registration-link": CAMP_REGISTRATION_LINK,
-        "status": "cancelled"
+        "status": ""
     },
     "fatherdaughterhorsecamp": {
         "name": "Father/Daughter Horse Camp",
-        "start-date": "July 15",
-        "end-date": "July 18",
-        "year": "2021",
-        "start-time": "2pm",
-        "end-time": "2pm",
-        "cost": "$250 for the adult, $200 for each daughter, Family max is $600.",
-        "additional-conditions": [
-            "Family Discount for second person in the family coming to the Father Daughter Horse Camp does not apply.",
-            "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply."
-        ],
-        "registration-link": CAMP_REGISTRATION_LINK
+        "start-date": "August 5",
+        "end-date": "August 8",
+        "year": "2024",
+        "start-time": "Noon",
+        "end-time": "2:00pm",
+        "cost": "$350 each with a max of $800 for a family of three",
+        // "additional-conditions": [
+        //     "Family Discount for second person in the family coming to the Father Daughter Horse Camp does not apply.",
+        //     "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply."
+        // ],
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
     },
     "fathersonadventurecamp": {
         "name": "Father/Son Adventure Camp",
-        "start-date": "August 5",
-        "end-date": "August 8",
-        "year": "2021",
-        "start-time": "2pm",
-        "end-time": "2pm",
-        "cost": "$250 for the adult, $200 for each son, Family max is $600",
-        "additional-conditions": [
-            "Family Discount for second person in the family coming to the Father Son Adventure Camp does not apply.",
-            "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply."
-        ],
-        "registration-link": CAMP_REGISTRATION_LINK
+        "start-date": "July 14",
+        "end-date": "July 18",
+        "year": "2024",
+        "start-time": "5:00pm",
+        "end-time": "2:00pm",
+        "cost": "$350 each with a max of $800 for a family of three",
+        // "additional-conditions": [
+        //     "Family Discount for second person in the family coming to the Father Son Adventure Camp does not apply.",
+        //     "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply."
+        // ],
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
     },
     "fishingcamp": {
         "name": "Fly Fishing Camp",
-        "start-date": "July 28",
-        "end-date": "July 31",
-        "year": "2021",
-        "start-time": "July 28th @2pm (you are welcome to come earlier to start fishing and bring your own lunch)",
-        "end-time": "August 1st @12pm",
-        "cost": "$250 per adult, $150 per youth that attends with an adult, family max of $600.",
-        "additional-conditions": [
-            "Family Discount for second person in the family coming to the Fly Fishing Camp does not apply.",
-            "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply."
-        ],
-        "registration-link": CAMP_REGISTRATION_LINK
+        "start-date": "July 21",
+        "end-date": "July 25",
+        "year": "2024",
+        "start-time": "July 23rd 12:00 noon",
+        "end-time": "July 27th 12:00 noon",
+        "cost": "$350 each with a max of $800 for a family of three",
+        // "additional-conditions": [
+        //     "Family Discount for second person in the family coming to the Fly Fishing Camp does not apply.",
+        //     "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply."
+        // ],
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
     },
     "ladieshorsecamp": {
         "name": "Ladies Horse Camp",
@@ -167,15 +204,15 @@ var CAMPS = {
         "status": "cancelled"
     },
     "meninministry": {
-        "name": "Men in Ministry Retreat",
-        "start-date": "June 16",
-        "end-date": "June 18",
-        "year": "2020",
+        "name": "Men in Ministry Camp",
+        "start-date": "June 13",
+        "end-date": "June 15",
+        "year": "2023",
         "start-time": "Noon",
         "end-time": "2pm",
-        "cost": "",
+        "cost": "Free",
         "registration-link": MEN_IN_MINISTRY_REGISTRATION_LINK,
-        "status": "cancelled"
+        "status": ""
     },
     "menspacktrip": {
         "name": "Men's Pack Trip",
@@ -189,19 +226,20 @@ var CAMPS = {
         "status": "cancelled"
     },
     "motherdaughterhorsecamp": {
-        "name": "Mother/Daughter Horse Camp",
-        "start-date": "July 8",
-        "end-date": "July 11",
-        "year": "2021",
-        "start-time": "2pm",
-        "end-time": "2pm",
-        "cost": "$250 for the adult, $200 for each daughter, Family max is $600.",
-        "additional-conditions": [
-            "Family Discount for second person in the family coming to the Mother Daughter does not apply. It does apply to others in your family who attend a different program that we offer.",
-            "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply. This discount applies to them coming to any camp that we run.",
-            "If this week does not work for you and an adult daughter, check out our Ladies Horse Camp July 16-19."
-        ],
-        "registration-link": CAMP_REGISTRATION_LINK
+        "name": "Mother/Daughter Horse Camps",
+        "start-date": "July 7",
+        "end-date": "July 10",
+        "year": "2024",
+        "start-time": "2:00pm",
+        "end-time": "2:00pm",
+        "cost": "$350 each with a max of $800 for a family of three",
+        // "additional-conditions": [
+        //     "Family Discount for second person in the family coming to the Mother Daughter does not apply. It does apply to others in your family who attend a different program that we offer.",
+        //     "$75 discount for a person who is invited by you and registers who has never been to Blue Bronna before does apply. This discount applies to them coming to any camp that we run.",
+        //     "If this week does not work for you and an adult daughter, check out our Ladies Horse Camp July 16-19."
+        // ],
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
     },
     "quadcamp": {
         "name": "Quad Camp",
@@ -210,8 +248,9 @@ var CAMPS = {
         "year": "2021",
         "start-time": "Noon",
         "end-time": "Noon",
-        "cost": "$275 per adult, $140 for youth attending with adult.",
-        "registration-link": CAMP_REGISTRATION_LINK
+        "cost": "$250 each with a max of $600 per family",
+        "registration-link": CAMP_REGISTRATION_LINK,
+        "status": ""
     },
     "boysadventurecamp": {
         "name": "Boy's Adventure Camp",
@@ -226,15 +265,26 @@ var CAMPS = {
     }
 };
 
-CAMPS["ladieshorsecamp"]["additional-conditions"][0] += " " + CAMPS["motherdaughterhorsecamp"]["start-date"] + " - " + CAMPS["motherdaughterhorsecamp"]["end-date"];
-CAMPS["motherdaughterhorsecamp"]["additional-conditions"][2] += " " + CAMPS["ladieshorsecamp"]["start-date"] + " - " + CAMPS["ladieshorsecamp"]["end-date"];
+if (CAMPS["ladieshorsecamp"].hasOwnProperty("additional-conditions")) {
+    CAMPS["ladieshorsecamp"]["additional-conditions"][0] += " " + CAMPS["motherdaughterhorsecamp"]["start-date"] + " - " + CAMPS["motherdaughterhorsecamp"]["end-date"];
+}
+
+if (CAMPS["motherdaughterhorsecamp"].hasOwnProperty("additional-conditions")) {
+    CAMPS["motherdaughterhorsecamp"]["additional-conditions"][2] += " " + CAMPS["ladieshorsecamp"]["start-date"] + " - " + CAMPS["ladieshorsecamp"]["end-date"];
+}
 
 Object.keys(CAMPS).forEach(function(camp) {
-   var data = CAMPS[camp];
 
-   CAMPS[camp]["start-time"] += " " + getEventDay(data["start-date"], data["year"]);
-   CAMPS[camp]["end-time"] += " " + getEventDay(data["end-date"], data["year"]);
-   CAMPS[camp]['days-till'] = daysTillCampStart(data["start-date"] + ", " + data["year"]);
+    try {
+        var data = CAMPS[camp];
+
+        CAMPS[camp]["start-time"] += " " + getEventDay(data["start-date"], data["year"]);
+        CAMPS[camp]["end-time"] += " " + getEventDay(data["end-date"], data["year"]);
+        CAMPS[camp]['days-till'] = daysTillCampStart(data["start-date"] + ", " + data["year"]);
+    } catch (e) {
+
+    }
+
 });
 
 function getEventDay(date, year) {
@@ -244,7 +294,7 @@ function getEventDay(date, year) {
 
 var STAFF = {
     "juniorstaff": {
-        "name": "Junior Staff",
+        "name": "Junior Staff Training Programs",
         "arrival": "2pm Tuesday Jun 30th",
         "departure": "Open depending on availability",
         "year": "2020",
@@ -309,8 +359,8 @@ function createNavBar() {
         '            <li class="nav-item"><a id="nav-adopt" class="nav-link" href="' + ROOT_PATH + '/adopt-a-horse/">Adopt A Horse</a></li>\n' +
         '            <li class="nav-item"><a id="nav-needs" class="nav-link" href="' + ROOT_PATH + '/needs/">Needs</a></li>\n' +
         '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/donate/">Donate</a></li>\n' +
-        '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/register/">Register</a></li>\n' +
-        '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/summer2021/">Summer 2021</a></li>\n' +
+        '            <li class="nav-item"><a class="nav-link" href=' + ROOT_PATH + '"/summer2024/">Summer 2023</a></li>\n' +
+        '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/camp-forms/">Camp Forms</a></li>\n' +
         '        </ul>\n' +
         '    </div>\n' +
         '</nav>';
@@ -362,7 +412,6 @@ function createFooter() {
         '                <li><a class="contact-text" href=' + ROOT_PATH + '"/staff/index.html" target="_self"><i class="fas fa-caret-right"></i> Staff Opportunities</a></li>\n' +
         '                <li><a class="contact-text" href="' + ROOT_PATH + '/about/contact-us.html" target="_self"><i class="fas fa-caret-right"></i> Contact Us</a></li>\n' +
         '                <li><a class="contact-text" href="' + ROOT_PATH + '/privacy-policy/index.html" target="_self"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>\n' +
-        '                <li><a class="contact-text" href="' + ROOT_PATH + '/register/"><i class="fas fa-caret-right"></i> Register</a></li>\n' +
         '\n' +
         '\n' +
         '            </ul>\n' +
@@ -371,10 +420,7 @@ function createFooter() {
         '            <h5 class="font-weight-bold">Contact Us</h5>\n' +
         '            <div>\n' +
         '                <p>\n' +
-        '                    <i class="fas fa-phone bb-darkblue"></i><a class="contact-text" href="tel:403-803-4776"> (403)803-4776 </a> <i>(Office Admin - offsite - all donations, donation receipts and summer camp registration questions)</i>\n' +
-        '                </p>\n' +
-        '                <p>\n' +
-        '                    <i class="fas fa-phone bb-darkblue"></i><a class="contact-text" href="tel:403-601-9350"> (403)601-9350</a> <i>(Director - rentals, staff recruitment, anything else camp related as well as to get a hold of on-site summer staff)</i>\n' +
+        '                    <i class="fas fa-phone bb-darkblue"></i><a class="contact-text" href="tel:4038791252"> (403)879-1252 </a> \n' +
         '                </p>\n' +
         '            </div>\n' +
         '            <div>\n' +
@@ -429,9 +475,16 @@ function getCampDetails(campKey) {
     var campEndDate = camp["end-date"] + ", " + camp["year"];
     var finished = isFinished(campEndDate);
     var cancelled = camp.hasOwnProperty("status") ? camp["status"] === "cancelled" : false;
+    var full = camp.hasOwnProperty("status") ? camp["status"] === "full" : false;
+    var soon = camp.hasOwnProperty("status") ? camp["status"] === "soon" : false;
+    var multiDate = camp.hasOwnProperty("multi") ? camp["multi"] === true : false;
 
     $(".name").text(camp["name"]);
     $(".cost").text(camp["cost"]);
+
+    if (soon || CAMP_REGISTRATION_LINK === "#") {
+        $(".registration-link").addClass("disabled");
+    }
 
     if (finished) {
         $(".camp-dates").text("TBA " + getUpcomingYear(camp["year"]));
@@ -444,6 +497,24 @@ function getCampDetails(campKey) {
         $(".end-time").text("Cancelled for " + camp["year"]);
         $(".start-time, .end-time").css("color", "red");
         $(".registration-link").addClass("disabled");
+    } else if (full) {
+        $(".camp-dates").text("Full");
+        $(".start-time").text("Full");
+        $(".end-time").text("Full");
+        $(".start-time, .end-time").css("color", "red");
+        $(".registration-link").addClass("disabled");
+    } else if (multiDate) {
+        let starts = camp["start-dates"];
+        let ends = camp["end-dates"];
+
+        for (let i = 0; i < starts.length; i++) {
+            $(".start-date-" + i).text(starts[i]);
+            $(".end-date-" + i).text(ends[i]);
+        }
+        $(".year").text(camp["year"]);
+        $(".start-time").text(camp["start-time"]);
+        $(".end-time").text(camp["end-time"]);
+
     } else {
         $(".start-date").text(camp["start-date"]);
         $(".end-date").text(camp["end-date"]);

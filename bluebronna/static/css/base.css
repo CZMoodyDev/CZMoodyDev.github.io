@@ -317,6 +317,22 @@ a.disabled {
     height: 400px;
 }
 
+.staff-volunteer-hero {
+    background-image: url("../img/staff-reunion/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 100%;
+    height: 500px;
+}
+
+.hiking-fundraiser-hero {
+    background-image: url("../img/hiking-fundraiser/hike.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 400px;
+}
+
 .blue-rendezvous-hero {
     background-image: url("../img/blue-rendezvous/hero.jpg");
     background-repeat: no-repeat;
@@ -367,6 +383,14 @@ a.disabled {
 
 .horse-camp-hero {
     background-image: url("../img/schedule/horse/hero.jpg");
+}
+
+.hiking-base-hero {
+    background-image: url("../img/schedule/hike-base-camp/3.jpg");
+}
+
+.survivor-camp-hero {
+    background-image: url("../img/schedule/survivor-camp/");
 }
 
 .teen-base-hero {
@@ -420,6 +444,10 @@ a.disabled {
 
 .mens-pack-trip-hero {
     background-image: url("../img/schedule/mens-pack-trip/hero.jpg");
+}
+
+.canoe-hero {
+    background-image: url("../img/schedule/youth-up/1.jpg");
 }
 
 /* About - Schedule */
