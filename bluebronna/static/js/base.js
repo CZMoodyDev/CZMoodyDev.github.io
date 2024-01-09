@@ -359,7 +359,7 @@ function createNavBar() {
         '            <li class="nav-item"><a id="nav-adopt" class="nav-link" href="' + ROOT_PATH + '/adopt-a-horse/">Adopt A Horse</a></li>\n' +
         '            <li class="nav-item"><a id="nav-needs" class="nav-link" href="' + ROOT_PATH + '/needs/">Needs</a></li>\n' +
         '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/donate/">Donate</a></li>\n' +
-        '            <li class="nav-item"><a class="nav-link" href=' + ROOT_PATH + '"/summer2024/">Summer 2023</a></li>\n' +
+        '            <li class="nav-item"><a class="nav-link" href=' + ROOT_PATH + '"/summer2024/">Summer 2024</a></li>\n' +
         '            <li class="nav-item"><a class="nav-link" href="' + ROOT_PATH + '/camp-forms/">Camp Forms</a></li>\n' +
         '        </ul>\n' +
         '    </div>\n' +
